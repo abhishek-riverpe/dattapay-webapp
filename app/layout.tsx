@@ -79,9 +79,9 @@ export const metadata: Metadata = {
     google: "your-google-verification-code",
   },
   icons: {
-    icon: "/logos/dattapay-logo.png?v=2",
-    shortcut: "/logos/dattapay-logo.png?v=2",
-    apple: "/logos/dattapay-logo.png?v=2",
+    icon: "/logos/logo.PNG?v=2",
+    shortcut: "/logos/logo.PNG?v=2",
+    apple: "/logos/logo.PNG?v=2",
   },
 };
 
@@ -95,7 +95,7 @@ const jsonLd = {
       url: siteUrl,
       logo: {
         "@type": "ImageObject",
-        url: `${siteUrl}/logos/dattapay-logo1.png?v=2`,
+        url: `${siteUrl}/logos/logo.PNG?v=2`,
         width: 512,
         height: 512,
       },

@@ -2,8 +2,8 @@ export const SITE = {
   name: "DattaPay",
   company: "Negentropy LLC",
   email: "support@dattapay.com",
-  logo: "/logos/dattapay-logo1.png",
-  logoDark: "/logos/dattapay-logo.png",
+  logo: "/logos/logo.PNG",
+  logoDark: "/logos/logo.PNG",
   year: new Date().getFullYear(),
 } as const;
 

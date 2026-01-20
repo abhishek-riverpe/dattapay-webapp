@@ -14,24 +14,25 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <div className="relative h-9 w-9">
+        <Link href="/" className="group flex items-center gap-3">
+          <div className="relative h-10 w-10">
+            <div className="absolute -inset-0.5 rounded-xl bg-gradient-to-br from-primary/60 to-primary/20 opacity-75 blur-sm transition-all group-hover:opacity-100 group-hover:blur-md" />
             <Image
               src={SITE.logo}
               alt={SITE.name}
-              width={36}
-              height={36}
-              className="h-9 w-9 rounded-full object-cover ring-2 ring-border/20 shadow-sm dark:hidden"
+              width={40}
+              height={40}
+              className="relative h-10 w-10 rounded-xl object-cover shadow-lg ring-1 ring-white/20 transition-transform group-hover:scale-105 dark:hidden"
             />
             <Image
               src={SITE.logoDark}
               alt={SITE.name}
-              width={36}
-              height={36}
-              className="h-9 w-9 rounded-full object-cover ring-2 ring-border/20 shadow-sm hidden dark:block"
+              width={40}
+              height={40}
+              className="relative h-10 w-10 rounded-xl object-cover shadow-lg ring-1 ring-white/20 transition-transform group-hover:scale-105 hidden dark:block"
             />
           </div>
-          <span className="text-xl font-bold tracking-tight">{SITE.name}</span>
+          <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text">{SITE.name}</span>
         </Link>
 
         {/* Desktop Navigation */}
