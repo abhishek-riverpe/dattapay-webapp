@@ -1,0 +1,15 @@
+# DattaPay Robots.txt
+# https://dattapay.com
+
+User-agent: *
+Allow: /
+
+# Disallow API routes
+Disallow: /api/
+
+# Disallow generated files
+Disallow: /_next/
+Disallow: /generated/
+
+# Sitemap
+Sitemap: https://dattapay.com/sitemap.xml
