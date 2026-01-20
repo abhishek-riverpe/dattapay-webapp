@@ -1,6 +1,6 @@
 export const SITE = {
   name: "DattaPay",
-  company: "Negentropy LLC",
+  company: "DattaPay",
   email: "support@dattapay.com",
   logo: "/logos/logo.PNG",
   logoDark: "/logos/logo.PNG",
