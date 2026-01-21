@@ -103,7 +103,10 @@ const jsonLd = {
         "International payment platform for freelancers with 0.5% fees and 4.2% APY yield.",
       email: "support@dattapay.com",
       foundingDate: "2024",
-      sameAs: [],
+      sameAs: [
+        "https://twitter.com/dattapay",
+        "https://linkedin.com/company/dattapay",
+      ],
     },
     {
       "@type": "WebSite",

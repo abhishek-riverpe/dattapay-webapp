@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
 import PlatformLogos from "@/components/platform-logos";
@@ -7,6 +8,15 @@ import KeepMore from "@/components/keep-more";
 import HowItWorks from "@/components/how-it-works";
 import CTASection from "@/components/cta-section";
 import Footer from "@/components/footer";
+
+export const metadata: Metadata = {
+  title: "DattaPay - International Payments for Freelancers",
+  description:
+    "Get paid in USD/EUR with just 0.5% flat fee. Earn 4.2% APY on idle funds. Bank-grade security & compliance. Join 5,000+ freelancers saving $847/year on fees.",
+  alternates: {
+    canonical: "https://dattapay.com",
+  },
+};
 
 export default function Home() {
   return (
