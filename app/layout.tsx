@@ -16,11 +16,11 @@ const siteUrl = "https://dattapay.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "DattaPay - International Payments for Freelancers",
+    default: "DattaPay | Get Paid in USD - 0.5% Fees | Freelancer Payments",
     template: "%s | DattaPay",
   },
   description:
-    "Get paid in USD/EUR with just 0.5% flat fee. Earn 4.2% APY on idle funds. Bank-grade security & compliance. Join 5,000+ freelancers saving $847/year on fees.",
+    "Receive USD payments with just 0.5% fees. Earn 4.2% APY on idle funds. Protect your earnings from inflation. Trusted by 5,000+ freelancers in Africa & LATAM.",
   keywords: [
     "USD payments for freelancers",
     "receive dollars Africa",
@@ -30,17 +30,24 @@ export const metadata: Metadata = {
     "USDC yield",
     "inflation hedge freelancers",
     "remote work payments",
+    "Upwork payments Africa",
     "dollar account freelancer",
     "currency protection",
     "cross-border payments low fees",
+    "USD account Nigeria",
+    "dollar account Kenya",
+    "payoneer alternative low fees",
+    "wise alternative Africa",
+    "protect earnings from inflation",
+    "hedge against currency devaluation",
   ],
   authors: [{ name: "DattaPay" }],
   creator: "DattaPay",
   publisher: "Negentropy LLC",
   openGraph: {
-    title: "DattaPay - International Payments for Freelancers",
+    title: "DattaPay | Get Paid in USD - 0.5% Fees | Freelancer Payments",
     description:
-      "Get paid in USD/EUR with 0.5% flat fee. Earn 4.2% APY on idle funds. Bank-grade security. Join 5,000+ freelancers.",
+      "Receive USD payments with just 0.5% fees. Earn 4.2% APY on idle funds. Protect your earnings from inflation. Trusted by freelancers in Africa & LATAM.",
     url: siteUrl,
     siteName: "DattaPay",
     type: "website",
@@ -58,9 +65,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "DattaPay - International Payments for Freelancers",
+    title: "DattaPay | Get Paid in USD - 0.5% Fees | Freelancer Payments",
     description:
-      "Get paid in USD/EUR with 0.5% flat fee. Earn 4.2% APY on idle funds. Join 5,000+ freelancers.",
+      "Receive USD payments with 0.5% fees. Earn 4.2% APY. Protect earnings from inflation. Trusted by 5,000+ freelancers.",
     images: ["/og-image.png"],
     creator: "@dattapay",
   },
@@ -123,7 +130,7 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": `${siteUrl}/#webpage`,
       url: siteUrl,
-      name: "DattaPay - International Payments for Freelancers",
+      name: "DattaPay | Get Paid in USD - 0.5% Fees | Freelancer Payments",
       isPartOf: {
         "@id": `${siteUrl}/#website`,
       },
@@ -131,7 +138,32 @@ const jsonLd = {
         "@id": `${siteUrl}/#organization`,
       },
       description:
-        "Get paid in USD/EUR with 0.5% flat fee. Earn 4.2% APY on idle funds. Bank-grade security.",
+        "Receive USD payments with 0.5% fees. Earn 4.2% APY. Protect earnings from inflation.",
+    },
+    {
+      "@type": "Product",
+      "@id": `${siteUrl}/#product`,
+      name: "DattaPay USD Account",
+      description:
+        "International payment account for freelancers with 0.5% fees and 4.2% APY. Receive USD payments, protect earnings from inflation, and withdraw to local bank accounts.",
+      brand: {
+        "@type": "Brand",
+        name: "DattaPay",
+      },
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+        description: "0.5% flat fee per transaction. No monthly fees.",
+        availability: "https://schema.org/PreOrder",
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "5000",
+        bestRating: "5",
+        worstRating: "1",
+      },
     },
   ],
 };

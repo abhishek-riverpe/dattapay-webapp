@@ -6,13 +6,14 @@ import DashboardVisual from "@/components/dashboard-visual/dashboard-visual";
 import Testimonials from "@/components/landing/testimonial";
 import KeepMore from "@/components/keep-more";
 import HowItWorks from "@/components/how-it-works";
+import FAQSection from "@/components/faq-section";
 import CTASection from "@/components/cta-section";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "DattaPay - International Payments for Freelancers",
+  title: "DattaPay | Get Paid in USD - 0.5% Fees | Freelancer Payments",
   description:
-    "Get paid in USD/EUR with just 0.5% flat fee. Earn 4.2% APY on idle funds. Bank-grade security & compliance. Join 5,000+ freelancers saving $847/year on fees.",
+    "Receive USD payments with just 0.5% fees. Earn 4.2% APY on idle funds. Protect your earnings from inflation. Trusted by 5,000+ freelancers in Africa & LATAM.",
   alternates: {
     canonical: "https://dattapay.com",
   },
@@ -29,6 +30,7 @@ export default function Home() {
         <KeepMore />
         <Testimonials />
         <HowItWorks />
+        <FAQSection />
         <CTASection />
       </main>
       <Footer />
