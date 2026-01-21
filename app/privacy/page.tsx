@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description:
+    "Learn how DattaPay collects, uses, and protects your personal information. Our privacy policy covers data security, retention, and your rights.",
+  alternates: {
+    canonical: "https://dattapay.com/privacy",
+  },
+};
 
 export default function PrivacyPolicy() {
   return (

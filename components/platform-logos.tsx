@@ -3,11 +3,11 @@
 import { LogoLoop } from "./LogoLoop";
 
 const platforms = [
-  { src: "/logos/upwork.png", alt: "Upwork" },
-  { src: "/logos/fiverr.png", alt: "Fiverr" },
-  { src: "/logos/deel.png", alt: "Deel" },
-  { src: "/logos/toptal.png", alt: "Toptal" },
-  { src: "/logos/freelancer.png", alt: "Freelancer" },
+  { src: "/logos/upwork.png", alt: "Upwork freelance marketplace logo" },
+  { src: "/logos/fiverr.png", alt: "Fiverr freelance services platform logo" },
+  { src: "/logos/deel.png", alt: "Deel global payroll and compliance logo" },
+  { src: "/logos/toptal.png", alt: "Toptal elite freelancer network logo" },
+  { src: "/logos/freelancer.png", alt: "Freelancer.com marketplace logo" },
 ];
 
 export default function PlatformLogos() {

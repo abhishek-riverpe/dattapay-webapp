@@ -45,6 +45,8 @@ export const metadata: Metadata = {
     siteName: "DattaPay",
     type: "website",
     locale: "en_US",
+    // TODO: Create og-image.png (1200x630px) and save to /public/og-image.png
+    // This image appears when sharing on social media (Twitter, LinkedIn, Facebook)
     images: [
       {
         url: "/og-image.png",
@@ -75,9 +77,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: siteUrl,
-  },
-  verification: {
-    google: "your-google-verification-code",
   },
   icons: {
     icon: "/logos/logo.PNG?v=2",
