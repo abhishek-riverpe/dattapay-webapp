@@ -71,14 +71,14 @@ export default function Hero() {
             <div className="flex items-center gap-8 opacity-60 grayscale transition-all hover:opacity-100 hover:grayscale-0">
               <Image
                 src="/logos/visa.png"
-                alt="Visa"
+                alt="Visa payment network partner powering DattaPay transactions"
                 width={80}
                 height={26}
                 className="h-8 w-auto"
               />
               <Image
                 src="/logos/stripe.png"
-                alt="Stripe"
+                alt="Stripe payment infrastructure partner for secure transactions"
                 width={80}
                 height={33}
                 className="h-10 w-auto"

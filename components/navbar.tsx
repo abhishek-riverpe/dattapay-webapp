@@ -19,14 +19,14 @@ export default function Navbar() {
             <div className="absolute -inset-0.5 rounded-xl bg-gradient-to-br from-primary/60 to-primary/20 opacity-75 blur-sm transition-all group-hover:opacity-100 group-hover:blur-md" />
             <Image
               src={SITE.logo}
-              alt={SITE.name}
+              alt={`${SITE.name} - Payment platform for freelancers and creators`}
               width={40}
               height={40}
               className="relative h-10 w-10 rounded-xl object-cover shadow-lg ring-1 ring-white/20 transition-transform group-hover:scale-105 dark:hidden"
             />
             <Image
               src={SITE.logoDark}
-              alt={SITE.name}
+              alt={`${SITE.name} - Payment platform for freelancers and creators`}
               width={40}
               height={40}
               className="relative h-10 w-10 rounded-xl object-cover shadow-lg ring-1 ring-white/20 transition-transform group-hover:scale-105 hidden dark:block"

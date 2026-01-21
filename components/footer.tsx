@@ -16,14 +16,14 @@ export default function Footer() {
               <div className="absolute -inset-0.5 rounded-lg bg-gradient-to-br from-primary/50 to-primary/10 opacity-60 blur-sm transition-opacity group-hover:opacity-80" />
               <Image
                 src={SITE.logo}
-                alt={SITE.name}
+                alt={`${SITE.name} - Payment platform for freelancers and creators`}
                 width={36}
                 height={36}
                 className="relative h-9 w-9 rounded-lg object-cover shadow-md ring-1 ring-white/20 transition-transform group-hover:scale-105 dark:hidden"
               />
               <Image
                 src={SITE.logoDark}
-                alt={SITE.name}
+                alt={`${SITE.name} - Payment platform for freelancers and creators`}
                 width={36}
                 height={36}
                 className="relative h-9 w-9 rounded-lg object-cover shadow-md ring-1 ring-white/20 transition-transform group-hover:scale-105 hidden dark:block"
