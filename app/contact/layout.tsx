@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Request Early Access",
+  title: "Join DattaPay Waitlist | Start Earning in USD Today",
   description:
-    "Join DattaPay and start receiving international payments with just 0.5% fee. Request early access today and save up to $847/year on payment fees.",
+    "Get early access to DattaPay. Receive USD payments at 0.5% fees, earn 4.2% APY, and protect your income from currency fluctuations. Join 5,000+ freelancers.",
   openGraph: {
-    title: "Request Early Access | DattaPay",
+    title: "Join DattaPay Waitlist | Start Earning in USD Today",
     description:
-      "Join DattaPay and start receiving international payments with just 0.5% fee. Request early access today.",
+      "Get early access to DattaPay. Receive USD payments at 0.5% fees, earn 4.2% APY, and protect your income from currency fluctuations.",
     url: "https://dattapay.com/contact",
   },
   twitter: {
-    title: "Request Early Access | DattaPay",
+    title: "Join DattaPay Waitlist | Start Earning in USD Today",
     description:
-      "Join DattaPay and start receiving international payments with just 0.5% fee.",
+      "Get early access to DattaPay. Receive USD payments at 0.5% fees, earn 4.2% APY. Join 5,000+ freelancers.",
   },
   alternates: {
     canonical: "https://dattapay.com/contact",
