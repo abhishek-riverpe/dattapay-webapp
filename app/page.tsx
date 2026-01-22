@@ -5,7 +5,9 @@ import PlatformLogos from "@/components/platform-logos";
 import DashboardVisual from "@/components/dashboard-visual/dashboard-visual";
 import Testimonials from "@/components/landing/testimonial";
 import KeepMore from "@/components/keep-more";
+import BlogsSection from "@/components/blogs-section";
 import HowItWorks from "@/components/how-it-works";
+import FAQ from "@/components/faq";
 import CTASection from "@/components/cta-section";
 import Footer from "@/components/footer";
 
@@ -28,7 +30,9 @@ export default function Home() {
         <PlatformLogos />
         <KeepMore />
         <Testimonials />
+        <BlogsSection />
         <HowItWorks />
+        <FAQ />
         <CTASection />
       </main>
       <Footer />
