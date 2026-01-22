@@ -16,6 +16,7 @@ export const NAV_LINKS = [
   { name: "Features", href: "/#features" },
   { name: "How it Works", href: "/#how-it-works" },
   { name: "Pricing", href: "/#pricing" },
+  { name: "Blogs", href: "/blogs" },
 ] as const;
 
 export const FOOTER_LINKS = [

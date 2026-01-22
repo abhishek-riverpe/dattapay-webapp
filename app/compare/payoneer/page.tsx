@@ -1,281 +1,286 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
-import Link from "next/link";
-import { Check, X, ArrowRight } from "lucide-react";
+import ComparisonHero from "@/components/comparison/comparison-hero";
+import ComparisonTable, {
+  ComparisonFeature,
+} from "@/components/comparison/comparison-table";
+import ComparisonFAQ, { FAQItem } from "@/components/comparison/comparison-faq";
+import ComparisonCTA from "@/components/comparison/comparison-cta";
+
+const siteUrl = "https://dattapay.com";
 
 export const metadata: Metadata = {
-  title: "DattaPay vs Payoneer - Compare Fees & Features",
+  title: "DattaPay vs Payoneer 2026 - Compare Fees & Features",
   description:
-    "Compare DattaPay vs Payoneer for freelancer payments. DattaPay offers 0.5% fees vs Payoneer's 2-3%. Save up to $847/year. See the full comparison.",
+    "Compare DattaPay vs Payoneer for freelancer payments. Save up to $847/year with 0.5% flat fees vs Payoneer's 8.5% total fees. See the full comparison.",
   keywords: [
-    "payoneer alternative",
-    "payoneer vs dattapay",
-    "payoneer fees",
-    "cheaper than payoneer",
-    "payoneer alternative Africa",
-    "freelancer payment comparison",
+    "DattaPay vs Payoneer",
+    "Payoneer alternative",
+    "Payoneer alternative Africa",
+    "Payoneer fees too high",
+    "Payoneer alternative low fees",
+    "freelancer payment platform comparison",
+    "Payoneer alternative Nigeria",
+    "cheaper than Payoneer",
   ],
-  openGraph: {
-    title: "DattaPay vs Payoneer - Compare Fees & Features",
-    description:
-      "Compare DattaPay vs Payoneer. DattaPay offers 0.5% fees vs Payoneer's 2-3%. Save up to $847/year on freelancer payments.",
-    url: "https://dattapay.com/compare/payoneer",
-  },
-  twitter: {
-    title: "DattaPay vs Payoneer - Compare Fees & Features",
-    description:
-      "Compare DattaPay vs Payoneer. Save up to $847/year with 0.5% fees.",
-  },
   alternates: {
-    canonical: "https://dattapay.com/compare/payoneer",
+    canonical: `${siteUrl}/compare/payoneer`,
+  },
+  openGraph: {
+    title: "DattaPay vs Payoneer 2026 - Compare Fees & Features",
+    description:
+      "Compare DattaPay vs Payoneer for freelancer payments. Save up to $847/year with 0.5% flat fees.",
+    url: `${siteUrl}/compare/payoneer`,
+    type: "website",
   },
 };
 
-const comparisonData = [
+const features: ComparisonFeature[] = [
   {
-    feature: "Transaction Fee",
+    feature: "Receiving Fee",
     dattapay: "0.5% flat",
-    payoneer: "2-3%",
-    winner: "dattapay",
-  },
-  {
-    feature: "Monthly Fee",
-    dattapay: "$0",
-    payoneer: "$0",
-    winner: "tie",
+    competitor: "2-3%",
   },
   {
     feature: "Currency Conversion",
-    dattapay: "No hidden markup",
-    payoneer: "2-3.5% markup",
-    winner: "dattapay",
+    dattapay: "0%",
+    competitor: "2-4%",
+  },
+  {
+    feature: "Annual Fee",
+    dattapay: "Free",
+    competitor: "$29.95",
   },
   {
     feature: "Withdrawal Fee",
-    dattapay: "$0",
-    payoneer: "$1.50-3.00",
-    winner: "dattapay",
+    dattapay: "Free",
+    competitor: "$1.50-$3",
   },
   {
-    feature: "Earn Interest on Balance",
+    feature: "Yield on Balance",
     dattapay: "4.2% APY",
-    payoneer: "No",
-    winner: "dattapay",
+    competitor: "0%",
+  },
+  {
+    feature: "Stablecoin Support",
+    dattapay: true,
+    competitor: false,
   },
   {
     feature: "Inflation Protection",
-    dattapay: "USDC stablecoin",
-    payoneer: "No",
-    winner: "dattapay",
+    dattapay: true,
+    competitor: false,
   },
   {
-    feature: "Africa/LATAM Focus",
-    dattapay: "Yes - optimized",
-    payoneer: "Limited support",
-    winner: "dattapay",
+    feature: "Nigeria Support",
+    dattapay: true,
+    competitor: true,
   },
   {
     feature: "US Bank Account",
-    dattapay: "Yes",
-    payoneer: "Yes",
-    winner: "tie",
+    dattapay: true,
+    competitor: true,
+  },
+  {
+    feature: "Upwork Integration",
+    dattapay: true,
+    competitor: true,
+  },
+  {
+    feature: "Fiverr Integration",
+    dattapay: true,
+    competitor: true,
+  },
+  {
+    feature: "Total Fees (on $10k)",
+    dattapay: "$50",
+    competitor: "$850+",
+    highlight: true,
+  },
+  {
+    feature: "Annual Savings",
+    dattapay: "$847",
+    competitor: "-",
+    highlight: true,
   },
 ];
 
-const comparisonSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "DattaPay vs Payoneer Comparison",
-  description:
-    "Compare DattaPay vs Payoneer for freelancer payments. See fees, features, and savings.",
-  mainEntity: {
-    "@type": "ItemList",
-    itemListElement: comparisonData.map((item, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: item.feature,
-      description: `DattaPay: ${item.dattapay}, Payoneer: ${item.payoneer}`,
-    })),
+const faqs: FAQItem[] = [
+  {
+    question: "Why is DattaPay cheaper than Payoneer?",
+    answer:
+      "DattaPay uses blockchain technology and stablecoin infrastructure to reduce costs. We charge a flat 0.5% fee with no hidden charges, while Payoneer's total fees (receiving + currency conversion + annual fee) can reach 8.5% or more.",
   },
+  {
+    question: "Can I receive Upwork payments with DattaPay like Payoneer?",
+    answer:
+      "Yes! DattaPay provides you with a US bank account (routing and account number) that works with Upwork, Fiverr, Deel, Toptal, and any platform that supports US bank transfers. Simply add your DattaPay account as a payment method.",
+  },
+  {
+    question: "How do I switch from Payoneer to DattaPay?",
+    answer:
+      "Switching is simple: 1) Sign up for DattaPay (takes 5 minutes), 2) Get your US bank account details, 3) Update your payment method on Upwork/Fiverr/other platforms. Your next payment will come to DattaPay.",
+  },
+  {
+    question: "Is DattaPay safe compared to Payoneer?",
+    answer:
+      "Yes, DattaPay uses bank-grade security with 256-bit encryption, multi-factor authentication, and is fully compliant with financial regulations. Your funds are backed by USDC stablecoin, providing additional security and transparency.",
+  },
+  {
+    question: "Does DattaPay work in Nigeria like Payoneer?",
+    answer:
+      "Yes, DattaPay fully supports Nigerian freelancers. Unlike some competitors, we offer complete functionality in Nigeria including USD account, local withdrawals, and competitive exchange rates.",
+  },
+  {
+    question: "What is the 4.2% APY that Payoneer doesn't offer?",
+    answer:
+      "DattaPay pays 4.2% Annual Percentage Yield on your idle balance. If you keep $10,000 in your account, you'd earn approximately $420/year in passive income. Payoneer pays 0% on your balance.",
+  },
+  {
+    question: "How does DattaPay protect against inflation unlike Payoneer?",
+    answer:
+      "DattaPay converts your payments to USDC stablecoin, keeping your earnings pegged to US dollars. This protects freelancers in countries like Nigeria, Argentina, and Brazil from local currency devaluation.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/compare/payoneer`,
+      url: `${siteUrl}/compare/payoneer`,
+      name: "DattaPay vs Payoneer 2026 - Compare Fees & Features",
+      description:
+        "Compare DattaPay vs Payoneer for freelancer payments. Save up to $847/year.",
+      datePublished: "2026-01-01",
+      dateModified: "2026-01-22",
+      isPartOf: {
+        "@id": `${siteUrl}/#website`,
+      },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    },
+    {
+      "@type": "ItemList",
+      name: "DattaPay vs Payoneer Comparison",
+      itemListElement: [
+        {
+          "@type": "Product",
+          name: "DattaPay",
+          description: "0.5% flat fee, 4.2% APY yield, stablecoin backing",
+          offers: {
+            "@type": "Offer",
+            price: "0",
+            priceCurrency: "USD",
+          },
+        },
+        {
+          "@type": "Product",
+          name: "Payoneer",
+          description: "2-3% receiving fee + currency conversion + annual fee",
+        },
+      ],
+    },
+  ],
 };
 
-export default function PayoneerComparison() {
+export default function PayoneerComparisonPage() {
   return (
-    <div className="min-h-screen">
+    <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(comparisonSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4 max-w-5xl">
-          {/* Hero Section */}
+
+      <ComparisonHero
+        competitorName="Payoneer"
+        headline="DattaPay vs Payoneer: Save $847/Year"
+        subheadline="Payoneer charges up to 8.5% in total fees. DattaPay charges 0.5% flat. Plus, earn 4.2% APY on your balance - something Payoneer doesn't offer."
+        highlightStats={[
+          { value: "0.5%", label: "DattaPay Fee" },
+          { value: "8.5%", label: "Payoneer Total Fees" },
+          { value: "$847", label: "Annual Savings" },
+          { value: "4.2%", label: "APY on Balance" },
+        ]}
+      />
+
+      {/* Comparison Section */}
+      <section id="comparison" className="py-16 sm:py-24 bg-secondary/30">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              DattaPay vs Payoneer
-            </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              See how much you could save by switching from Payoneer to DattaPay
-            </p>
-          </div>
-
-          {/* Savings Calculator */}
-          <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-8 mb-12 text-white text-center">
-            <p className="text-lg opacity-90 mb-2">
-              On $10,000 annual freelance income, you save
-            </p>
-            <p className="text-5xl font-bold mb-2">$847/year</p>
-            <p className="text-sm opacity-80">
-              Based on average Payoneer fees of 3% vs DattaPay&apos;s 0.5%
-            </p>
-          </div>
-
-          {/* Comparison Table */}
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden mb-12">
-            <div className="grid grid-cols-3 bg-gray-50 dark:bg-gray-700 font-semibold">
-              <div className="p-4 text-gray-900 dark:text-white">Feature</div>
-              <div className="p-4 text-center text-green-600 dark:text-green-400">
-                DattaPay
-              </div>
-              <div className="p-4 text-center text-gray-600 dark:text-gray-400">
-                Payoneer
-              </div>
-            </div>
-            {comparisonData.map((row, index) => (
-              <div
-                key={index}
-                className="grid grid-cols-3 border-t border-gray-200 dark:border-gray-700"
-              >
-                <div className="p-4 text-gray-900 dark:text-white font-medium">
-                  {row.feature}
-                </div>
-                <div
-                  className={`p-4 text-center flex items-center justify-center gap-2 ${
-                    row.winner === "dattapay"
-                      ? "text-green-600 dark:text-green-400 font-semibold"
-                      : "text-gray-600 dark:text-gray-400"
-                  }`}
-                >
-                  {row.winner === "dattapay" && (
-                    <Check className="w-4 h-4 flex-shrink-0" />
-                  )}
-                  {row.dattapay}
-                </div>
-                <div
-                  className={`p-4 text-center flex items-center justify-center gap-2 ${
-                    row.winner === "payoneer"
-                      ? "text-green-600 dark:text-green-400 font-semibold"
-                      : "text-gray-600 dark:text-gray-400"
-                  }`}
-                >
-                  {row.winner === "dattapay" && row.payoneer !== "No" && (
-                    <X className="w-4 h-4 flex-shrink-0 text-red-500" />
-                  )}
-                  {row.payoneer}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Key Differences */}
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-green-50 dark:bg-green-900/20 rounded-xl p-6">
-              <h2 className="text-xl font-bold text-green-700 dark:text-green-400 mb-4">
-                Why Choose DattaPay
-              </h2>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 dark:text-gray-300">
-                    <strong>Save 80%+ on fees</strong> - 0.5% vs Payoneer&apos;s
-                    2-3%
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 dark:text-gray-300">
-                    <strong>Earn 4.2% APY</strong> on your idle funds
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 dark:text-gray-300">
-                    <strong>Inflation protection</strong> with USDC stablecoin
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 dark:text-gray-300">
-                    <strong>No hidden currency conversion</strong> markup
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 dark:text-gray-300">
-                    <strong>Built for Africa & LATAM</strong> freelancers
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
-              <h2 className="text-xl font-bold text-gray-700 dark:text-gray-300 mb-4">
-                Payoneer Limitations
-              </h2>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <X className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 dark:text-gray-300">
-                    High fees eat into your earnings (2-3%+)
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <X className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 dark:text-gray-300">
-                    Hidden currency conversion markup (2-3.5%)
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <X className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 dark:text-gray-300">
-                    No yield on idle funds - your money sits doing nothing
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <X className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 dark:text-gray-300">
-                    No protection against local currency inflation
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <X className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 dark:text-gray-300">
-                    Not optimized for emerging market freelancers
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="text-center bg-gray-900 dark:bg-gray-800 rounded-2xl p-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Ready to save $847/year?
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground mb-4">
+              Feature-by-Feature Comparison
             </h2>
-            <p className="text-gray-300 mb-6 max-w-xl mx-auto">
-              Join 5,000+ freelancers who switched from Payoneer to DattaPay
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              See exactly how DattaPay compares to Payoneer on fees, features,
+              and functionality.
             </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-4 rounded-xl transition-colors"
-            >
-              Get Early Access
-              <ArrowRight className="w-5 h-5" />
-            </Link>
+          </div>
+
+          <div className="rounded-2xl border border-border/50 bg-card overflow-hidden">
+            <ComparisonTable competitorName="Payoneer" features={features} />
           </div>
         </div>
-      </main>
-      <Footer />
-    </div>
+      </section>
+
+      {/* Why Switch Section */}
+      <section className="py-16 sm:py-24 bg-background">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground mb-4">
+              Why Freelancers Switch from Payoneer
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="rounded-2xl border border-border/50 bg-card p-6">
+              <div className="text-3xl font-bold text-primary mb-2">$29.95</div>
+              <h3 className="font-semibold text-foreground mb-2">
+                Annual Fee You Won&apos;t Pay
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Payoneer charges $29.95/year just to have an account. DattaPay
+                is free forever.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-border/50 bg-card p-6">
+              <div className="text-3xl font-bold text-primary mb-2">2-4%</div>
+              <h3 className="font-semibold text-foreground mb-2">
+                Hidden Currency Fees
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Payoneer&apos;s currency conversion adds 2-4% on top of their
+                receiving fees. DattaPay: 0%.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-border/50 bg-card p-6">
+              <div className="text-3xl font-bold text-primary mb-2">0%</div>
+              <h3 className="font-semibold text-foreground mb-2">
+                No Yield on Balance
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Payoneer pays nothing on your balance. DattaPay pays 4.2% APY
+                automatically.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <ComparisonFAQ competitorName="Payoneer" faqs={faqs} />
+
+      <ComparisonCTA competitorName="Payoneer" savings="$847" />
+    </>
   );
 }

@@ -1,326 +1,327 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
-import Link from "next/link";
-import { Check, X, ArrowRight } from "lucide-react";
+import ComparisonHero from "@/components/comparison/comparison-hero";
+import ComparisonTable, {
+  ComparisonFeature,
+} from "@/components/comparison/comparison-table";
+import ComparisonFAQ, { FAQItem } from "@/components/comparison/comparison-faq";
+import ComparisonCTA from "@/components/comparison/comparison-cta";
+
+const siteUrl = "https://dattapay.com";
 
 export const metadata: Metadata = {
-  title: "DattaPay vs Wise (TransferWise) - Compare Fees & Features",
+  title: "DattaPay vs Wise 2026 - Best Alternative After USD Suspension",
   description:
-    "Compare DattaPay vs Wise for freelancer payments in Africa & LATAM. DattaPay offers 0.5% fees + 4.2% APY. See the full feature comparison.",
+    "Wise suspended USD in Nigeria since 2022. DattaPay is the best Wise alternative with 0.5% fees, full USD support, and 4.2% APY. Compare features.",
   keywords: [
-    "wise alternative",
-    "wise alternative Africa",
-    "transferwise alternative",
-    "wise vs dattapay",
-    "wise fees Africa",
-    "cheaper than wise",
-    "freelancer payment comparison",
+    "DattaPay vs Wise",
+    "Wise alternative",
+    "Wise alternative Nigeria",
+    "Wise USD suspended Nigeria",
+    "TransferWise alternative Africa",
+    "Wise not working Nigeria",
+    "best Wise alternative 2026",
+    "Wise USD suspended alternative",
   ],
-  openGraph: {
-    title: "DattaPay vs Wise (TransferWise) - Compare Fees & Features",
-    description:
-      "Compare DattaPay vs Wise for Africa & LATAM freelancers. DattaPay offers 0.5% fees + 4.2% APY on your balance.",
-    url: "https://dattapay.com/compare/wise",
-  },
-  twitter: {
-    title: "DattaPay vs Wise - Compare Fees & Features",
-    description:
-      "Compare DattaPay vs Wise. Get 0.5% fees + 4.2% APY for freelancers in Africa & LATAM.",
-  },
   alternates: {
-    canonical: "https://dattapay.com/compare/wise",
+    canonical: `${siteUrl}/compare/wise`,
+  },
+  openGraph: {
+    title: "DattaPay vs Wise 2026 - Best Alternative After USD Suspension",
+    description:
+      "Wise suspended USD in Nigeria since 2022. DattaPay offers full USD support with 0.5% fees.",
+    url: `${siteUrl}/compare/wise`,
+    type: "website",
   },
 };
 
-const comparisonData = [
+const features: ComparisonFeature[] = [
+  {
+    feature: "USD Support in Nigeria",
+    dattapay: true,
+    competitor: false,
+    highlight: true,
+  },
   {
     feature: "Transaction Fee",
     dattapay: "0.5% flat",
-    wise: "0.5-2% (varies)",
-    winner: "dattapay",
-  },
-  {
-    feature: "Monthly Fee",
-    dattapay: "$0",
-    wise: "$0",
-    winner: "tie",
+    competitor: "0.5-2%",
   },
   {
     feature: "Currency Conversion",
-    dattapay: "No markup",
-    wise: "0.5-1.5% markup",
-    winner: "dattapay",
+    dattapay: "Competitive rates",
+    competitor: "Mid-market rate",
   },
   {
-    feature: "Earn Interest on Balance",
+    feature: "Monthly Fee",
+    dattapay: "Free",
+    competitor: "Free",
+  },
+  {
+    feature: "Yield on Balance",
     dattapay: "4.2% APY",
-    wise: "2-4% (limited countries)",
-    winner: "dattapay",
+    competitor: "Up to 4.36% (UK only)",
+  },
+  {
+    feature: "Stablecoin Support",
+    dattapay: true,
+    competitor: false,
   },
   {
     feature: "Inflation Protection",
-    dattapay: "USDC stablecoin",
-    wise: "No",
-    winner: "dattapay",
+    dattapay: true,
+    competitor: false,
   },
   {
-    feature: "Africa Support",
-    dattapay: "Full - optimized",
-    wise: "Limited countries",
-    winner: "dattapay",
+    feature: "Nigeria Full Support",
+    dattapay: true,
+    competitor: false,
+    highlight: true,
   },
   {
-    feature: "LATAM Support",
-    dattapay: "Full - optimized",
-    wise: "Limited features",
-    winner: "dattapay",
+    feature: "Kenya Support",
+    dattapay: true,
+    competitor: true,
+  },
+  {
+    feature: "Brazil Support",
+    dattapay: true,
+    competitor: true,
   },
   {
     feature: "US Bank Account",
-    dattapay: "Yes",
-    wise: "Yes",
-    winner: "tie",
+    dattapay: true,
+    competitor: true,
   },
   {
-    feature: "Nigerian Naira Support",
-    dattapay: "Yes",
-    wise: "Suspended",
-    winner: "dattapay",
+    feature: "Upwork Integration",
+    dattapay: true,
+    competitor: true,
   },
 ];
 
-const comparisonSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "DattaPay vs Wise Comparison",
-  description:
-    "Compare DattaPay vs Wise for freelancer payments in Africa & LATAM.",
-  mainEntity: {
-    "@type": "ItemList",
-    itemListElement: comparisonData.map((item, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: item.feature,
-      description: `DattaPay: ${item.dattapay}, Wise: ${item.wise}`,
-    })),
+const faqs: FAQItem[] = [
+  {
+    question: "Why did Wise suspend USD in Nigeria?",
+    answer:
+      "Wise suspended USD transfers to Nigeria in November 2022 due to regulatory and operational challenges. As of 2026, this suspension remains in effect, leaving Nigerian freelancers without access to Wise's USD services.",
   },
+  {
+    question: "Is DattaPay a good Wise alternative for Nigeria?",
+    answer:
+      "Yes! DattaPay fully supports Nigerian freelancers with USD accounts, competitive exchange rates, and local withdrawals. Unlike Wise, there are no restrictions on USD services in Nigeria.",
+  },
+  {
+    question: "How do DattaPay fees compare to Wise?",
+    answer:
+      "DattaPay charges a flat 0.5% fee on all transactions. Wise fees vary from 0.5-2% depending on the currency and transfer type. The key difference: DattaPay works in Nigeria, Wise doesn't for USD.",
+  },
+  {
+    question: "Does DattaPay offer the same multi-currency features as Wise?",
+    answer:
+      "DattaPay focuses on USD/USDC for freelancers, with a US bank account and multi-currency support. While Wise offers 50+ currencies, DattaPay offers what freelancers need most: reliable USD access with 4.2% APY yield.",
+  },
+  {
+    question: "Can I receive Upwork payments with DattaPay like I could with Wise?",
+    answer:
+      "Yes! DattaPay provides US bank account details (routing and account number) that work with Upwork, Fiverr, Deel, Toptal, and any platform supporting US bank transfers.",
+  },
+  {
+    question: "What's the advantage of DattaPay's stablecoin backing?",
+    answer:
+      "DattaPay converts your funds to USDC stablecoin, providing transparency and protection against local currency devaluation. Wise doesn't offer stablecoin backing, and their USD service is suspended in Nigeria.",
+  },
+  {
+    question: "Is DattaPay available in other African countries?",
+    answer:
+      "Yes! DattaPay supports freelancers across Africa including Nigeria, Kenya, Ghana, and more. Unlike Wise which has various restrictions in African countries, DattaPay is built specifically for emerging markets.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/compare/wise`,
+      url: `${siteUrl}/compare/wise`,
+      name: "DattaPay vs Wise 2026 - Best Alternative After USD Suspension",
+      description:
+        "Wise suspended USD in Nigeria since 2022. DattaPay is the best alternative.",
+      datePublished: "2026-01-01",
+      dateModified: "2026-01-22",
+      isPartOf: {
+        "@id": `${siteUrl}/#website`,
+      },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    },
+  ],
 };
 
-export default function WiseComparison() {
+export default function WiseComparisonPage() {
   return (
-    <div className="min-h-screen">
+    <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(comparisonSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Navbar />
-      <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4 max-w-5xl">
-          {/* Hero Section */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              DattaPay vs Wise
-            </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              The better alternative to Wise for freelancers in Africa & Latin
-              America
-            </p>
-          </div>
 
-          {/* Key Benefit */}
-          <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl p-8 mb-12 text-white text-center">
-            <p className="text-lg opacity-90 mb-2">Unlike Wise, DattaPay gives you</p>
-            <p className="text-4xl font-bold mb-2">
-              4.2% APY + Full Africa Support
-            </p>
-            <p className="text-sm opacity-80">
-              Earn yield on every dollar while getting full regional support
-            </p>
-          </div>
+      <ComparisonHero
+        competitorName="Wise"
+        headline="Wise Suspended USD in Nigeria. DattaPay Didn't."
+        subheadline="Since November 2022, Wise has suspended USD transfers to Nigeria. DattaPay offers full USD support, 0.5% fees, and 4.2% APY for Nigerian freelancers."
+        highlightStats={[
+          { value: "100%", label: "USD Support" },
+          { value: "Nov 2022", label: "Wise Suspended" },
+          { value: "0.5%", label: "DattaPay Fee" },
+          { value: "4.2%", label: "APY on Balance" },
+        ]}
+      />
 
-          {/* Comparison Table */}
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden mb-12">
-            <div className="grid grid-cols-3 bg-gray-50 dark:bg-gray-700 font-semibold">
-              <div className="p-4 text-gray-900 dark:text-white">Feature</div>
-              <div className="p-4 text-center text-green-600 dark:text-green-400">
-                DattaPay
-              </div>
-              <div className="p-4 text-center text-gray-600 dark:text-gray-400">
-                Wise
-              </div>
+      {/* Alert Section */}
+      <section className="py-8 bg-amber-500/10 border-y border-amber-500/20">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="flex items-start gap-4">
+            <div className="flex-shrink-0 text-2xl">⚠️</div>
+            <div>
+              <h3 className="font-semibold text-foreground mb-1">
+                Wise USD Suspended in Nigeria Since November 2022
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Wise has not restored USD transfer services to Nigeria as of
+                January 2026. Nigerian freelancers need an alternative that
+                actually works.
+              </p>
             </div>
-            {comparisonData.map((row, index) => (
-              <div
-                key={index}
-                className="grid grid-cols-3 border-t border-gray-200 dark:border-gray-700"
-              >
-                <div className="p-4 text-gray-900 dark:text-white font-medium">
-                  {row.feature}
-                </div>
-                <div
-                  className={`p-4 text-center flex items-center justify-center gap-2 ${
-                    row.winner === "dattapay"
-                      ? "text-green-600 dark:text-green-400 font-semibold"
-                      : "text-gray-600 dark:text-gray-400"
-                  }`}
-                >
-                  {row.winner === "dattapay" && (
-                    <Check className="w-4 h-4 flex-shrink-0" />
-                  )}
-                  {row.dattapay}
-                </div>
-                <div
-                  className={`p-4 text-center flex items-center justify-center gap-2 ${
-                    row.winner === "wise"
-                      ? "text-green-600 dark:text-green-400 font-semibold"
-                      : "text-gray-600 dark:text-gray-400"
-                  }`}
-                >
-                  {row.winner === "dattapay" &&
-                    row.wise !== "No" &&
-                    row.wise !== "Limited" && (
-                      <X className="w-4 h-4 flex-shrink-0 text-red-500" />
-                    )}
-                  {row.wise}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Key Differences */}
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-green-50 dark:bg-green-900/20 rounded-xl p-6">
-              <h2 className="text-xl font-bold text-green-700 dark:text-green-400 mb-4">
-                Why Choose DattaPay Over Wise
-              </h2>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 dark:text-gray-300">
-                    <strong>Full Africa support</strong> - Nigeria, Kenya, Ghana
-                    & more
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 dark:text-gray-300">
-                    <strong>4.2% APY guaranteed</strong> - not limited by country
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 dark:text-gray-300">
-                    <strong>USDC stablecoin protection</strong> against inflation
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 dark:text-gray-300">
-                    <strong>Consistent 0.5% fee</strong> - no variable rates
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 dark:text-gray-300">
-                    <strong>Built specifically</strong> for emerging market
-                    freelancers
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
-              <h2 className="text-xl font-bold text-gray-700 dark:text-gray-300 mb-4">
-                Wise Limitations for Africa/LATAM
-              </h2>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <X className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 dark:text-gray-300">
-                    Nigerian Naira transfers suspended
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <X className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 dark:text-gray-300">
-                    Interest feature not available in most African countries
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <X className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 dark:text-gray-300">
-                    Variable fees make costs unpredictable
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <X className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 dark:text-gray-300">
-                    Limited support for local withdrawal methods
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <X className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700 dark:text-gray-300">
-                    No inflation protection for your earnings
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Use Case */}
-          <div className="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-8 mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Perfect For Freelancers Who:
-            </h2>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="flex items-center gap-3">
-                <Check className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                <span className="text-gray-700 dark:text-gray-300">
-                  Work with US/EU clients on Upwork, Fiverr, or direct contracts
-                </span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Check className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                <span className="text-gray-700 dark:text-gray-300">
-                  Live in countries with high inflation (Nigeria, Argentina, etc.)
-                </span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Check className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                <span className="text-gray-700 dark:text-gray-300">
-                  Want to earn yield on their idle balance
-                </span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Check className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                <span className="text-gray-700 dark:text-gray-300">
-                  Need reliable USD access in underserved regions
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="text-center bg-gray-900 dark:bg-gray-800 rounded-2xl p-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Get full Africa & LATAM support
-            </h2>
-            <p className="text-gray-300 mb-6 max-w-xl mx-auto">
-              Join 5,000+ freelancers who chose DattaPay for reliable USD
-              payments
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-4 rounded-xl transition-colors"
-            >
-              Get Early Access
-              <ArrowRight className="w-5 h-5" />
-            </Link>
           </div>
         </div>
-      </main>
-      <Footer />
-    </div>
+      </section>
+
+      {/* Comparison Section */}
+      <section id="comparison" className="py-16 sm:py-24 bg-secondary/30">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground mb-4">
+              DattaPay vs Wise: Feature Comparison
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              See why DattaPay is the best Wise alternative for Nigerian and
+              African freelancers.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-border/50 bg-card overflow-hidden">
+            <ComparisonTable competitorName="Wise" features={features} />
+          </div>
+        </div>
+      </section>
+
+      {/* Why DattaPay Section */}
+      <section className="py-16 sm:py-24 bg-background">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground mb-4">
+              What Wise Users Get with DattaPay
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="rounded-2xl border border-border/50 bg-card p-6">
+              <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">
+                ✓
+              </div>
+              <h3 className="font-semibold text-foreground mb-2">
+                Full USD Support
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Unlike Wise, DattaPay has no restrictions on USD in Nigeria.
+                Receive and hold USD without limitations.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-border/50 bg-card p-6">
+              <div className="text-3xl font-bold text-primary mb-2">4.2%</div>
+              <h3 className="font-semibold text-foreground mb-2">
+                APY on Your Balance
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Wise&apos;s interest feature is UK-only. DattaPay pays 4.2% APY
+                globally on all idle funds.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-border/50 bg-card p-6">
+              <div className="text-3xl font-bold text-primary mb-2">USDC</div>
+              <h3 className="font-semibold text-foreground mb-2">
+                Stablecoin Protection
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Your funds are backed by USDC stablecoin. Protection against
+                Naira devaluation that Wise doesn&apos;t offer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline Section */}
+      <section className="py-16 sm:py-24 bg-secondary/30">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground mb-4">
+              Wise Nigeria USD Suspension Timeline
+            </h2>
+          </div>
+
+          <div className="space-y-6">
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 w-24 text-sm font-medium text-primary">
+                Nov 2022
+              </div>
+              <div className="flex-1 rounded-lg border border-border/50 bg-card p-4">
+                <p className="text-sm text-foreground">
+                  Wise suspends USD transfers to Nigeria citing operational
+                  challenges
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 w-24 text-sm font-medium text-muted-foreground">
+                2023-2025
+              </div>
+              <div className="flex-1 rounded-lg border border-border/50 bg-card p-4">
+                <p className="text-sm text-foreground">
+                  Suspension continues with no timeline for restoration
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 w-24 text-sm font-medium text-green-600 dark:text-green-400">
+                Today
+              </div>
+              <div className="flex-1 rounded-lg border border-primary/50 bg-primary/5 p-4">
+                <p className="text-sm text-foreground">
+                  DattaPay offers full USD support for Nigerian freelancers with
+                  0.5% fees and 4.2% APY
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <ComparisonFAQ competitorName="Wise" faqs={faqs} />
+
+      <ComparisonCTA competitorName="Wise" savings="$500+" />
+    </>
   );
 }
