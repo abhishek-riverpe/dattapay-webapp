@@ -1,10 +1,13 @@
 "use client";
 
-import { createContext, useContext, ReactNode } from "react";
+import { createContext, useContext, ReactNode, useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import {
   RegionalContentData,
   getRegionalContent,
   isSupportedRegion,
+  SUPPORTED_REGIONS,
+  REGIONAL_CONTENT,
 } from "./regional-content";
 
 interface RegionContextValue {
@@ -36,7 +39,23 @@ interface RegionProviderProps {
  * Provider component that wraps the app and provides region info
  * Should be used in the root layout with regionCode from middleware headers
  */
-export function RegionProvider({ children, regionCode }: RegionProviderProps) {
+export function RegionProvider({ children, regionCode: initialRegionCode }: RegionProviderProps) {
+  const pathname = usePathname();
+  const [regionCode, setRegionCode] = useState<string | null>(initialRegionCode);
+
+  useEffect(() => {
+    // Check if current path matches a supported region
+    const pathRegion = SUPPORTED_REGIONS.find((r) => 
+      pathname.startsWith(REGIONAL_CONTENT[r].path)
+    );
+
+    if (pathRegion) {
+      setRegionCode(pathRegion);
+    } else {
+      setRegionCode(initialRegionCode);
+    }
+  }, [pathname, initialRegionCode]);
+
   const isSupported = isSupportedRegion(regionCode);
   const regionData = getRegionalContent(regionCode);
 

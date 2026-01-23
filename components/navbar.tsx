@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { SITE, NAV_LINKS } from "@/lib/constants";
+import { RegionSwitcher } from "./region-switcher";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -49,7 +50,8 @@ export default function Navbar() {
         </div>
 
         {/* Desktop CTA */}
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center gap-4">
+          <RegionSwitcher />
           <Button asChild size="lg" className="rounded-full px-6">
             <Link href="/contact">Get Started Free</Link>
           </Button>
@@ -85,7 +87,11 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <div className="pt-4">
+            <div className="pt-4 flex flex-col gap-4">
+              <div className="flex items-center justify-between px-3">
+                <span className="text-sm font-medium text-muted-foreground">Region</span>
+                <RegionSwitcher />
+              </div>
               <Button asChild size="lg" className="w-full rounded-full">
                 <Link href="/contact">Get Started Free</Link>
               </Button>

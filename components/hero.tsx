@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, BadgePercent, Building2 } from "lucide-react";
 import { RegionalContentData, DEFAULT_CONTENT } from "@/lib/regional-content";
+import { useRegion } from "@/lib/region-context";
 
 const focusPoints = [
   { icon: BadgePercent, label: "Flat 0.5% Fee" },

@@ -50,10 +50,16 @@ export function proxy(request: NextRequest) {
 
   // Create response with region header for all routes
   // This allows server components to read the detected region
-  const response = NextResponse.next();
+  const requestHeaders = new Headers(request.headers);
   if (country) {
-    response.headers.set("x-detected-region", country);
+    requestHeaders.set("x-detected-region", country);
   }
+
+  const response = NextResponse.next({
+    request: {
+      headers: requestHeaders,
+    },
+  });
 
   return response;
 }
