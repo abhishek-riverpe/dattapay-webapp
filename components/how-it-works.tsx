@@ -1,48 +1,54 @@
-import { FileText, Banknote, Wallet } from "lucide-react";
+"use client";
 
-const steps = [
-  {
-    number: 1,
-    title: "Share details",
-    description: "Send your DattaPay USD account details to your client.",
-    icon: FileText,
-    iconBg: "bg-blue-100 dark:bg-blue-900/30",
-    iconColor: "text-blue-600 dark:text-blue-400",
-    numberStyle: "border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400",
-  },
-  {
-    number: 2,
-    title: "Get paid",
-    description: "Client pays via bank transfer. We receive it instantly.",
-    icon: Banknote,
-    iconBg: "bg-green-100 dark:bg-green-900/30",
-    iconColor: "text-green-600 dark:text-green-400",
-    numberStyle: "border-green-600 text-green-600 dark:border-green-400 dark:text-green-400",
-  },
-  {
-    number: 3,
-    title: "Earn & Spend",
-    description:
-      "Auto-convert to USDC stablecoin. Earn 4.2% APY or spend instantly via Visa card.",
-    icon: Wallet,
-    iconBg: "bg-amber-100 dark:bg-amber-900/30",
-    iconColor: "text-amber-600 dark:text-amber-400",
-    numberStyle:
-      "border-amber-600 text-amber-600 dark:border-amber-400 dark:text-amber-400",
-  },
-];
+import { FileText, Banknote, Wallet } from "lucide-react";
+import { useRegion } from "@/lib/region-context";
+import { DEFAULT_CONTENT } from "@/lib/regional-content";
 
 export default function HowItWorks() {
+  const { regionData } = useRegion();
+  const content = regionData?.howItWorks ?? DEFAULT_CONTENT.howItWorks;
+
+  const steps = [
+    {
+      number: 1,
+      title: content.steps.step1.title,
+      description: content.steps.step1.description,
+      icon: FileText,
+      iconBg: "bg-blue-100 dark:bg-blue-900/30",
+      iconColor: "text-blue-600 dark:text-blue-400",
+      numberStyle: "border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400",
+    },
+    {
+      number: 2,
+      title: content.steps.step2.title,
+      description: content.steps.step2.description,
+      icon: Banknote,
+      iconBg: "bg-green-100 dark:bg-green-900/30",
+      iconColor: "text-green-600 dark:text-green-400",
+      numberStyle: "border-green-600 text-green-600 dark:border-green-400 dark:text-green-400",
+    },
+    {
+      number: 3,
+      title: content.steps.step3.title,
+      description: content.steps.step3.description,
+      icon: Wallet,
+      iconBg: "bg-amber-100 dark:bg-amber-900/30",
+      iconColor: "text-amber-600 dark:text-amber-400",
+      numberStyle:
+        "border-amber-600 text-amber-600 dark:border-amber-400 dark:text-amber-400",
+    },
+  ];
+
   return (
     <section id="how-it-works" className="py-20 sm:py-28 bg-secondary/30">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-            How DattaPay works
+            {content.title}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Three simple steps to financial freedom as a global freelancer.
+            {content.subtitle}
           </p>
         </div>
 

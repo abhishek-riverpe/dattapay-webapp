@@ -3,6 +3,8 @@
 import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { useRegion } from "@/lib/region-context";
+import { DEFAULT_CONTENT } from "@/lib/regional-content";
 import {
   ALL_CONTENT,
   ContentItem,
@@ -13,7 +15,7 @@ import {
 // Filter out regional content from the count
 const nonRegionalContent = ALL_CONTENT.filter(item => item.type !== "regional");
 
-function BlogCard({ item }: { item: ContentItem }) {
+function BlogCard({ item, readMoreLabel }: { item: ContentItem; readMoreLabel: string }) {
   const config = typeConfig[item.type];
   const Icon = config.icon;
 
@@ -54,7 +56,7 @@ function BlogCard({ item }: { item: ContentItem }) {
         </p>
 
         <div className="flex items-center text-sm font-medium text-primary">
-          Read more
+          {readMoreLabel}
           <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
         </div>
       </div>
@@ -63,6 +65,8 @@ function BlogCard({ item }: { item: ContentItem }) {
 }
 
 export default function BlogsSection() {
+  const { regionData } = useRegion();
+  const content = regionData?.blogsSection ?? DEFAULT_CONTENT.blogsSection;
   const displayItems = getFeaturedContent(8);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -107,10 +111,10 @@ export default function BlogsSection() {
         <div className="flex items-center justify-between mb-10">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
-              Resources & Guides
+              {content.title}
             </h2>
             <p className="mt-2 text-lg text-muted-foreground">
-              Learn how to get paid smarter as a freelancer
+              {content.subtitle}
             </p>
           </div>
 
@@ -152,7 +156,7 @@ export default function BlogsSection() {
             className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide scroll-smooth"
           >
             {displayItems.map((item) => (
-              <BlogCard key={item.slug} item={item} />
+              <BlogCard key={item.slug} item={item} readMoreLabel={content.readMore} />
             ))}
 
             {/* "More" CTA Card */}
@@ -164,10 +168,10 @@ export default function BlogsSection() {
                 <ArrowRight className="h-8 w-8 text-primary transition-transform group-hover:translate-x-1" />
               </div>
               <span className="font-semibold text-foreground group-hover:text-primary transition-colors">
-                View All Resources
+                {content.viewAll}
               </span>
               <span className="text-sm text-muted-foreground mt-1">
-                {nonRegionalContent.length}+ articles
+                {nonRegionalContent.length}+ {content.articles}
               </span>
             </Link>
           </div>

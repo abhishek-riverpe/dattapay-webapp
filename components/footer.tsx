@@ -1,11 +1,23 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Linkedin, Instagram, Twitter } from "lucide-react";
-import { SITE, FOOTER_LINKS, SOCIAL_LINKS } from "@/lib/constants";
+import { SITE, SOCIAL_LINKS } from "@/lib/constants";
+import { useRegion } from "@/lib/region-context";
+import { DEFAULT_CONTENT } from "@/lib/regional-content";
 
 const socialIcons = { Linkedin, Instagram, Twitter } as const;
 
 export default function Footer() {
+  const { regionData } = useRegion();
+  const footer = regionData?.footer ?? DEFAULT_CONTENT.footer;
+
+  const footerLinks = [
+    { name: footer.privacy, href: "/privacy" },
+    { name: footer.contactUs, href: "/contact" },
+  ];
+
   return (
     <footer className="border-t border-border/40">
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
@@ -34,7 +46,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-sm text-muted-foreground text-center">
-            © {SITE.year} {SITE.company}. All rights reserved.
+            © {SITE.year} {SITE.company}. {footer.rights}
           </p>
 
           {/* Social Links */}
@@ -58,7 +70,7 @@ export default function Footer() {
 
           {/* Links */}
           <div className="flex items-center gap-6">
-            {FOOTER_LINKS.map((link) => (
+            {footerLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}

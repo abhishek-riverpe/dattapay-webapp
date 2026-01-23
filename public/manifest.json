@@ -1,0 +1,21 @@
+{
+  "name": "DattaPay",
+  "short_name": "DattaPay",
+  "description": "International Payments for Freelancers - Get paid in USD/EUR with 0.5% flat fee.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "icons": [
+    {
+      "src": "/logos/logo.PNG",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logos/logo.PNG",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

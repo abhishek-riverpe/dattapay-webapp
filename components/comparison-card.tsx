@@ -1,6 +1,10 @@
+"use client";
+
 import { memo } from "react";
 import { Check, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useRegion } from "@/lib/region-context";
+import { DEFAULT_CONTENT } from "@/lib/regional-content";
 
 interface FeeRow {
   label: string;
@@ -9,25 +13,28 @@ interface FeeRow {
   isHighlight?: boolean;
 }
 
-const feeData: FeeRow[] = [
-  { label: "Receive International", traditional: "3-5%", dattapay: "0.5%" },
-  { label: "Currency Conversion", traditional: "2-4%", dattapay: "0%" },
-  { label: "Monthly Fee", traditional: "$0-30", dattapay: "Free" },
-  { label: "Withdrawal Fee", traditional: "$1-5", dattapay: "Free" },
-  {
-    label: "Annual Savings",
-    traditional: "-",
-    dattapay: "~$847",
-    isHighlight: true,
-  },
-];
-
 interface ComparisonCardProps {
   type: "traditional" | "dattapay";
 }
 
 const ComparisonCard = memo(function ComparisonCard({ type }: ComparisonCardProps) {
   const isRecommended = type === "dattapay";
+  const { regionData } = useRegion();
+  
+  const comp = regionData?.keepMore.comparison ?? DEFAULT_CONTENT.keepMore.comparison;
+
+  const feeData: FeeRow[] = [
+    { label: comp.labels.receiveInternational, traditional: "3-5%", dattapay: "0.5%" },
+    { label: comp.labels.currencyConversion, traditional: "2-4%", dattapay: "0%" },
+    { label: comp.labels.monthlyFee, traditional: "$0-30", dattapay: comp.free },
+    { label: comp.labels.withdrawalFee, traditional: "$1-5", dattapay: comp.free },
+    {
+      label: comp.labels.annualSavings,
+      traditional: "-",
+      dattapay: "~$847",
+      isHighlight: true,
+    },
+  ];
 
   return (
     <div
@@ -41,7 +48,7 @@ const ComparisonCard = memo(function ComparisonCard({ type }: ComparisonCardProp
       {/* Recommended Badge */}
       {isRecommended && (
         <div className="absolute -top-3 right-6 bg-primary text-primary-foreground text-xs font-semibold uppercase px-3 py-1 rounded-full">
-          Recommended
+          {comp.recommended}
         </div>
       )}
 
@@ -53,12 +60,12 @@ const ComparisonCard = memo(function ComparisonCard({ type }: ComparisonCardProp
             isRecommended ? "text-foreground" : "text-muted-foreground"
           )}
         >
-          {isRecommended ? "DattaPay" : "PayPal, Payoneer & Others"}
+          {isRecommended ? "DattaPay" : comp.othersTitle}
         </h3>
         <p className="text-sm text-muted-foreground mt-1">
           {isRecommended
-            ? "Modern payment infrastructure"
-            : "Traditional payment methods"}
+            ? comp.dattapaySubtitle
+            : comp.othersSubtitle}
         </p>
       </div>
 
@@ -76,7 +83,7 @@ const ComparisonCard = memo(function ComparisonCard({ type }: ComparisonCardProp
             <div className="flex items-center gap-2">
               {isRecommended ? (
                 <>
-                  {row.dattapay === "Free" || row.dattapay === "0%" ? (
+                  {row.dattapay === comp.free || row.dattapay === "0%" ? (
                     <Check className="h-4 w-4 text-green-600 dark:text-green-400" />
                   ) : null}
                   <span
@@ -84,7 +91,7 @@ const ComparisonCard = memo(function ComparisonCard({ type }: ComparisonCardProp
                       "text-sm font-semibold",
                       row.isHighlight
                         ? "text-green-600 dark:text-green-400 text-base"
-                        : row.dattapay === "Free" || row.dattapay === "0%"
+                        : row.dattapay === comp.free || row.dattapay === "0%"
                         ? "text-green-600 dark:text-green-400"
                         : "text-foreground"
                     )}

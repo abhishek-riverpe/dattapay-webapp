@@ -3,33 +3,6 @@ import ComparisonCard from "./comparison-card";
 import FeatureCard from "./feature-card";
 import { RegionalContentData, DEFAULT_CONTENT } from "@/lib/regional-content";
 
-const features = [
-  {
-    icon: Globe,
-    title: "Global Accounts",
-    description:
-      "Get US & EU local banking details for seamless international payments without borders.",
-    iconBg: "bg-blue-100 dark:bg-blue-900/30",
-    iconColor: "text-blue-600 dark:text-blue-400",
-  },
-  {
-    icon: Zap,
-    title: "Instant Settlement",
-    description:
-      "Mid-market exchange rates with instant conversion. No waiting, no hidden markups.",
-    iconBg: "bg-amber-100 dark:bg-amber-900/30",
-    iconColor: "text-amber-600 dark:text-amber-400",
-  },
-  {
-    icon: TrendingUp,
-    title: "Automated Yield",
-    description:
-      "Earn 4.2% APY automatically on idle funds with instant withdrawal anytime.",
-    iconBg: "bg-green-100 dark:bg-green-900/30",
-    iconColor: "text-green-600 dark:text-green-400",
-  },
-];
-
 interface KeepMoreProps {
   regionData?: RegionalContentData;
 }
@@ -37,6 +10,31 @@ interface KeepMoreProps {
 export default function KeepMore({ regionData }: KeepMoreProps) {
   // Use regional content if provided, otherwise use default
   const content = regionData?.keepMore ?? DEFAULT_CONTENT.keepMore;
+
+  const featureItems = [
+    {
+      icon: Globe,
+      title: content.features.globalAccounts.title,
+      description: content.features.globalAccounts.description,
+      iconBg: "bg-blue-100 dark:bg-blue-900/30",
+      iconColor: "text-blue-600 dark:text-blue-400",
+    },
+    {
+      icon: Zap,
+      title: content.features.instantSettlement.title,
+      description: content.features.instantSettlement.description,
+      iconBg: "bg-amber-100 dark:bg-amber-900/30",
+      iconColor: "text-amber-600 dark:text-amber-400",
+    },
+    {
+      icon: TrendingUp,
+      title: content.features.automatedYield.title,
+      description: content.features.automatedYield.description,
+      iconBg: "bg-green-100 dark:bg-green-900/30",
+      iconColor: "text-green-600 dark:text-green-400",
+    },
+  ];
+
   return (
     <section id="features" className="py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -71,7 +69,7 @@ export default function KeepMore({ regionData }: KeepMoreProps) {
 
         {/* Feature Cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature) => (
+          {featureItems.map((feature) => (
             <FeatureCard
               key={feature.title}
               icon={feature.icon}

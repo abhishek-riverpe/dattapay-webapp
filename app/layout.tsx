@@ -105,6 +105,13 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: siteUrl,
+    languages: {
+      "en-US": siteUrl,
+      "en-NG": `${siteUrl}/ng`,
+      "pt-BR": `${siteUrl}/br`,
+      "es-AR": `${siteUrl}/ar`,
+      "en-BD": `${siteUrl}/bn`,
+    },
   },
   icons: {
     icon: "/logos/logo.PNG?v=2",
@@ -113,166 +120,86 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": `${siteUrl}/#organization`,
-      name: "DattaPay",
-      url: siteUrl,
-      logo: {
-        "@type": "ImageObject",
-        url: `${siteUrl}/logos/logo.PNG?v=2`,
-        width: 512,
-        height: 512,
-      },
-      description:
-        "International payment platform for freelancers with 0.5% fees and 4.2% APY yield.",
-      email: "support@dattapay.com",
-      foundingDate: "2024",
-      sameAs: [
-        "https://twitter.com/dattapay",
-        "https://linkedin.com/company/dattapay",
-        "https://instagram.com/dattapay.global",
-      ],
-    },
-    {
-      "@type": "WebSite",
-      "@id": `${siteUrl}/#website`,
-      url: siteUrl,
-      name: "DattaPay",
-      description:
-        "Get paid in USD/EUR with 0.5% flat fee. Earn 4.2% APY on idle funds.",
-      publisher: {
-        "@id": `${siteUrl}/#organization`,
-      },
-    },
-    {
-      "@type": "WebPage",
-      "@id": `${siteUrl}/#webpage`,
-      url: siteUrl,
-      name: "DattaPay - International Payments for Freelancers",
-      isPartOf: {
-        "@id": `${siteUrl}/#website`,
-      },
-      about: {
-        "@id": `${siteUrl}/#organization`,
-      },
-      description:
-        "Get paid in USD/EUR with 0.5% flat fee. Earn 4.2% APY on idle funds. Bank-grade security.",
-    },
-    {
-      "@type": "SoftwareApplication",
-      "@id": `${siteUrl}/#application`,
-      name: "DattaPay",
-      applicationCategory: "FinanceApplication",
-      operatingSystem: "Web, iOS, Android",
-      description:
-        "Receive USD payments with 0.5% fees. Earn 4.2% APY on idle funds. Protect earnings from inflation with stablecoin backing.",
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "USD",
-        description: "Free to join, 0.5% flat fee per transaction",
-      },
-      featureList: [
-        "0.5% flat transaction fee",
-        "4.2% APY on idle funds",
-        "USDC stablecoin backing",
-        "US bank account details",
-        "Multi-currency support",
-        "Bank-grade security",
-      ],
-      provider: {
-        "@id": `${siteUrl}/#organization`,
-      },
-    },
-    {
-      "@type": "FAQPage",
-      "@id": `${siteUrl}/#faq`,
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "How do I receive USD payments as a freelancer in Africa?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Sign up for DattaPay to get a US bank account with routing and account numbers. Share your account details with clients on Upwork, Fiverr, or any platform. Receive payments in USD with only 0.5% fees. Your funds automatically earn 4.2% APY while idle.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How does DattaPay protect my earnings from inflation?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "DattaPay converts your payments to USDC stablecoin, keeping your earnings pegged to US dollars regardless of local currency fluctuations. You also earn 4.2% APY on idle funds, helping you outpace inflation in countries like Nigeria, Argentina, and Brazil.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What are DattaPay's fees compared to Payoneer?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "DattaPay charges a flat 0.5% fee with no hidden costs. Payoneer charges 2-3% receiving fee plus 2-4% currency conversion, plus a $29.95 annual fee. On average, freelancers save $847/year by switching to DattaPay.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Is DattaPay available in Nigeria?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes, DattaPay is fully available in Nigeria. Unlike PayPal (send-only until 2026) and Wise (USD suspended since November 2022), DattaPay fully supports Nigerian freelancers with USD accounts and local withdrawals.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How is DattaPay different from Grey or Raenest?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "DattaPay offers the lowest fees at 0.5% flat, compared to Grey and Raenest's higher rates. Plus, DattaPay pays 4.2% APY yield on idle funds and uses USDC stablecoin backing for inflation protection - features not offered by competitors.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Can I receive payments from Upwork, Fiverr, and Deel?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes, DattaPay works with all major freelance platforms including Upwork, Fiverr, Deel, Toptal, and Freelancer.com. Simply add your DattaPay US bank details as a payment method on any platform.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What is the 4.2% APY yield and how does it work?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Your idle funds in DattaPay automatically earn 4.2% Annual Percentage Yield. This means if you keep $10,000 in your account for a year, you'd earn approximately $420 in passive income. Interest accrues daily and compounds automatically.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How long do withdrawals take?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Withdrawals to local bank accounts typically complete within 1-2 business days. Crypto withdrawals (USDC) are instant. There are no withdrawal fees - you only pay the 0.5% flat fee when receiving funds.",
-          },
-        },
-      ],
-    },
-  ],
-};
-
 export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Get region code from middleware headers
   const headersList = await headers();
   const regionCode = headersList.get("x-detected-region");
+  
+  // Determine language based on region code
+  let lang = "en";
+  let currentSiteUrl = siteUrl;
+  
+  if (regionCode === "BR") {
+    lang = "pt-BR";
+    currentSiteUrl = `${siteUrl}/br`;
+  } else if (regionCode === "AR") {
+    lang = "es-AR";
+    currentSiteUrl = `${siteUrl}/ar`;
+  } else if (regionCode === "BD") {
+    lang = "en-BD";
+    currentSiteUrl = `${siteUrl}/bn`;
+  } else if (regionCode === "NG") {
+    lang = "en-NG";
+    currentSiteUrl = `${siteUrl}/ng`;
+  }
+
+  const dynamicJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${siteUrl}/#organization`,
+        "name": "DattaPay",
+        "url": siteUrl,
+        "logo": {
+          "@type": "ImageObject",
+          "url": `${siteUrl}/logos/logo.PNG?v=2`,
+          "width": 512,
+          "height": 512
+        },
+        "description": "International payment platform for freelancers with 0.5% fees and 4.2% APY yield.",
+        "email": "support@dattapay.com",
+        "foundingDate": "2024",
+        "sameAs": [
+          "https://twitter.com/dattapay",
+          "https://linkedin.com/company/dattapay",
+          "https://instagram.com/dattapay.global"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        "url": siteUrl,
+        "name": "DattaPay",
+        "description": "Get paid in USD/EUR with 0.5% flat fee. Earn 4.2% APY on idle funds.",
+        "publisher": {
+          "@id": `${siteUrl}/#organization`
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${currentSiteUrl}/#webpage`,
+        "url": currentSiteUrl,
+        "name": "DattaPay - International Payments for Freelancers",
+        "isPartOf": {
+          "@id": `${siteUrl}/#website`
+        },
+        "about": {
+          "@id": `${siteUrl}/#organization`
+        },
+        "description": "Get paid in USD/EUR with 0.5% flat fee. Earn 4.2% APY on idle funds. Bank-grade security.",
+        "inLanguage": lang
+      }
+    ]
+  };
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <head>
+        <link rel="manifest" href="/manifest.json" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -281,7 +208,7 @@ export default async function RootLayout({
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(dynamicJsonLd) }}
         />
       </head>
       <body className={`${poppins.variable} antialiased`}>

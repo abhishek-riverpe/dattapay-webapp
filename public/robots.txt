@@ -4,12 +4,11 @@
 User-agent: *
 Allow: /
 
-# Disallow API routes
-Disallow: /api/
-
-# Disallow generated files
+# Disallow critical internal folders
 Disallow: /_next/
-Disallow: /generated/
+Disallow: /static/
+Disallow: /api/
+Disallow: /prisma/
 
-# Sitemap
+# Sitemaps
 Sitemap: https://dattapay.com/sitemap.xml

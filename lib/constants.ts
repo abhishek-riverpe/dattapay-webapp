@@ -12,18 +12,6 @@ export const RATE_LIMIT = {
   windowMs: 60 * 60 * 1000, // 1 hour
 } as const;
 
-export const NAV_LINKS = [
-  { name: "Features", href: "/#features" },
-  { name: "How it Works", href: "/#how-it-works" },
-  { name: "Pricing", href: "/#pricing" },
-  { name: "Blogs", href: "/blogs" },
-] as const;
-
-export const FOOTER_LINKS = [
-  { name: "Privacy", href: "/privacy" },
-  { name: "Contact Us", href: "/contact" },
-] as const;
-
 export const SOCIAL_LINKS = [
   { name: "LinkedIn", href: "https://www.linkedin.com/company/dattapay/home", icon: "Linkedin" },
   { name: "Instagram", href: "https://www.instagram.com/dattapay.global/", icon: "Instagram" },

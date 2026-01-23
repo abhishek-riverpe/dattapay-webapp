@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, BadgePercent, Building2 } from "lucide-react";
 import { RegionalContentData, DEFAULT_CONTENT } from "@/lib/regional-content";
-import { useRegion } from "@/lib/region-context";
 
 const focusPoints = [
   { icon: BadgePercent, label: "Flat 0.5% Fee" },
@@ -87,17 +86,19 @@ export default function Hero({ regionData }: HeroProps) {
             <div className="flex items-center gap-8 opacity-60 grayscale transition-all hover:opacity-100 hover:grayscale-0">
               <Image
                 src="/logos/visa.png"
-                alt="Visa payment network partner powering DattaPay transactions"
+                alt="Visa Official Partner - Global Payment Network"
                 width={80}
                 height={26}
                 className="h-8 w-auto"
+                priority
               />
               <Image
                 src="/logos/stripe.png"
-                alt="Stripe payment infrastructure partner for secure transactions"
+                alt="Stripe Official Partner - Secure Infrastructure"
                 width={80}
                 height={33}
                 className="h-10 w-auto"
+                priority
               />
             </div>
           </div>

@@ -13,6 +13,7 @@ export default function FAQ({ regionData }: FAQProps) {
 
   // Use regional FAQs if provided, otherwise use default
   const faqs = regionData?.faqs ?? DEFAULT_CONTENT.faqs;
+  const faqTrans = regionData?.faqTranslations ?? DEFAULT_CONTENT.faqTranslations;
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -24,10 +25,10 @@ export default function FAQ({ regionData }: FAQProps) {
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-            {regionData ? (regionData.language === "pt" ? "Perguntas frequentes" : regionData.language === "es" ? "Preguntas frecuentes" : "Frequently asked questions") : "Frequently asked questions"}
+            {faqTrans.title}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            {regionData ? (regionData.language === "pt" ? "Tudo o que você precisa saber sobre receber pagamentos com DattaPay." : regionData.language === "es" ? "Todo lo que necesitas saber sobre recibir pagos con DattaPay." : "Everything you need to know about receiving payments with DattaPay.") : "Everything you need to know about receiving payments with DattaPay."}
+            {faqTrans.subtitle}
           </p>
         </div>
 

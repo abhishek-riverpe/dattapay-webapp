@@ -6,6 +6,11 @@ export interface FAQItem {
   answer: string;
 }
 
+export interface FAQTranslations {
+  title: string;
+  subtitle: string;
+}
+
 export interface HeroContent {
   headline: string;
   subheadline: string;
@@ -20,6 +25,25 @@ export interface KeepMoreContent {
   comparisonTitle: string;
   featuresTitle: string;
   featuresSubtitle: string;
+  features: {
+    globalAccounts: { title: string; description: string };
+    instantSettlement: { title: string; description: string };
+    automatedYield: { title: string; description: string };
+  };
+  comparison: {
+    recommended: string;
+    othersTitle: string;
+    othersSubtitle: string;
+    dattapaySubtitle: string;
+    labels: {
+      receiveInternational: string;
+      currencyConversion: string;
+      monthlyFee: string;
+      withdrawalFee: string;
+      annualSavings: string;
+    };
+    free: string;
+  };
 }
 
 export interface CTAContent {
@@ -27,6 +51,42 @@ export interface CTAContent {
   subheadline: string;
   ctaText: string;
   note: string;
+}
+
+export interface HowItWorksTranslations {
+  title: string;
+  subtitle: string;
+  steps: {
+    step1: { title: string; description: string };
+    step2: { title: string; description: string };
+    step3: { title: string; description: string };
+  };
+}
+
+export interface PlatformLogosTranslations {
+  trustedBy: string;
+}
+
+export interface BlogsSectionTranslations {
+  title: string;
+  subtitle: string;
+  readMore: string;
+  viewAll: string;
+  articles: string;
+}
+
+export interface NavTranslations {
+  features: string;
+  howItWorks: string;
+  pricing: string;
+  blogs: string;
+  getStarted: string;
+}
+
+export interface FooterTranslations {
+  privacy: string;
+  contactUs: string;
+  rights: string;
 }
 
 export interface RegionalContentData {
@@ -44,8 +104,14 @@ export interface RegionalContentData {
   hero: HeroContent;
   keepMore: KeepMoreContent;
   faqs: FAQItem[];
+  faqTranslations: FAQTranslations;
+  howItWorks: HowItWorksTranslations;
+  platformLogos: PlatformLogosTranslations;
+  blogsSection: BlogsSectionTranslations;
   cta: CTAContent;
   platforms: string[];
+  nav: NavTranslations;
+  footer: FooterTranslations;
 }
 
 export const SUPPORTED_REGIONS = ["NG", "BR", "AR", "BD"] as const;
@@ -54,6 +120,18 @@ export type SupportedRegion = (typeof SUPPORTED_REGIONS)[number];
 // Default English content (used for main landing page and unsupported regions)
 export const DEFAULT_CONTENT: Omit<RegionalContentData, "code" | "country" | "countryAdjective" | "flag" | "locale" | "path" | "currency"> = {
   language: "en",
+  nav: {
+    features: "Features",
+    howItWorks: "How it Works",
+    pricing: "Pricing",
+    blogs: "Blogs",
+    getStarted: "Get Started Free",
+  },
+  footer: {
+    privacy: "Privacy",
+    contactUs: "Contact Us",
+    rights: "All rights reserved.",
+  },
   hero: {
     headline: "Empowering freelancers & creators.",
     subheadline: "Get paid in USD/EUR with instant settlement. Save up to $847/year in fees and earn 4.2% APY on idle funds.",
@@ -72,6 +150,34 @@ export const DEFAULT_CONTENT: Omit<RegionalContentData, "code" | "country" | "co
     comparisonTitle: "Fee Comparison",
     featuresTitle: "Built for the modern freelancer",
     featuresSubtitle: "Everything you need to get paid globally and grow your wealth",
+    features: {
+      globalAccounts: {
+        title: "Global Accounts",
+        description: "Get US & EU local banking details for seamless international payments without borders.",
+      },
+      instantSettlement: {
+        title: "Instant Settlement",
+        description: "Mid-market exchange rates with instant conversion. No waiting, no hidden markups.",
+      },
+      automatedYield: {
+        title: "Automated Yield",
+        description: "Earn 4.2% APY automatically on idle funds with instant withdrawal anytime.",
+      },
+    },
+    comparison: {
+      recommended: "Recommended",
+      othersTitle: "PayPal, Payoneer & Others",
+      othersSubtitle: "Traditional payment methods",
+      dattapaySubtitle: "Modern payment infrastructure",
+      labels: {
+        receiveInternational: "Receive International",
+        currencyConversion: "Currency Conversion",
+        monthlyFee: "Monthly Fee",
+        withdrawalFee: "Withdrawal Fee",
+        annualSavings: "Annual Savings",
+      },
+      free: "Free",
+    },
   },
   faqs: [
     {
@@ -107,6 +213,38 @@ export const DEFAULT_CONTENT: Omit<RegionalContentData, "code" | "country" | "co
       answer: "Withdrawals to local bank accounts typically complete within 1-2 business days. Crypto withdrawals (USDC) are instant. There are no withdrawal fees - you only pay the 0.5% flat fee when receiving funds.",
     },
   ],
+  faqTranslations: {
+    title: "Frequently asked questions",
+    subtitle: "Everything you need to know about receiving payments with DattaPay.",
+  },
+  howItWorks: {
+    title: "How DattaPay works",
+    subtitle: "Three simple steps to financial freedom as a global freelancer.",
+    steps: {
+      step1: {
+        title: "Share details",
+        description: "Send your DattaPay USD account details to your client.",
+      },
+      step2: {
+        title: "Get paid",
+        description: "Client pays via bank transfer. We receive it instantly.",
+      },
+      step3: {
+        title: "Earn & Spend",
+        description: "Auto-convert to USDC stablecoin. Earn 4.2% APY or spend instantly via Visa card.",
+      },
+    },
+  },
+  platformLogos: {
+    trustedBy: "Trusted by global teams at",
+  },
+  blogsSection: {
+    title: "Resources & Guides",
+    subtitle: "Learn how to get paid smarter as a freelancer",
+    readMore: "Read more",
+    viewAll: "View All Resources",
+    articles: "articles",
+  },
   cta: {
     headline: "Ready to get paid like a local?",
     subheadline: "Join 5,000+ freelancers saving on fees and earning yield on their hard-earned money.",
@@ -129,6 +267,18 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
       code: "NGN",
       symbol: "\u20A6",
     },
+    nav: {
+      features: "Features",
+      howItWorks: "How it Works",
+      pricing: "Pricing",
+      blogs: "Blogs",
+      getStarted: "Get Started Free",
+    },
+    footer: {
+      privacy: "Privacy",
+      contactUs: "Contact Us",
+      rights: "All rights reserved.",
+    },
     hero: {
       headline: "Receive USD Payments in Nigeria with 0.5% Fees",
       subheadline: "Join thousands of Nigerian freelancers using DattaPay. Get a US dollar account, earn 4.2% APY, and protect your earnings from Naira devaluation.",
@@ -147,6 +297,34 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
       comparisonTitle: "Fee Comparison",
       featuresTitle: "Built for Nigerian freelancers",
       featuresSubtitle: "Everything you need to get paid in USD and protect your earnings",
+      features: {
+        globalAccounts: {
+          title: "Global Accounts",
+          description: "Get US & EU local banking details for seamless international payments without borders.",
+        },
+        instantSettlement: {
+          title: "Instant Settlement",
+          description: "Mid-market exchange rates with instant conversion. No waiting, no hidden markups.",
+        },
+        automatedYield: {
+          title: "Automated Yield",
+          description: "Earn 4.2% APY automatically on idle funds with instant withdrawal anytime.",
+        },
+      },
+      comparison: {
+        recommended: "Recommended",
+        othersTitle: "PayPal, Payoneer & Others",
+        othersSubtitle: "Traditional payment methods",
+        dattapaySubtitle: "Modern payment infrastructure",
+        labels: {
+          receiveInternational: "Receive International",
+          currencyConversion: "Currency Conversion",
+          monthlyFee: "Monthly Fee",
+          withdrawalFee: "Withdrawal Fee",
+          annualSavings: "Annual Savings",
+        },
+        free: "Free",
+      },
     },
     faqs: [
       {
@@ -182,6 +360,38 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
         answer: "Withdrawals to Nigerian bank accounts typically complete within 1-2 business days. We support all major Nigerian banks including GTBank, Access Bank, First Bank, UBA, and others.",
       },
     ],
+    faqTranslations: {
+      title: "Frequently asked questions",
+      subtitle: "Everything you need to know about receiving payments in Nigeria with DattaPay.",
+    },
+    howItWorks: {
+      title: "How DattaPay works",
+      subtitle: "Three simple steps to financial freedom as a global freelancer.",
+      steps: {
+        step1: {
+          title: "Share details",
+          description: "Send your DattaPay USD account details to your client.",
+        },
+        step2: {
+          title: "Get paid",
+          description: "Client pays via bank transfer. We receive it instantly.",
+        },
+        step3: {
+          title: "Earn & Spend",
+          description: "Auto-convert to USDC stablecoin. Earn 4.2% APY or spend instantly via Visa card.",
+        },
+      },
+    },
+    platformLogos: {
+      trustedBy: "Trusted by global teams at",
+    },
+    blogsSection: {
+      title: "Resources & Guides",
+      subtitle: "Learn how to get paid smarter as a freelancer",
+      readMore: "Read more",
+      viewAll: "View All Resources",
+      articles: "articles",
+    },
     cta: {
       headline: "Start Receiving USD in Nigeria Today",
       subheadline: "Set up your DattaPay account in 5 minutes. No paperwork, no waiting. Just a US bank account ready to receive payments.",
@@ -202,6 +412,18 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
       code: "BRL",
       symbol: "R$",
     },
+    nav: {
+      features: "Recursos",
+      howItWorks: "Como Funciona",
+      pricing: "Preços",
+      blogs: "Blogs",
+      getStarted: "Começar Grátis",
+    },
+    footer: {
+      privacy: "Privacidade",
+      contactUs: "Contate-nos",
+      rights: "Todos os direitos reservados.",
+    },
     hero: {
       headline: "Receba em Dólar como Freelancer no Brasil",
       subheadline: "Conta americana com taxa de apenas 0.5%. Ganhe 4.2% APY no seu saldo. Proteja seus ganhos da desvalorização do real.",
@@ -220,6 +442,34 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
       comparisonTitle: "Comparação de Taxas",
       featuresTitle: "Feito para o freelancer moderno",
       featuresSubtitle: "Tudo o que você precisa para receber pagamentos globais e aumentar sua riqueza",
+      features: {
+        globalAccounts: {
+          title: "Contas Globais",
+          description: "Obtenha detalhes bancários locais dos EUA e da UE para pagamentos internacionais perfeitos e sem fronteiras.",
+        },
+        instantSettlement: {
+          title: "Liquidação Instantânea",
+          description: "Taxas de câmbio de mercado com conversão instantânea. Sem espera, sem taxas ocultas.",
+        },
+        automatedYield: {
+          title: "Rendimento Automatizado",
+          description: "Ganhe 4,2% de APY automaticamente em fundos ociosos com retirada instantânea a qualquer momento.",
+        },
+      },
+      comparison: {
+        recommended: "Recomendado",
+        othersTitle: "PayPal, Payoneer e Outros",
+        othersSubtitle: "Métodos de pagamento tradicionais",
+        dattapaySubtitle: "Infraestrutura de pagamento moderna",
+        labels: {
+          receiveInternational: "Receber Internacional",
+          currencyConversion: "Conversão de Moeda",
+          monthlyFee: "Taxa Mensal",
+          withdrawalFee: "Taxa de Retirada",
+          annualSavings: "Economia Anual",
+        },
+        free: "Grátis",
+      },
     },
     faqs: [
       {
@@ -255,6 +505,38 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
         answer: "Como qualquer conta no exterior, você deve declarar sua conta DattaPay na declaração de imposto de renda anual se o saldo ultrapassar US$100. Consulte um contador para orientação específica sobre sua situação.",
       },
     ],
+    faqTranslations: {
+      title: "Perguntas Frequentes",
+      subtitle: "Tudo o que você precisa saber sobre receber pagamentos com o DattaPay no Brasil.",
+    },
+    howItWorks: {
+      title: "Como o DattaPay funciona",
+      subtitle: "Três passos simples para a liberdade financeira como freelancer global.",
+      steps: {
+        step1: {
+          title: "Compartilhe detalhes",
+          description: "Envie os detalhes da sua conta DattaPay em USD para o seu cliente.",
+        },
+        step2: {
+          title: "Receba o pagamento",
+          description: "O cliente paga via transferência bancária. Recebemos instantaneamente.",
+        },
+        step3: {
+          title: "Ganhe e Gaste",
+          description: "Conversão automática para a stablecoin USDC. Ganhe 4,2% de APY ou gaste instantaneamente via cartão Visa.",
+        },
+      },
+    },
+    platformLogos: {
+      trustedBy: "Confiado por equipes globais em",
+    },
+    blogsSection: {
+      title: "Recursos e Guias",
+      subtitle: "Saiba como receber pagamentos de forma mais inteligente como freelancer",
+      readMore: "Leia mais",
+      viewAll: "Ver Todos os Recursos",
+      articles: "artigos",
+    },
     cta: {
       headline: "Comece a Receber em Dólar Hoje",
       subheadline: "Crie sua conta DattaPay em 5 minutos. Sem burocracia, sem espera. Sua conta americana pronta para receber pagamentos.",
@@ -275,6 +557,18 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
       code: "ARS",
       symbol: "$",
     },
+    nav: {
+      features: "Funciones",
+      howItWorks: "Cómo Funciona",
+      pricing: "Precios",
+      blogs: "Blogs",
+      getStarted: "Empezar Gratis",
+    },
+    footer: {
+      privacy: "Privacidad",
+      contactUs: "Contáctenos",
+      rights: "Todos los derechos reservados.",
+    },
     hero: {
       headline: "Cobra en Dólares sin Cepo en Argentina",
       subheadline: "Cuenta americana con 0.5% de comisión. Gana 4.2% APY. Protege tus ingresos de la inflación del 100%+ con USDC stablecoin.",
@@ -293,6 +587,34 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
       comparisonTitle: "Comparación de Comisiones",
       featuresTitle: "Hecho para el freelancer moderno",
       featuresSubtitle: "Todo lo que necesitás para recibir pagos globales y hacer crecer tu patrimonio",
+      features: {
+        globalAccounts: {
+          title: "Cuentas Globales",
+          description: "Obtené detalles bancarios locales de EE. UU. y la UE para pagos internacionales sin fronteras.",
+        },
+        instantSettlement: {
+          title: "Liquidación Instantánea",
+          description: "Tipos de cambio de mercado con conversión instantánea. Sin esperas ni cargos ocultos.",
+        },
+        automatedYield: {
+          title: "Rendimiento Automatizado",
+          description: "Ganá un 4,2% de APY automáticamente sobre fondos inactivos con retiro instantáneo en cualquier momento.",
+        },
+      },
+      comparison: {
+        recommended: "Recomendado",
+        othersTitle: "PayPal, Payoneer y Otros",
+        othersSubtitle: "Métodos de pago tradicionales",
+        dattapaySubtitle: "Infraestructura de pago moderna",
+        labels: {
+          receiveInternational: "Recibir Internacional",
+          currencyConversion: "Conversión de Moneda",
+          monthlyFee: "Cargo Mensual",
+          withdrawalFee: "Cargo por Retiro",
+          annualSavings: "Ahorro Anual",
+        },
+        free: "Gratis",
+      },
     },
     faqs: [
       {
@@ -328,6 +650,38 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
         answer: "Podés retirar a tu cuenta bancaria argentina, mantener tus fondos en USDC para protección contra inflación, o hacer retiros en crypto. Los retiros a bancos argentinos se procesan en 1-3 días hábiles.",
       },
     ],
+    faqTranslations: {
+      title: "Preguntas Frecuentes",
+      subtitle: "Todo lo que necesitás saber sobre recibir pagos con DattaPay en Argentina.",
+    },
+    howItWorks: {
+      title: "Cómo funciona DattaPay",
+      subtitle: "Tres simples pasos hacia la libertad financiera como freelancer global.",
+      steps: {
+        step1: {
+          title: "Compartí detalles",
+          description: "Enviá los detalles de tu cuenta DattaPay en USD a tu cliente.",
+        },
+        step2: {
+          title: "Cobrá",
+          description: "El cliente paga mediante transferencia bancaria. Lo recibimos al instante.",
+        },
+        step3: {
+          title: "Ganá y Gastá",
+          description: "Conversión automática a la stablecoin USDC. Ganá un 4,2% de APY o gastá al instante con tu tarjeta Visa.",
+        },
+      },
+    },
+    platformLogos: {
+      trustedBy: "Confiado por equipos globales en",
+    },
+    blogsSection: {
+      title: "Recursos y Guías",
+      subtitle: "Aprendé cómo cobrar de forma más inteligente como freelancer",
+      readMore: "Leer más",
+      viewAll: "Ver Todos los Recursos",
+      articles: "artículos",
+    },
     cta: {
       headline: "Empezá a Cobrar en Dólares Hoy",
       subheadline: "Creá tu cuenta DattaPay en 5 minutos. Sin burocracia, sin espera. Tu cuenta americana lista para recibir pagos.",
@@ -348,6 +702,18 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
       code: "BDT",
       symbol: "৳",
     },
+    nav: {
+      features: "Features",
+      howItWorks: "How it Works",
+      pricing: "Pricing",
+      blogs: "Blogs",
+      getStarted: "Get Started Free",
+    },
+    footer: {
+      privacy: "Privacy",
+      contactUs: "Contact Us",
+      rights: "All rights reserved.",
+    },
     hero: {
       headline: "Receive USD Payments in Bangladesh with 0.5% Fees",
       subheadline: "Join thousands of Bangladeshi freelancers using DattaPay. Get a US dollar account, earn 4.2% APY, and protect your earnings from Taka devaluation.",
@@ -366,6 +732,34 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
       comparisonTitle: "Fee Comparison",
       featuresTitle: "Built for Bangladeshi freelancers",
       featuresSubtitle: "Everything you need to get paid in USD and protect your earnings",
+      features: {
+        globalAccounts: {
+          title: "Global Accounts",
+          description: "Get US & EU local banking details for seamless international payments without borders.",
+        },
+        instantSettlement: {
+          title: "Instant Settlement",
+          description: "Mid-market exchange rates with instant conversion. No waiting, no hidden markups.",
+        },
+        automatedYield: {
+          title: "Automated Yield",
+          description: "Earn 4.2% APY automatically on idle funds with instant withdrawal anytime.",
+        },
+      },
+      comparison: {
+        recommended: "Recommended",
+        othersTitle: "PayPal, Payoneer & Others",
+        othersSubtitle: "Traditional payment methods",
+        dattapaySubtitle: "Modern payment infrastructure",
+        labels: {
+          receiveInternational: "Receive International",
+          currencyConversion: "Currency Conversion",
+          monthlyFee: "Monthly Fee",
+          withdrawalFee: "Withdrawal Fee",
+          annualSavings: "Annual Savings",
+        },
+        free: "Free",
+      },
     },
     faqs: [
       {
@@ -401,6 +795,38 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
         answer: "Withdrawals to Bangladeshi bank accounts typically complete within 1-3 business days. We support all major Bangladeshi banks for local withdrawals.",
       },
     ],
+    faqTranslations: {
+      title: "Frequently asked questions",
+      subtitle: "Everything you need to know about receiving payments in Bangladesh with DattaPay.",
+    },
+    howItWorks: {
+      title: "How DattaPay works",
+      subtitle: "Three simple steps to financial freedom as a global freelancer.",
+      steps: {
+        step1: {
+          title: "Share details",
+          description: "Send your DattaPay USD account details to your client.",
+        },
+        step2: {
+          title: "Get paid",
+          description: "Client pays via bank transfer. We receive it instantly.",
+        },
+        step3: {
+          title: "Earn & Spend",
+          description: "Auto-convert to USDC stablecoin. Earn 4.2% APY or spend instantly via Visa card.",
+        },
+      },
+    },
+    platformLogos: {
+      trustedBy: "Trusted by global teams at",
+    },
+    blogsSection: {
+      title: "Resources & Guides",
+      subtitle: "Learn how to get paid smarter as a freelancer",
+      readMore: "Read more",
+      viewAll: "View All Resources",
+      articles: "articles",
+    },
     cta: {
       headline: "Start Receiving USD in Bangladesh Today",
       subheadline: "Set up your DattaPay account in 5 minutes. No paperwork, no waiting. Just a US bank account ready to receive payments.",

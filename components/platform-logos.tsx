@@ -1,6 +1,8 @@
 "use client";
 
 import { LogoLoop } from "./LogoLoop";
+import { useRegion } from "@/lib/region-context";
+import { DEFAULT_CONTENT } from "@/lib/regional-content";
 
 const platforms = [
   { src: "/logos/upwork.png", alt: "Upwork freelance marketplace logo" },
@@ -11,11 +13,14 @@ const platforms = [
 ];
 
 export default function PlatformLogos() {
+  const { regionData } = useRegion();
+  const content = regionData?.platformLogos ?? DEFAULT_CONTENT.platformLogos;
+
   return (
     <section className="py-12 border-y border-border/40 bg-secondary/20">
       <div className="text-center mb-8">
         <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
-          Trusted by global teams at
+          {content.trustedBy}
         </p>
       </div>
       <LogoLoop
