@@ -1,8 +1,16 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { RegionalContentData, DEFAULT_CONTENT } from "@/lib/regional-content";
 
-export default function CTASection() {
+interface CTASectionProps {
+  regionData?: RegionalContentData;
+}
+
+export default function CTASection({ regionData }: CTASectionProps) {
+  // Use regional content if provided, otherwise use default
+  const content = regionData?.cta ?? DEFAULT_CONTENT.cta;
+
   return (
     <section className="relative py-20 sm:py-28 overflow-hidden">
       {/* Background */}
@@ -13,20 +21,19 @@ export default function CTASection() {
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         {/* Headline */}
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-          Ready to get paid like a local?
+          {content.headline}
         </h2>
 
         {/* Subheadline */}
         <p className="mt-4 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-          Join 5,000+ freelancers saving on fees and earning yield on their
-          hard-earned money.
+          {content.subheadline}
         </p>
 
         {/* CTA Button */}
         <div className="mt-8">
           <Button asChild size="lg" className="rounded-full px-8 text-base">
             <Link href="/contact">
-              Request Early Access
+              {content.ctaText}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
@@ -34,7 +41,7 @@ export default function CTASection() {
 
         {/* Note */}
         <p className="mt-4 text-sm text-muted-foreground">
-          No credit card required. Tailored for non-US residents.
+          {content.note}
         </p>
       </div>
     </section>

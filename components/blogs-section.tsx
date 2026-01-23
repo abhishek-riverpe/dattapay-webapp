@@ -10,6 +10,9 @@ import {
   getFeaturedContent,
 } from "@/lib/content-registry";
 
+// Filter out regional content from the count
+const nonRegionalContent = ALL_CONTENT.filter(item => item.type !== "regional");
+
 function BlogCard({ item }: { item: ContentItem }) {
   const config = typeConfig[item.type];
   const Icon = config.icon;
@@ -164,7 +167,7 @@ export default function BlogsSection() {
                 View All Resources
               </span>
               <span className="text-sm text-muted-foreground mt-1">
-                {ALL_CONTENT.length}+ articles
+                {nonRegionalContent.length}+ articles
               </span>
             </Link>
           </div>

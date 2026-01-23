@@ -189,13 +189,13 @@ export function getContentByType(type: ContentType): ContentItem[] {
 
 export function getFeaturedContent(count: number = 8): ContentItem[] {
   // Return a mix of content types for the landing page section
+  // Regional content is excluded as it's served via IP-based routing
   const featured: ContentItem[] = [];
 
-  // Add some from each category
-  featured.push(...COMPARISONS.slice(0, 2));
-  featured.push(...PLATFORMS.slice(0, 2));
+  // Add some from each category (excluding regional)
+  featured.push(...COMPARISONS.slice(0, 3));
+  featured.push(...PLATFORMS.slice(0, 3));
   featured.push(...LEARNING.slice(0, 2));
-  featured.push(...REGIONS.slice(0, 2));
 
   return featured.slice(0, count);
 }

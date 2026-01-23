@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { Poppins } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { RegionProvider } from "@/lib/region-context";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -259,11 +261,15 @@ const jsonLd = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Get region code from middleware headers
+  const headersList = await headers();
+  const regionCode = headersList.get("x-detected-region");
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -285,7 +291,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <RegionProvider regionCode={regionCode}>
+            {children}
+          </RegionProvider>
           <ThemeToggle />
         </ThemeProvider>
       </body>
