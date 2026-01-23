@@ -48,7 +48,7 @@ export interface RegionalContentData {
   platforms: string[];
 }
 
-export const SUPPORTED_REGIONS = ["NG", "BR", "AR"] as const;
+export const SUPPORTED_REGIONS = ["NG", "BR", "AR", "BD"] as const;
 export type SupportedRegion = (typeof SUPPORTED_REGIONS)[number];
 
 // Default English content (used for main landing page and unsupported regions)
@@ -335,6 +335,79 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
       note: "Sin tarjeta de crédito requerida. Hecho para freelancers argentinos.",
     },
     platforms: ["Upwork", "Fiverr", "Toptal", "Freelancer.com", "Workana", "Deel", "Remote.com", "Turing"],
+  },
+  BD: {
+    code: "BD",
+    country: "Bangladesh",
+    countryAdjective: "Bangladeshi",
+    flag: "\u{1F1E7}\u{1F1E9}",
+    locale: "en-BD",
+    language: "en",
+    path: "/bn",
+    currency: {
+      code: "BDT",
+      symbol: "৳",
+    },
+    hero: {
+      headline: "Receive USD Payments in Bangladesh with 0.5% Fees",
+      subheadline: "Join thousands of Bangladeshi freelancers using DattaPay. Get a US dollar account, earn 4.2% APY, and protect your earnings from Taka devaluation.",
+      ctaText: "Get Your USD Account",
+      badge: "Built for Bangladeshi Freelancers",
+      stats: [
+        { value: "0.5%", label: "Flat Fee" },
+        { value: "4.2%", label: "APY Yield" },
+        { value: "$0", label: "Monthly Fee" },
+        { value: "5 min", label: "Setup Time" },
+      ],
+    },
+    keepMore: {
+      title: "Keep more of what you earn",
+      subtitle: "Bangladeshi freelancers lose up to 5-8% on traditional payment processors. DattaPay charges 0.5% flat and protects your earnings with USDC.",
+      comparisonTitle: "Fee Comparison",
+      featuresTitle: "Built for Bangladeshi freelancers",
+      featuresSubtitle: "Everything you need to get paid in USD and protect your earnings",
+    },
+    faqs: [
+      {
+        question: "How do I receive USD payments in Bangladesh with DattaPay?",
+        answer: "Sign up for DattaPay to get a US bank account with routing and account numbers. Share these details with your clients on Upwork, Fiverr, or any platform. When they pay, the funds arrive in your DattaPay account in USD.",
+      },
+      {
+        question: "Is DattaPay legal in Bangladesh?",
+        answer: "Yes, DattaPay operates legally and is compliant with international financial regulations. We provide legitimate USD account services for freelancers receiving international payments for remote work.",
+      },
+      {
+        question: "Why is DattaPay better than Payoneer for Bangladesh?",
+        answer: "DattaPay charges 0.5% flat fee vs Payoneer's 5-8% total fees (receiving + currency conversion + annual fee). Plus, DattaPay pays 4.2% APY on your balance - Payoneer pays 0%.",
+      },
+      {
+        question: "Can I receive Upwork payments with DattaPay in Bangladesh?",
+        answer: "Yes! Simply add your DattaPay US bank account details (routing and account number) as a payment method on Upwork. Your earnings will be deposited directly to your DattaPay account with only 0.5% fees.",
+      },
+      {
+        question: "How does DattaPay protect against Taka devaluation?",
+        answer: "DattaPay converts your payments to USDC stablecoin, keeping your earnings pegged to the US dollar. When the Taka drops, your USD-denominated funds maintain their value. You can convert to Taka only when you need to spend.",
+      },
+      {
+        question: "How does the 4.2% APY yield work?",
+        answer: "Your idle funds in DattaPay automatically earn 4.2% Annual Percentage Yield. This means if you keep $10,000 in your account for a year, you'd earn approximately $420 in passive income. Interest accrues daily and compounds automatically.",
+      },
+      {
+        question: "Can I receive payments from Fiverr and Freelancer.com?",
+        answer: "Yes, DattaPay works with all major freelance platforms including Upwork, Fiverr, Freelancer.com, Toptal, and Deel. Simply add your DattaPay US bank details as a payment method on any platform.",
+      },
+      {
+        question: "How long do withdrawals to Bangladeshi banks take?",
+        answer: "Withdrawals to Bangladeshi bank accounts typically complete within 1-3 business days. We support all major Bangladeshi banks for local withdrawals.",
+      },
+    ],
+    cta: {
+      headline: "Start Receiving USD in Bangladesh Today",
+      subheadline: "Set up your DattaPay account in 5 minutes. No paperwork, no waiting. Just a US bank account ready to receive payments.",
+      ctaText: "Get Your USD Account",
+      note: "No credit card required. Tailored for Bangladeshi freelancers.",
+    },
+    platforms: ["Upwork", "Fiverr", "Toptal", "Deel", "Freelancer.com", "Remote.com", "Turing"],
   },
 };
 

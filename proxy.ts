@@ -6,12 +6,13 @@ const SUPPORTED_COUNTRIES: Record<string, string> = {
   NG: "/ng", // Nigeria
   BR: "/br", // Brazil
   AR: "/ar", // Argentina
+  BD: "/bn", // Bangladesh
 };
 
 // Cookie name to track if user has been geo-redirected
 const GEO_COOKIE = "dattapay-geo-redirect";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Get country from various geo headers (Vercel, Cloudflare, etc.)
