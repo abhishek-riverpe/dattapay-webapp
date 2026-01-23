@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, BadgePercent, Building2 } from "lucide-react";
+import { RegionalContentData, DEFAULT_CONTENT } from "@/lib/regional-content";
 
 const focusPoints = [
   { icon: BadgePercent, label: "Flat 0.5% Fee" },
@@ -9,7 +10,13 @@ const focusPoints = [
   { icon: Building2, label: "Registered MSB with FinCEN" },
 ];
 
-export default function Hero() {
+interface HeroProps {
+  regionData?: RegionalContentData;
+}
+
+export default function Hero({ regionData }: HeroProps) {
+  // Use regional content if provided, otherwise use default
+  const content = regionData?.hero ?? DEFAULT_CONTENT.hero;
   return (
     <section className="relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
@@ -20,24 +27,32 @@ export default function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary"></span>
             </span>
-            Founded by former Visa employees
+            {regionData ? (
+              <>
+                {regionData.flag} {content.badge}
+              </>
+            ) : (
+              content.badge
+            )}
           </div>
 
           {/* Headline */}
           <h1 className="max-w-4xl text-4xl font-bold tracking-tight leading-snug sm:text-5xl lg:text-6xl">
-            Empowering freelancers & creators.{" "}
-            <span className="bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              Receive, grow, spend.
-            </span>
+            {regionData ? (
+              content.headline
+            ) : (
+              <>
+                Empowering freelancers & creators.{" "}
+                <span className="bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                  Receive, grow, spend.
+                </span>
+              </>
+            )}
           </h1>
 
           {/* Subtitle */}
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-            Get paid in USD/EUR with instant settlement. Save up to{" "}
-            <span className="font-semibold text-foreground">$847/year</span> in
-            fees and earn{" "}
-            <span className="font-semibold text-foreground">4.2% APY</span> on
-            idle funds.
+            {content.subheadline}
           </p>
 
           {/* Focus Points */}
@@ -57,7 +72,7 @@ export default function Hero() {
           <div className="mt-10">
             <Button asChild size="lg" className="rounded-full px-8 text-base">
               <Link href="/contact">
-                Get Started Free
+                {content.ctaText}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>

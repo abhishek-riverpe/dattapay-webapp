@@ -1,6 +1,7 @@
 import { Globe, Zap, TrendingUp } from "lucide-react";
 import ComparisonCard from "./comparison-card";
 import FeatureCard from "./feature-card";
+import { RegionalContentData, DEFAULT_CONTENT } from "@/lib/regional-content";
 
 const features = [
   {
@@ -29,18 +30,23 @@ const features = [
   },
 ];
 
-export default function KeepMore() {
+interface KeepMoreProps {
+  regionData?: RegionalContentData;
+}
+
+export default function KeepMore({ regionData }: KeepMoreProps) {
+  // Use regional content if provided, otherwise use default
+  const content = regionData?.keepMore ?? DEFAULT_CONTENT.keepMore;
   return (
     <section id="features" className="py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-            Keep more of what you earn
+            {content.title}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Traditional payment processors take up to 5% of your hard-earned money.
-            DattaPay charges a flat 0.5% — saving you thousands every year.
+            {content.subtitle}
           </p>
         </div>
 
@@ -56,10 +62,10 @@ export default function KeepMore() {
         {/* Features Section */}
         <div className="text-center mb-10">
           <h3 className="text-xl sm:text-2xl font-semibold text-foreground">
-            Built for the modern freelancer
+            {content.featuresTitle}
           </h3>
           <p className="mt-2 text-muted-foreground">
-            Everything you need to get paid globally and grow your wealth
+            {content.featuresSubtitle}
           </p>
         </div>
 

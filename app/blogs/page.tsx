@@ -146,7 +146,6 @@ export default function BlogsPage() {
   const comparisons = getContentByType("comparison");
   const platforms = getContentByType("platform");
   const learning = getContentByType("learning");
-  const regions = getContentByType("regional");
 
   return (
     <>
@@ -187,9 +186,6 @@ export default function BlogsPage() {
           )}
           {learning.length > 0 && (
             <ContentSection type="learning" items={learning} />
-          )}
-          {regions.length > 0 && (
-            <ContentSection type="regional" items={regions} />
           )}
         </div>
       </section>
