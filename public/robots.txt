@@ -1,14 +1,45 @@
 # DattaPay Robots.txt
 # https://dattapay.com
+# Last updated: January 2026
 
+# Allow all crawlers
 User-agent: *
 Allow: /
+Crawl-delay: 1
 
-# Disallow critical internal folders
+# Disallow internal/system paths
 Disallow: /_next/
-Disallow: /static/
 Disallow: /api/
+Disallow: /static/
 Disallow: /prisma/
+Disallow: /*.json$
+Disallow: /*?*
+
+# Allow important static files
+Allow: /manifest.json
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Google Bot specific rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing Bot specific rules
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Image bots
+User-agent: Googlebot-Image
+Allow: /logos/
+Allow: /og-image.png
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.svg$
 
 # Sitemaps
 Sitemap: https://dattapay.com/sitemap.xml
+
+# Host
+Host: https://dattapay.com

@@ -2,12 +2,39 @@ import type { Metadata } from "next";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
+const siteUrl = "https://dattapay.com";
+
 export const metadata: Metadata = {
-  title: "Privacy Policy",
+  title: "Privacy Policy - DattaPay Data Protection",
   description:
     "Learn how DattaPay collects, uses, and protects your personal information. Our privacy policy covers data security, retention, and your rights.",
+  keywords: [
+    "DattaPay privacy policy",
+    "data protection",
+    "user privacy",
+    "financial data security",
+    "freelancer data privacy",
+    "payment platform privacy",
+    "GDPR compliance",
+    "data retention policy",
+  ],
   alternates: {
-    canonical: "https://dattapay.com/privacy",
+    canonical: `${siteUrl}/privacy`,
+  },
+  openGraph: {
+    title: "Privacy Policy - DattaPay Data Protection",
+    description:
+      "Learn how DattaPay collects, uses, and protects your personal information.",
+    url: `${siteUrl}/privacy`,
+    type: "website",
+    siteName: "DattaPay",
+  },
+  twitter: {
+    card: "summary",
+    title: "Privacy Policy - DattaPay",
+    description:
+      "Learn how DattaPay collects, uses, and protects your personal information.",
+    site: "@dattapay",
   },
 };
 

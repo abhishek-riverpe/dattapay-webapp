@@ -32,34 +32,79 @@ export const metadata: Metadata = {
       "Learn what USDC stablecoin is and why freelancers use it to protect their earnings.",
     url: `${siteUrl}/learn/usdc`,
     type: "article",
+    siteName: "DattaPay Learn",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "What is USDC? Guide for Freelancers",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "What is USDC? A Complete Guide for Freelancers",
+    description:
+      "Learn what USDC stablecoin is and why freelancers use it to protect their earnings.",
+    images: ["/og-image.png"],
+    site: "@dattapay",
+    creator: "@dattapay",
   },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "@id": `${siteUrl}/learn/usdc`,
-  url: `${siteUrl}/learn/usdc`,
-  headline: "What is USDC? A Complete Guide for Freelancers",
-  description:
-    "Learn what USDC stablecoin is, how it works, and why freelancers use it to protect their earnings.",
-  datePublished: "2026-01-01",
-  dateModified: "2026-01-22",
-  author: {
-    "@type": "Organization",
-    name: "DattaPay",
-    url: siteUrl,
-  },
-  publisher: {
-    "@id": `${siteUrl}/#organization`,
-  },
-  isPartOf: {
-    "@id": `${siteUrl}/#website`,
-  },
-  mainEntityOfPage: {
-    "@type": "WebPage",
-    "@id": `${siteUrl}/learn/usdc`,
-  },
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: siteUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Learn",
+          item: `${siteUrl}/learn`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "USDC Guide",
+          item: `${siteUrl}/learn/usdc`,
+        },
+      ],
+    },
+    {
+      "@type": "Article",
+      "@id": `${siteUrl}/learn/usdc`,
+      url: `${siteUrl}/learn/usdc`,
+      headline: "What is USDC? A Complete Guide for Freelancers",
+      description:
+        "Learn what USDC stablecoin is, how it works, and why freelancers use it to protect their earnings.",
+      datePublished: "2026-01-01",
+      dateModified: "2026-01-23",
+      author: {
+        "@type": "Organization",
+        name: "DattaPay",
+        url: siteUrl,
+      },
+      publisher: {
+        "@id": `${siteUrl}/#organization`,
+      },
+      isPartOf: {
+        "@id": `${siteUrl}/#website`,
+      },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `${siteUrl}/learn/usdc`,
+      },
+    },
+  ],
 };
 
 export default function USDCGuidePage() {

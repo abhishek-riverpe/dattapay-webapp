@@ -31,6 +31,24 @@ export const metadata: Metadata = {
       "Compare DattaPay vs Grey for African freelancers. Get 0.5% fees + 4.2% APY yield.",
     url: `${siteUrl}/compare/grey`,
     type: "website",
+    siteName: "DattaPay",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "DattaPay vs Grey Comparison",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DattaPay vs Grey 2026 - Compare Fees & Features for Africa",
+    description:
+      "Compare DattaPay vs Grey. Get 0.5% fees + 4.2% APY yield for African freelancers.",
+    images: ["/og-image.png"],
+    site: "@dattapay",
+    creator: "@dattapay",
   },
 };
 
@@ -135,6 +153,29 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: siteUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Compare",
+          item: `${siteUrl}/compare`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Grey",
+          item: `${siteUrl}/compare/grey`,
+        },
+      ],
+    },
+    {
       "@type": "WebPage",
       "@id": `${siteUrl}/compare/grey`,
       url: `${siteUrl}/compare/grey`,
@@ -142,7 +183,7 @@ const jsonLd = {
       description:
         "Compare DattaPay vs Grey for African freelancers. Get 0.5% fees + 4.2% APY yield.",
       datePublished: "2026-01-01",
-      dateModified: "2026-01-22",
+      dateModified: "2026-01-23",
       isPartOf: {
         "@id": `${siteUrl}/#website`,
       },

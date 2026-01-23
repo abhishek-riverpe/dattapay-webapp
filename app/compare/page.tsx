@@ -16,9 +16,36 @@ export const metadata: Metadata = {
     "PayPal alternative Africa",
     "freelancer payment comparison",
     "best payment platform freelancers",
+    "payment platform fees comparison",
+    "international payment comparison 2026",
   ],
   alternates: {
     canonical: `${siteUrl}/compare`,
+  },
+  openGraph: {
+    title: "Compare DattaPay - Payment Platform Comparisons 2026",
+    description:
+      "Compare DattaPay with Payoneer, Wise, Grey. See how we offer lower fees, higher yield for freelancers.",
+    url: `${siteUrl}/compare`,
+    type: "website",
+    siteName: "DattaPay",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "DattaPay Payment Platform Comparison",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Compare DattaPay with Alternatives",
+    description:
+      "See how DattaPay compares to Payoneer, Wise, Grey. Lower fees, higher yield.",
+    images: ["/og-image.png"],
+    site: "@dattapay",
+    creator: "@dattapay",
   },
 };
 

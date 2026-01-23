@@ -90,6 +90,7 @@ export const metadata: Metadata = {
     description:
       "Get paid in USD/EUR with 0.5% flat fee. Earn 4.2% APY on idle funds. Join 5,000+ freelancers.",
     images: ["/og-image.png"],
+    site: "@dattapay",
     creator: "@dattapay",
   },
   robots: {

@@ -31,27 +31,72 @@ export const metadata: Metadata = {
       "Practical strategies for freelancers in high-inflation countries.",
     url: `${siteUrl}/learn/inflation-hedge`,
     type: "article",
+    siteName: "DattaPay Learn",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Protect Freelance Income from Inflation",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "How to Protect Your Freelance Income from Inflation",
+    description:
+      "Practical strategies for freelancers in high-inflation countries.",
+    images: ["/og-image.png"],
+    site: "@dattapay",
+    creator: "@dattapay",
   },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "@id": `${siteUrl}/learn/inflation-hedge`,
-  url: `${siteUrl}/learn/inflation-hedge`,
-  headline: "How to Protect Your Freelance Income from Inflation",
-  description:
-    "Practical strategies for freelancers in high-inflation countries to preserve earnings.",
-  datePublished: "2026-01-01",
-  dateModified: "2026-01-22",
-  author: {
-    "@type": "Organization",
-    name: "DattaPay",
-    url: siteUrl,
-  },
-  publisher: {
-    "@id": `${siteUrl}/#organization`,
-  },
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: siteUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Learn",
+          item: `${siteUrl}/learn`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Inflation Hedge",
+          item: `${siteUrl}/learn/inflation-hedge`,
+        },
+      ],
+    },
+    {
+      "@type": "Article",
+      "@id": `${siteUrl}/learn/inflation-hedge`,
+      url: `${siteUrl}/learn/inflation-hedge`,
+      headline: "How to Protect Your Freelance Income from Inflation",
+      description:
+        "Practical strategies for freelancers in high-inflation countries to preserve earnings.",
+      datePublished: "2026-01-01",
+      dateModified: "2026-01-23",
+      author: {
+        "@type": "Organization",
+        name: "DattaPay",
+        url: siteUrl,
+      },
+      publisher: {
+        "@id": `${siteUrl}/#organization`,
+      },
+    },
+  ],
 };
 
 export default function InflationHedgePage() {

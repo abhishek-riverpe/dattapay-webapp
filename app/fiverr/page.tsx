@@ -36,6 +36,24 @@ export const metadata: Metadata = {
       "Withdraw Fiverr earnings with just 0.5% fees. US bank account, 4.2% APY yield.",
     url: `${siteUrl}/fiverr`,
     type: "website",
+    siteName: "DattaPay",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Withdraw Fiverr Earnings with DattaPay",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Withdraw Fiverr Earnings with DattaPay - Save $400+/Year",
+    description:
+      "Withdraw Fiverr earnings with just 0.5% fees. US bank account, 4.2% APY yield.",
+    images: ["/og-image.png"],
+    site: "@dattapay",
+    creator: "@dattapay",
   },
 };
 
@@ -152,6 +170,23 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: siteUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Fiverr",
+          item: `${siteUrl}/fiverr`,
+        },
+      ],
+    },
+    {
       "@type": "WebPage",
       "@id": `${siteUrl}/fiverr`,
       url: `${siteUrl}/fiverr`,
@@ -159,7 +194,7 @@ const jsonLd = {
       description:
         "Withdraw Fiverr earnings with just 0.5% fees. US bank account, 4.2% APY yield.",
       datePublished: "2026-01-01",
-      dateModified: "2026-01-22",
+      dateModified: "2026-01-23",
       isPartOf: {
         "@id": `${siteUrl}/#website`,
       },
