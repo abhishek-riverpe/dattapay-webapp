@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import axios from "axios";
 import {
   ArrowRight,
   Check,
@@ -16,6 +17,7 @@ import {
   Loader2,
   AlertCircle,
 } from "lucide-react";
+import apiClient from "@/lib/api-client";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -42,6 +44,11 @@ const schema = yup.object({
     .string()
     .required("WhatsApp number is required")
     .min(10, "Please enter a valid phone number"),
+  message: yup
+    .string()
+    .required("Message is required")
+    .min(10, "Message must be at least 10 characters")
+    .max(2000, "Message must be at most 2000 characters"),
 });
 
 type FormData = yup.InferType<typeof schema>;
@@ -81,6 +88,7 @@ export default function ContactPage() {
       fullName: "",
       email: "",
       whatsapp: "",
+      message: "",
     },
   });
 
@@ -99,28 +107,18 @@ export default function ContactPage() {
     setIsError(false);
     setIsSuccess(false);
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/contact`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+      await apiClient.post("/contact", data);
 
-      if (response.ok) {
-        setIsSuccess(true);
-        form.reset();
-      } else {
-        const result = await response.json();
-        setIsError(true);
-        setErrorMessage(
-          result.error || "Something went wrong. Please try again."
-        );
-      }
+      setIsSuccess(true);
+      form.reset();
     } catch (error) {
       console.error("Submission error:", error);
       setIsError(true);
-      setErrorMessage(
-        "Network error. Please check your connection and try again."
-      );
+      if (axios.isAxiosError(error) && error.response?.data?.error) {
+        setErrorMessage(error.response.data.error);
+      } else {
+        setErrorMessage("Network error. Please check your connection and try again.");
+      }
     } finally {
       setIsLoading(false);
     }
@@ -262,6 +260,25 @@ export default function ContactPage() {
                               placeholder="+1 234 567 8900"
                               {...field}
                               className="h-11"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    {/* Message */}
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Message</FormLabel>
+                          <FormControl>
+                            <textarea
+                              placeholder="Tell us about your needs..."
+                              {...field}
+                              className="flex min-h-[100px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                             />
                           </FormControl>
                           <FormMessage />
