@@ -16,32 +16,34 @@ const siteUrl = "https://dattapay.com";
 const regionData = REGIONAL_CONTENT.NG;
 
 export const metadata: Metadata = {
-  title: "DattaPay Nigeria - Receive USD Payments | Dollar Account for Freelancers",
+  title: "DattaPay Nigeria - Stop Paying Payoneer's ₦50,000/Year Fees | Instant Funding Account",
   description:
-    "Get a US dollar account in Nigeria. Receive payments from Upwork, Fiverr with 0.5% fees. Earn 4.2% APY. Protect your earnings from Naira devaluation with USDC.",
+    "Nigerian freelancers: Get instant funding account + crypto wallet. Receive from Fiverr, Upwork — auto-convert to USDT. Sell on Binance P2P at ₦1,550+/$. Zero annual fees. No ₦4,500 per withdrawal like Payoneer.",
   keywords: [
-    "dollar account Nigeria",
-    "receive USD payments Nigeria",
-    "USD account Nigerian freelancer",
-    "Upwork payments Nigeria",
-    "Fiverr withdrawal Nigeria",
-    "domiciliary account alternative Nigeria",
-    "stablecoin payments Nigeria",
-    "protect naira devaluation",
-    "USDC Nigeria freelancer",
     "Payoneer alternative Nigeria",
+    "Fiverr withdrawal Nigeria no fees",
+    "Upwork payment Nigeria USDT",
+    "receive USD Nigeria freelancer",
+    "Binance P2P Nigeria freelancer",
+    "USDT freelancer Nigeria",
+    "dollar account Nigeria instant",
+    "domiciliary account alternative",
+    "naira devaluation protection",
+    "stablecoin Nigeria",
+    "crypto wallet Nigeria freelancer",
     "Wise alternative Nigeria",
     "Grey alternative Nigeria",
-    "best dollar account Nigerian freelancers",
-    "receive dollars Africa",
+    "best payment method Nigerian freelancers",
+    "funding account Nigeria",
+    "remittance Nigeria low fees",
   ],
   alternates: {
     canonical: `${siteUrl}/ng`,
   },
   openGraph: {
-    title: "DattaPay Nigeria - USD Payments for Nigerian Freelancers",
+    title: "Stop Paying Payoneer ₦50,000/Year - DattaPay Nigeria",
     description:
-      "Get a US dollar account in Nigeria. 0.5% fees, 4.2% APY, protection from Naira devaluation.",
+      "Instant funding account + crypto wallet. Auto USDT conversion. Sell on Binance at premium rates. Zero annual fees for Nigerian freelancers.",
     url: `${siteUrl}/ng`,
     type: "website",
     locale: "en_NG",
@@ -55,12 +57,12 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": `${siteUrl}/ng`,
       url: `${siteUrl}/ng`,
-      name: "DattaPay Nigeria - USD Payments for Nigerian Freelancers",
+      name: "DattaPay Nigeria - Instant Funding Account & Crypto Wallet for Freelancers",
       description:
-        "Get a US dollar account in Nigeria. Receive payments with 0.5% fees, earn 4.2% APY.",
+        "Stop paying Payoneer's ₦50,000/year fees. Get instant funding account, auto USDT conversion, sell on Binance at premium rates.",
       inLanguage: "en-NG",
       datePublished: "2026-01-01",
-      dateModified: "2026-01-23",
+      dateModified: "2026-01-26",
       isPartOf: {
         "@id": `${siteUrl}/#website`,
       },
@@ -84,7 +86,7 @@ const jsonLd = {
       "@type": "Service",
       name: "DattaPay Nigeria",
       description:
-        "USD payment platform for Nigerian freelancers with 0.5% fees and 4.2% APY",
+        "Instant funding account and crypto wallet for Nigerian freelancers. Auto USDT/USDC conversion, sell on Binance P2P. Zero annual fees, lowest transaction costs.",
       provider: {
         "@id": `${siteUrl}/#organization`,
       },

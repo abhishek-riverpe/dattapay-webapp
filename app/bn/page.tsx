@@ -16,30 +16,32 @@ const siteUrl = "https://dattapay.com";
 const regionData = REGIONAL_CONTENT.BD;
 
 export const metadata: Metadata = {
-  title: "DattaPay Bangladesh - Receive USD Payments | Dollar Account for Freelancers",
+  title: "DattaPay Bangladesh - Stop Paying Payoneer's ৳4,000/Year Fees | Instant Funding Account",
   description:
-    "Get a US dollar account in Bangladesh. Receive payments from Upwork, Fiverr with 0.5% fees. Earn 4.2% APY. Protect your earnings from Taka devaluation with USDC.",
+    "Bangladeshi freelancers: Get instant funding account + crypto wallet. Receive from Fiverr, Upwork — auto-convert to USDT. Sell on Binance P2P at ৳117+/$. Zero annual fees. No ৳350 per withdrawal like Payoneer.",
   keywords: [
-    "dollar account Bangladesh",
-    "receive USD payments Bangladesh",
-    "USD account Bangladeshi freelancer",
-    "Upwork payments Bangladesh",
-    "Fiverr withdrawal Bangladesh",
-    "stablecoin payments Bangladesh",
-    "protect taka devaluation",
-    "USDC Bangladesh freelancer",
     "Payoneer alternative Bangladesh",
-    "best dollar account Bangladeshi freelancers",
-    "receive dollars Bangladesh",
-    "freelancer payment Bangladesh",
+    "Fiverr withdrawal Bangladesh no fees",
+    "Upwork payment Bangladesh USDT",
+    "receive USD Bangladesh freelancer",
+    "Binance P2P Bangladesh freelancer",
+    "USDT freelancer Bangladesh",
+    "dollar account Bangladesh instant",
+    "taka devaluation protection",
+    "stablecoin Bangladesh",
+    "crypto wallet Bangladesh freelancer",
+    "best payment method Bangladeshi freelancers",
+    "funding account Bangladesh",
+    "remittance Bangladesh low fees",
+    "freelancer payment solution Bangladesh",
   ],
   alternates: {
     canonical: `${siteUrl}/bn`,
   },
   openGraph: {
-    title: "DattaPay Bangladesh - USD Payments for Bangladeshi Freelancers",
+    title: "Stop Paying Payoneer ৳4,000/Year - DattaPay Bangladesh",
     description:
-      "Get a US dollar account in Bangladesh. 0.5% fees, 4.2% APY, protection from Taka devaluation.",
+      "Instant funding account + crypto wallet. Auto USDT conversion. Sell on Binance at premium rates. Zero annual fees for Bangladeshi freelancers.",
     url: `${siteUrl}/bn`,
     type: "website",
     locale: "en_BD",
@@ -53,12 +55,12 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": `${siteUrl}/bn`,
       url: `${siteUrl}/bn`,
-      name: "DattaPay Bangladesh - USD Payments for Bangladeshi Freelancers",
+      name: "DattaPay Bangladesh - Instant Funding Account & Crypto Wallet for Freelancers",
       description:
-        "Get a US dollar account in Bangladesh. Receive payments with 0.5% fees, earn 4.2% APY.",
+        "Stop paying Payoneer's ৳4,000/year fees. Get instant funding account, auto USDT conversion, sell on Binance at premium rates.",
       inLanguage: "en-BD",
       datePublished: "2026-01-01",
-      dateModified: "2026-01-23",
+      dateModified: "2026-01-26",
       isPartOf: {
         "@id": `${siteUrl}/#website`,
       },
@@ -82,7 +84,7 @@ const jsonLd = {
       "@type": "Service",
       name: "DattaPay Bangladesh",
       description:
-        "USD payment platform for Bangladeshi freelancers with 0.5% fees and 4.2% APY",
+        "Instant funding account and crypto wallet for Bangladeshi freelancers. Auto USDT/USDC conversion, sell on Binance P2P. Zero annual fees, lowest transaction costs.",
       provider: {
         "@id": `${siteUrl}/#organization`,
       },

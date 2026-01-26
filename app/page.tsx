@@ -12,9 +12,21 @@ import CTASection from "@/components/cta-section";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "DattaPay - International Payments for Freelancers",
+  title: "DattaPay - Stop Paying Payoneer's $35/Year + $3/Withdrawal Fees | Instant Funding Account",
   description:
-    "Get paid in USD/EUR with just 0.5% flat fee. Earn 4.2% APY on idle funds. Bank-grade security & compliance. Join 5,000+ freelancers saving $847/year on fees.",
+    "Get instant funding account + crypto wallet in 2 minutes. Receive from Fiverr, Upwork, Freelancer — auto-convert to USDT/USDC. Sell on Binance at premium rates. Zero annual fees. Perfect for freelancers and remittances.",
+  keywords: [
+    "Payoneer alternative",
+    "funding account freelancer",
+    "USDT freelancer payment",
+    "crypto wallet freelancer",
+    "Fiverr withdrawal no fees",
+    "Upwork payment USDT",
+    "stablecoin payments",
+    "Binance P2P freelancer",
+    "remittance low fees",
+    "international payments freelancer",
+  ],
   alternates: {
     canonical: "https://dattapay.com",
   },

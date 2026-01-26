@@ -16,30 +16,33 @@ const siteUrl = "https://dattapay.com";
 const regionData = REGIONAL_CONTENT.AR;
 
 export const metadata: Metadata = {
-  title: "DattaPay Argentina - Cobrar en Dólares | Cuenta USD para Freelancers",
+  title: "DattaPay Argentina - Dejá de Pagar $35/Año a Payoneer | Cuenta de Cobro + Cotización Blue",
   description:
-    "Cobra en dólares en Argentina sin cepo. Cuenta americana con 0.5% de comisión, 4.2% APY. Protege tus ingresos de la inflación con USDC stablecoin.",
+    "Freelancer argentino: Cuenta de cobro + billetera crypto en 2 minutos. Cobrá de Fiverr, Upwork — conversión instantánea a USDT. Vendé en Binance a cotización blue. Sin cepo. Sin cuota anual.",
   keywords: [
-    "cobrar en dólares Argentina",
-    "recibir dólares Argentina freelancer",
-    "cuenta dólares freelancer Argentina",
-    "cobrar en dólares sin cepo",
-    "mejor forma cobrar Upwork Argentina",
     "Payoneer alternativa Argentina",
-    "stablecoin vs dólar blue Argentina",
-    "cuenta en dólares Argentina legal",
-    "recibir pagos internacionales Argentina",
-    "freelancer Argentina cobrar USD",
-    "proteger pesos inflación Argentina",
-    "USDC Argentina freelancer",
+    "Fiverr cobrar Argentina sin cepo",
+    "Upwork pago Argentina USDT",
+    "cobrar dólares freelancer Argentina",
+    "Binance P2P Argentina freelancer",
+    "USDT freelancer Argentina",
+    "cuenta americana Argentina instantánea",
+    "dólar blue vs USDT",
+    "stablecoin Argentina",
+    "billetera crypto freelancer Argentina",
+    "mejor forma cobrar dólares Argentina",
+    "cuenta de cobro Argentina",
+    "remesa Argentina bajas comisiones",
+    "Workana cobrar Argentina",
+    "cotización MEP freelancer",
   ],
   alternates: {
     canonical: `${siteUrl}/ar`,
   },
   openGraph: {
-    title: "DattaPay Argentina - Cobra en Dólares como Freelancer",
+    title: "Dejá de Pagar $35/Año a Payoneer - DattaPay Argentina",
     description:
-      "Cuenta americana para freelancers argentinos. 0.5% comisión, 4.2% APY, sin cepo.",
+      "Cuenta de cobro + billetera crypto instantánea. Conversión automática a USDT. Vendé en Binance a cotización libre. Sin cepo, sin cuota anual para freelancers argentinos.",
     url: `${siteUrl}/ar`,
     type: "website",
     locale: "es_AR",
@@ -53,12 +56,12 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": `${siteUrl}/ar`,
       url: `${siteUrl}/ar`,
-      name: "DattaPay Argentina - Cobra en Dólares como Freelancer",
+      name: "DattaPay Argentina - Cuenta de Cobro y Billetera Crypto Instantánea",
       description:
-        "Cuenta americana para freelancers argentinos. 0.5% comisión, 4.2% APY, sin cepo.",
+        "Dejá de pagar $35/año a Payoneer. Cuenta de cobro instantánea, conversión automática a USDT, vendé en Binance a cotización blue/MEP.",
       inLanguage: "es-AR",
       datePublished: "2026-01-01",
-      dateModified: "2026-01-23",
+      dateModified: "2026-01-26",
       isPartOf: {
         "@id": `${siteUrl}/#website`,
       },
@@ -82,7 +85,7 @@ const jsonLd = {
       "@type": "Service",
       name: "DattaPay Argentina",
       description:
-        "Plataforma de pagos en dólares para freelancers argentinos con 0.5% comisión y 4.2% APY",
+        "Cuenta de cobro y billetera crypto instantánea para freelancers argentinos. Conversión automática a USDT/USDC, vendé en Binance P2P a cotización libre. Sin cepo, sin cuota anual.",
       provider: {
         "@id": `${siteUrl}/#organization`,
       },

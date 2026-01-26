@@ -16,30 +16,33 @@ const siteUrl = "https://dattapay.com";
 const regionData = REGIONAL_CONTENT.BR;
 
 export const metadata: Metadata = {
-  title: "DattaPay Brasil - Receba em Dólar | Conta USD para Freelancers",
+  title: "DattaPay Brasil - Pare de Pagar R$200/Ano do Payoneer | Conta de Recebimento Instantânea",
   description:
-    "Receba pagamentos em dólar no Brasil. Conta americana com taxa de 0.5%, rendimento de 4.2% APY. Ideal para freelancers que trabalham com Upwork, Fiverr.",
+    "Freelancer brasileiro: Conta de recebimento + carteira crypto em 2 minutos. Receba do Fiverr, Upwork — conversão automática para USDT. Venda na Binance P2P a R$6,10+/$. Zero taxa anual.",
   keywords: [
-    "receber dólar como freelancer",
-    "freelancer em dólar",
-    "conta em dólar Brasil",
-    "receber pagamentos internacionais Brasil",
-    "Upwork como receber em dólar",
-    "Fiverr ganhar em dólar",
-    "conta internacional freelancer",
-    "sites que pagam em dólar",
-    "como ganhar em dólar trabalhando no Brasil",
-    "conta americana para brasileiros",
-    "receber dólar Upwork Brasil",
-    "pagamentos internacionais freelancer",
+    "Payoneer alternativa Brasil",
+    "Fiverr saque Brasil sem taxas",
+    "Upwork pagamento Brasil USDT",
+    "receber dólar freelancer Brasil",
+    "Binance P2P freelancer Brasil",
+    "USDT freelancer Brasil",
+    "conta americana Brasil instantânea",
+    "real desvalorização proteção",
+    "stablecoin Brasil",
+    "carteira crypto freelancer Brasil",
+    "melhor forma receber dólar Brasil",
+    "conta de recebimento Brasil",
+    "remessa Brasil baixas taxas",
+    "Workana saque",
+    "99designs pagamento Brasil",
   ],
   alternates: {
     canonical: `${siteUrl}/br`,
   },
   openGraph: {
-    title: "DattaPay Brasil - Receba em Dólar como Freelancer",
+    title: "Pare de Pagar R$200/Ano do Payoneer - DattaPay Brasil",
     description:
-      "Conta americana para freelancers brasileiros. Taxa de 0.5%, rendimento de 4.2% APY.",
+      "Conta de recebimento + carteira crypto instantânea. Conversão automática para USDT. Venda na Binance com cotação premium. Zero taxa anual para freelancers brasileiros.",
     url: `${siteUrl}/br`,
     type: "website",
     locale: "pt_BR",
@@ -53,12 +56,12 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": `${siteUrl}/br`,
       url: `${siteUrl}/br`,
-      name: "DattaPay Brasil - Receba em Dólar como Freelancer",
+      name: "DattaPay Brasil - Conta de Recebimento e Carteira Crypto Instantânea",
       description:
-        "Conta americana para freelancers brasileiros. Taxa de 0.5%, rendimento de 4.2% APY.",
+        "Pare de pagar R$200/ano do Payoneer. Conta de recebimento instantânea, conversão automática para USDT, venda na Binance com cotação premium.",
       inLanguage: "pt-BR",
       datePublished: "2026-01-01",
-      dateModified: "2026-01-23",
+      dateModified: "2026-01-26",
       isPartOf: {
         "@id": `${siteUrl}/#website`,
       },
@@ -82,7 +85,7 @@ const jsonLd = {
       "@type": "Service",
       name: "DattaPay Brasil",
       description:
-        "Plataforma de pagamentos em dólar para freelancers brasileiros com taxa de 0.5% e 4.2% APY",
+        "Conta de recebimento e carteira crypto instantânea para freelancers brasileiros. Conversão automática para USDT/USDC, venda na Binance P2P. Zero taxa anual, menores custos de transação.",
       provider: {
         "@id": `${siteUrl}/#organization`,
       },
