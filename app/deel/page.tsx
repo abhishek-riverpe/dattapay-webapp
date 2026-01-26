@@ -60,31 +60,43 @@ export const metadata: Metadata = {
 const steps = [
   {
     number: 1,
-    title: "Sign Up for DattaPay",
+    title: "Sign Up in 2 Minutes",
     description:
-      "Create your free account in 5 minutes. No paperwork, instant approval.",
+      "Get your instant funding account + crypto wallet. No paperwork, instant approval.",
   },
   {
     number: 2,
-    title: "Get Your US Bank Details",
+    title: "Add to Deel",
     description:
-      "Receive your US bank account with routing number and account number.",
+      "Go to Deel > Payment Methods > Add Bank Account. Enter your DattaPay funding account details.",
   },
   {
     number: 3,
-    title: "Add to Deel",
+    title: "Auto-Convert to USDT/USDC",
     description:
-      "Go to Deel > Payment Methods > Add Bank Account. Enter your DattaPay US bank details.",
+      "When Deel payments arrive, they automatically convert to USDT/USDC stablecoin.",
   },
   {
     number: 4,
-    title: "Get Paid & Earn Yield",
+    title: "Sell on Binance P2P",
     description:
-      "Receive your Deel payments with 0.5% fee. Your balance earns 4.2% APY automatically.",
+      "Transfer to Binance/Bybit/Bitget and sell at premium P2P rates (3-5% higher than banks).",
   },
 ];
 
 const fees = [
+  {
+    label: "Annual Fee",
+    platform: "$0",
+    dattapay: "$0",
+    isBetter: false,
+  },
+  {
+    label: "Per-Transaction Fee",
+    platform: "1-2% (Deel Card)",
+    dattapay: "~0.5%",
+    isBetter: true,
+  },
   {
     label: "Deel Platform Fee",
     platform: "Paid by employer",
@@ -92,33 +104,21 @@ const fees = [
     isBetter: false,
   },
   {
-    label: "Deel Card Fees",
-    platform: "1-2% + ATM fees",
-    dattapay: "N/A",
+    label: "Auto USDT/USDC Conversion",
+    platform: "No",
+    dattapay: "Yes",
     isBetter: true,
   },
   {
-    label: "Bank Transfer Fee",
-    platform: "$5-$20",
-    dattapay: "0.5% flat",
+    label: "Binance P2P Selling",
+    platform: "No",
+    dattapay: "Yes (3-5% premium)",
     isBetter: true,
   },
   {
-    label: "Currency Conversion",
-    platform: "2-3%",
-    dattapay: "0%",
-    isBetter: true,
-  },
-  {
-    label: "Monthly Fee",
-    platform: "$0",
-    dattapay: "$0",
-    isBetter: false,
-  },
-  {
-    label: "Yield on Balance",
-    platform: "0%",
-    dattapay: "4.2% APY",
+    label: "Setup Time",
+    platform: "Days to weeks",
+    dattapay: "2 minutes",
     isBetter: true,
   },
 ];
@@ -127,42 +127,42 @@ const faqs: PlatformFAQItem[] = [
   {
     question: "How do I receive Deel payments with DattaPay?",
     answer:
-      "Log into Deel > Go to Payment Methods > Add a new bank account > Select US Bank (ACH). Enter your DattaPay routing and account number. Your next payment will be deposited to DattaPay.",
+      "Sign up in 2 minutes to get your instant funding account. Go to Deel > Payment Methods > Add Bank Account. Enter your funding account details. Payments auto-convert to USDT/USDC, then sell on Binance P2P at premium rates.",
   },
   {
     question: "Is DattaPay better than Deel Card?",
     answer:
-      "For most contractors, yes. The Deel Card charges 1-2% on transactions plus ATM fees. With DattaPay, you pay 0.5% flat, earn 4.2% APY on your balance, and have full control over when to convert currencies.",
+      "Yes! Deel Card charges 1-2% on transactions. DattaPay has lower fees, plus your payments auto-convert to USDT/USDC so you can sell on Binance P2P at 3-5% higher rates than bank transfers.",
+  },
+  {
+    question: "How does the auto-conversion to USDT/USDC work?",
+    answer:
+      "When Deel payments arrive in your DattaPay funding account, they automatically convert to USDT or USDC stablecoin. This protects your earnings from local currency devaluation and lets you sell at premium rates on Binance/Bybit/Bitget.",
+  },
+  {
+    question: "How do I sell on Binance P2P?",
+    answer:
+      "After your payment converts to USDT/USDC, transfer to your Binance/Bybit/Bitget wallet. Use their P2P marketplace to sell at premium rates - often 3-5% higher than official bank exchange rates. Cash out in your local currency.",
   },
   {
     question: "Does DattaPay work with Deel EOR?",
     answer:
-      "Yes! Whether you're a Deel contractor or employed through Deel EOR (Employer of Record), you can receive your salary to a DattaPay US bank account. The setup process is the same.",
+      "Yes! Whether you're a Deel contractor or employed through Deel EOR (Employer of Record), you can receive your salary to DattaPay. Payments auto-convert to stablecoin for Binance P2P selling.",
   },
   {
     question: "Can I use DattaPay for Deel in Nigeria?",
     answer:
-      "Yes! DattaPay fully supports Deel contractors and EOR employees in Nigeria. You get a US bank account that works with Deel's bank transfer option, and you can withdraw to your Nigerian bank.",
+      "Yes! DattaPay fully supports Deel contractors and EOR employees in Nigeria. Sign up in 2 minutes, add your funding account to Deel, and start selling on Binance P2P at premium rates.",
   },
   {
-    question: "How long does Deel take to pay to DattaPay?",
+    question: "Does DattaPay work for remittances too?",
     answer:
-      "Deel processes US bank (ACH) payments within 3-5 business days after your payment is approved. This is Deel's standard timeline for US bank transfers. Once received, funds are immediately available in DattaPay.",
+      "Yes! The same benefits apply to receiving money from family abroad. Payments auto-convert to USDT/USDC, and you can sell on Binance P2P at premium rates. Zero annual fees and much better rates than traditional services.",
   },
   {
-    question: "What's better: DattaPay, Deel Crypto, or Deel Card?",
+    question: "What's the setup process?",
     answer:
-      "DattaPay offers the best combination: 0.5% flat fee (lower than Deel Card), 4.2% APY yield (Deel pays 0%), and USDC stablecoin backing (similar to crypto but more stable). You get crypto-level protection with bank-level convenience.",
-  },
-  {
-    question: "Does DattaPay work with Deel Advance?",
-    answer:
-      "Yes! If you use Deel Advance to access your earnings early, those payments can be sent to your DattaPay US bank account. The same low fees apply.",
-  },
-  {
-    question: "How does the 4.2% APY work with Deel payments?",
-    answer:
-      "Once your Deel payment arrives in DattaPay, it immediately starts earning 4.2% APY. Interest compounds daily. If you keep $5,000 in your account between payments, you'd earn about $210/year in passive income.",
+      "1. Sign up in 2 minutes to get instant funding account + crypto wallet. 2. Add funding account to Deel as withdrawal method. 3. Payments auto-convert to USDT/USDC. 4. Sell on Binance/Bybit P2P at 3-5% premium rates.",
   },
 ];
 
@@ -239,13 +239,13 @@ export default function DeelPage() {
         <PlatformHero
           platformName="Deel"
           platformColor="#4338ca"
-          headline="Receive Deel Payments with 0.5% Fees"
-          subheadline="Better than Deel Card for contractors and EOR employees. Use DattaPay's US bank account to receive payments with just 0.5% flat fee."
+          headline="Better Than Deel Card: Auto-Convert to USDT/USDC"
+          subheadline="Get an instant funding account + crypto wallet in 2 minutes. Deel payments auto-convert to USDT/USDC. Sell on Binance/Bybit at premium P2P rates (3-5% higher than banks)."
           benefits={[
-            "US bank account accepted by Deel",
-            "0.5% flat fee vs Deel Card's 1-2%",
-            "Earn 4.2% APY on your balance",
-            "Works for contractors and EOR employees",
+            "Instant funding account in 2 minutes",
+            "Zero annual fees",
+            "Auto-convert to USDT/USDC stablecoin",
+            "Sell on Binance P2P at 3-5% premium rates",
           ]}
           savings="$300+"
         />
@@ -319,40 +319,40 @@ export default function DeelPage() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="rounded-2xl border border-border/50 bg-card p-6">
                 <div className="text-3xl font-bold text-primary mb-2">
-                  $300+
+                  2 min
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">
-                  Annual Savings
+                  Instant Setup
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  On $6,000/year in Deel payments, you save over $300 compared
-                  to Deel Card fees.
+                  Get your funding account + crypto wallet in 2 minutes. Add to
+                  Deel and start receiving payments.
                 </p>
               </div>
 
               <div className="rounded-2xl border border-border/50 bg-card p-6">
                 <div className="text-3xl font-bold text-primary mb-2">
-                  4.2%
+                  Auto
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">
-                  APY on Balance
+                  USDT/USDC Conversion
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Your Deel payments earn 4.2% APY automatically. Deel Card pays
-                  0%.
+                  Payments automatically convert to stablecoin. Protection
+                  against local currency devaluation.
                 </p>
               </div>
 
               <div className="rounded-2xl border border-border/50 bg-card p-6">
                 <div className="text-3xl font-bold text-primary mb-2">
-                  USDC
+                  3-5%
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">
-                  Stablecoin Protection
+                  Binance P2P Premium
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Like Deel Crypto but more stable. Your funds are backed by
-                  USDC stablecoin.
+                  Sell USDT/USDC on Binance/Bybit P2P at rates 3-5% higher than
+                  bank transfers.
                 </p>
               </div>
             </div>

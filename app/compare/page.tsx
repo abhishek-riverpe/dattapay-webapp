@@ -53,22 +53,22 @@ const comparisons = [
   {
     name: "Payoneer",
     slug: "payoneer",
-    tagline: "Save $847/year vs 8.5% total fees",
-    painPoint: "High fees eating your earnings",
+    tagline: "Stop paying $35/year + $3 per withdrawal",
+    painPoint: "$35 annual fee + $3 per withdrawal = $71+/year wasted",
     highlight: "Most Popular",
   },
   {
     name: "Grey",
     slug: "grey",
-    tagline: "Same markets, better yield (4.2% APY)",
-    painPoint: "No yield on your balance",
+    tagline: "Sell on Binance P2P at premium rates",
+    painPoint: "No access to crypto P2P premium rates",
     highlight: "Africa Focused",
   },
   {
     name: "Wise",
     slug: "wise",
-    tagline: "Full USD support (unlike Wise in Nigeria)",
-    painPoint: "USD suspended since 2022",
+    tagline: "Auto-convert to USDT/USDC instantly",
+    painPoint: "USD suspended in Nigeria since 2022",
     highlight: "Nigeria Alternative",
   },
 ];
@@ -80,11 +80,11 @@ export default function ComparePage() {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6">
-            Compare DattaPay with Alternatives
+            Stop Paying Payoneer&apos;s $35/Year + $3 Per Withdrawal
           </h1>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-            See how DattaPay stacks up against other payment platforms. Lower
-            fees, higher yield, and built for freelancers in Africa and LATAM.
+            Get an instant funding account + crypto wallet in 2 minutes. Payments auto-convert to USDT/USDC.
+            Sell on Binance/Bybit/Bitget at premium P2P rates.
           </p>
         </div>
 
@@ -135,27 +135,27 @@ export default function ComparePage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">0.5%</div>
+              <div className="text-3xl font-bold text-primary mb-2">2 min</div>
               <div className="text-sm text-muted-foreground">
-                Flat transaction fee
+                Setup time
               </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">4.2%</div>
+              <div className="text-3xl font-bold text-primary mb-2">$0</div>
               <div className="text-sm text-muted-foreground">
-                APY on idle funds
+                Annual fees (Payoneer: $35)
               </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">$847</div>
+              <div className="text-3xl font-bold text-primary mb-2">Auto</div>
               <div className="text-sm text-muted-foreground">
-                Average annual savings
+                USDT/USDC conversion
               </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">100%</div>
+              <div className="text-3xl font-bold text-primary mb-2">3-5%</div>
               <div className="text-sm text-muted-foreground">
-                USDC-backed funds
+                Premium on Binance P2P
               </div>
             </div>
           </div>

@@ -54,40 +54,41 @@ export const metadata: Metadata = {
 
 const features: ComparisonFeature[] = [
   {
-    feature: "Transaction Fee",
-    dattapay: "0.5% flat",
-    competitor: "1-2%",
+    feature: "Setup Time",
+    dattapay: "2 minutes",
+    competitor: "Days to weeks",
   },
   {
-    feature: "Currency Conversion",
-    dattapay: "Competitive rates",
-    competitor: "Variable markup",
+    feature: "Instant Funding Account",
+    dattapay: true,
+    competitor: false,
   },
   {
-    feature: "Monthly Fee",
-    dattapay: "Free",
-    competitor: "Free",
+    feature: "Crypto Wallet",
+    dattapay: true,
+    competitor: false,
   },
   {
-    feature: "Withdrawal Fee",
-    dattapay: "Free",
-    competitor: "Varies by method",
-  },
-  {
-    feature: "Yield on Balance",
-    dattapay: "4.2% APY",
-    competitor: "0%",
+    feature: "Auto USDT/USDC Conversion",
+    dattapay: true,
+    competitor: false,
     highlight: true,
   },
   {
-    feature: "Stablecoin (USDC) Support",
+    feature: "Sell on Binance/Bybit P2P",
+    dattapay: true,
+    competitor: false,
+    highlight: true,
+  },
+  {
+    feature: "P2P Premium Rates (3-5%)",
     dattapay: true,
     competitor: false,
   },
   {
-    feature: "Inflation Protection",
-    dattapay: true,
-    competitor: false,
+    feature: "Annual Fee",
+    dattapay: "$0",
+    competitor: "$0",
   },
   {
     feature: "Nigeria Support",
@@ -100,17 +101,7 @@ const features: ComparisonFeature[] = [
     competitor: true,
   },
   {
-    feature: "US Bank Account",
-    dattapay: true,
-    competitor: true,
-  },
-  {
-    feature: "Virtual USD Card",
-    dattapay: true,
-    competitor: true,
-  },
-  {
-    feature: "Naira Withdrawals",
+    feature: "Upwork/Fiverr Compatible",
     dattapay: true,
     competitor: true,
   },
@@ -120,32 +111,32 @@ const faqs: FAQItem[] = [
   {
     question: "What's the main difference between DattaPay and Grey?",
     answer:
-      "Both offer USD accounts for African freelancers, but DattaPay has key advantages: lower fees (0.5% flat vs Grey's higher rates), 4.2% APY yield on your balance (Grey pays 0%), and USDC stablecoin backing for inflation protection.",
+      "DattaPay gives you an instant funding account + crypto wallet. Payments auto-convert to USDT/USDC. You can then sell on Binance/Bybit/Bitget P2P at premium rates (often 3-5% higher than bank rates). Grey doesn't offer crypto conversion or P2P access.",
+  },
+  {
+    question: "How do I sell on Binance P2P with DattaPay?",
+    answer:
+      "When payments arrive in your DattaPay funding account, they auto-convert to USDT/USDC. Transfer to your Binance/Bybit/Bitget wallet and sell on their P2P marketplace. Rates are often 3-5% higher than official bank exchange rates.",
+  },
+  {
+    question: "What's the advantage of auto-conversion to USDT/USDC?",
+    answer:
+      "Auto-conversion protects your earnings from Naira devaluation by keeping them pegged to USD. Plus, USDT/USDC can be sold on Binance P2P at premium rates - often 3-5% higher than what Grey or banks offer for Naira conversion.",
   },
   {
     question: "Does DattaPay work in Nigeria like Grey?",
     answer:
-      "Yes! DattaPay fully supports Nigerian freelancers with USD accounts, competitive Naira withdrawals, and local bank transfers. You can receive payments from Upwork, Fiverr, and any international client.",
-  },
-  {
-    question: "Why does the 4.2% APY matter?",
-    answer:
-      "Grey doesn't pay interest on your balance. With DattaPay's 4.2% APY, if you keep $5,000 in your account, you'd earn about $210/year in passive income. That's money you'd otherwise leave on the table with Grey.",
-  },
-  {
-    question: "How does DattaPay protect against Naira devaluation?",
-    answer:
-      "DattaPay converts your payments to USDC stablecoin, keeping your earnings pegged to the US dollar. When the Naira fluctuates (like the 30%+ inflation Nigeria has experienced), your USD-denominated funds retain their value.",
+      "Yes! DattaPay fully supports Nigerian freelancers. Sign up in 2 minutes, get your instant funding account, and add it to Upwork/Fiverr. Payments auto-convert to stablecoin for Binance P2P selling.",
   },
   {
     question: "Can I switch from Grey to DattaPay easily?",
     answer:
-      "Yes! Sign up for DattaPay in 5 minutes, get your US bank account details, and update your payment method on Upwork/Fiverr. Your next payment will come to DattaPay. No need to close your Grey account immediately.",
+      "Yes! Sign up in 2 minutes to get your instant funding account + crypto wallet. Add it to Upwork/Fiverr as a new withdrawal method. Your next payment will auto-convert to USDT/USDC for Binance P2P selling.",
   },
   {
-    question: "Which platforms work with DattaPay in Nigeria?",
+    question: "Does DattaPay work for remittances too?",
     answer:
-      "DattaPay works with all major freelance platforms: Upwork, Fiverr, Toptal, Deel, Freelancer.com, and any platform that supports US bank transfers. It's the same as Grey in terms of platform compatibility.",
+      "Yes! The same benefits apply to receiving money from family abroad. Payments auto-convert to USDT/USDC, and you can sell on Binance P2P at premium rates. Zero annual fees and much better rates than traditional services.",
   },
 ];
 
@@ -212,13 +203,13 @@ export default function GreyComparisonPage() {
 
       <ComparisonHero
         competitorName="Grey"
-        headline="DattaPay vs Grey: The Better Choice for African Freelancers"
-        subheadline="Both offer USD accounts for Africa, but only DattaPay pays 4.2% APY on your balance and offers USDC stablecoin protection against inflation."
+        headline="DattaPay vs Grey: Sell on Binance P2P at Premium Rates"
+        subheadline="Get an instant funding account + crypto wallet in 2 minutes. Payments auto-convert to USDT/USDC. Sell on Binance/Bybit/Bitget at premium P2P rates (3-5% higher than banks). Grey doesn't offer this."
         highlightStats={[
-          { value: "0.5%", label: "DattaPay Fee" },
-          { value: "4.2%", label: "APY (Grey: 0%)" },
-          { value: "$0", label: "Hidden Fees" },
-          { value: "100%", label: "USD-Backed" },
+          { value: "2 min", label: "Setup Time" },
+          { value: "Auto", label: "USDT/USDC Convert" },
+          { value: "3-5%", label: "P2P Premium" },
+          { value: "$0", label: "Annual Fee" },
         ]}
       />
 
@@ -252,52 +243,53 @@ export default function GreyComparisonPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="rounded-2xl border border-border/50 bg-card p-6">
-              <div className="text-3xl font-bold text-primary mb-2">4.2%</div>
+              <div className="text-3xl font-bold text-primary mb-2">2 min</div>
               <h3 className="font-semibold text-foreground mb-2">
-                APY on Your Balance
+                Instant Funding Account
               </h3>
               <p className="text-sm text-muted-foreground">
-                Your idle funds earn 4.2% annually. Grey pays 0%. On $5,000,
-                that&apos;s $210/year in passive income.
+                Get a funding account + crypto wallet in 2 minutes. Add to
+                Fiverr/Upwork as withdrawal method.
               </p>
             </div>
 
             <div className="rounded-2xl border border-border/50 bg-card p-6">
-              <div className="text-3xl font-bold text-primary mb-2">USDC</div>
+              <div className="text-3xl font-bold text-primary mb-2">Auto</div>
               <h3 className="font-semibold text-foreground mb-2">
-                Stablecoin Protection
+                USDT/USDC Conversion
               </h3>
               <p className="text-sm text-muted-foreground">
-                Your funds are backed by USDC stablecoin. When the Naira drops,
-                your USD value stays the same.
+                Payments automatically convert to USDT/USDC stablecoin. Grey
+                doesn&apos;t offer this crypto integration.
               </p>
             </div>
 
             <div className="rounded-2xl border border-border/50 bg-card p-6">
-              <div className="text-3xl font-bold text-primary mb-2">0.5%</div>
+              <div className="text-3xl font-bold text-primary mb-2">3-5%</div>
               <h3 className="font-semibold text-foreground mb-2">
-                Lowest Fees in Africa
+                Binance P2P Premium
               </h3>
               <p className="text-sm text-muted-foreground">
-                Flat 0.5% transaction fee. No hidden charges, no monthly fees,
-                no withdrawal fees.
+                Sell USDT/USDC on Binance/Bybit/Bitget P2P at rates often 3-5%
+                higher than bank rates. Grey can&apos;t do this.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Nigeria Focus Section */}
+      {/* DattaPay Flow Section */}
       <section className="py-16 sm:py-24 bg-secondary/30">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground mb-6">
-            Built for Nigerian Freelancers
+            The DattaPay Flow for African Freelancers
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Nigeria&apos;s $22 billion stablecoin market shows freelancers need
-            USD protection. With 30%+ inflation, keeping earnings in Naira means
-            losing money. DattaPay keeps your funds in USD-backed USDC while
-            earning 4.2% APY.
+            1. Sign up in 2 minutes → Get instant funding account + crypto wallet.
+            2. Add funding account to Fiverr/Upwork as withdrawal method.
+            3. Payments arrive → Auto-convert to USDT/USDC.
+            4. Sell on Binance/Bybit/Bitget P2P at 3-5% premium rates.
+            5. Cash out in Naira at better rates than banks.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
             <span className="px-4 py-2 rounded-full bg-card border border-border/50">
@@ -307,10 +299,10 @@ export default function GreyComparisonPage() {
               Fiverr Withdrawals
             </span>
             <span className="px-4 py-2 rounded-full bg-card border border-border/50">
-              Naira Bank Transfers
+              Binance P2P Selling
             </span>
             <span className="px-4 py-2 rounded-full bg-card border border-border/50">
-              USD Virtual Card
+              Family Remittances
             </span>
           </div>
         </div>

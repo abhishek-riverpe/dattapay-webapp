@@ -60,34 +60,40 @@ const features: ComparisonFeature[] = [
     highlight: true,
   },
   {
-    feature: "Transaction Fee",
-    dattapay: "0.5% flat",
-    competitor: "0.5-2%",
+    feature: "Setup Time",
+    dattapay: "2 minutes",
+    competitor: "Days to weeks",
   },
   {
-    feature: "Currency Conversion",
-    dattapay: "Competitive rates",
-    competitor: "Mid-market rate",
-  },
-  {
-    feature: "Monthly Fee",
-    dattapay: "Free",
-    competitor: "Free",
-  },
-  {
-    feature: "Yield on Balance",
-    dattapay: "4.2% APY",
-    competitor: "Up to 4.36% (UK only)",
-  },
-  {
-    feature: "Stablecoin Support",
+    feature: "Instant Funding Account",
     dattapay: true,
     competitor: false,
   },
   {
-    feature: "Inflation Protection",
+    feature: "Crypto Wallet",
     dattapay: true,
     competitor: false,
+  },
+  {
+    feature: "Auto USDT/USDC Conversion",
+    dattapay: true,
+    competitor: false,
+    highlight: true,
+  },
+  {
+    feature: "Sell on Binance/Bybit P2P",
+    dattapay: true,
+    competitor: false,
+  },
+  {
+    feature: "P2P Premium Rates (3-5%)",
+    dattapay: true,
+    competitor: false,
+  },
+  {
+    feature: "Annual Fee",
+    dattapay: "$0",
+    competitor: "$0",
   },
   {
     feature: "Nigeria Full Support",
@@ -96,22 +102,7 @@ const features: ComparisonFeature[] = [
     highlight: true,
   },
   {
-    feature: "Kenya Support",
-    dattapay: true,
-    competitor: true,
-  },
-  {
-    feature: "Brazil Support",
-    dattapay: true,
-    competitor: true,
-  },
-  {
-    feature: "US Bank Account",
-    dattapay: true,
-    competitor: true,
-  },
-  {
-    feature: "Upwork Integration",
+    feature: "Upwork/Fiverr Compatible",
     dattapay: true,
     competitor: true,
   },
@@ -126,32 +117,32 @@ const faqs: FAQItem[] = [
   {
     question: "Is DattaPay a good Wise alternative for Nigeria?",
     answer:
-      "Yes! DattaPay fully supports Nigerian freelancers with USD accounts, competitive exchange rates, and local withdrawals. Unlike Wise, there are no restrictions on USD services in Nigeria.",
+      "Yes! DattaPay gives you an instant funding account + crypto wallet in 2 minutes. Payments auto-convert to USDT/USDC. You can then sell on Binance/Bybit/Bitget P2P at premium rates (often 3-5% higher than banks).",
   },
   {
-    question: "How do DattaPay fees compare to Wise?",
+    question: "How does the auto-conversion to USDT/USDC work?",
     answer:
-      "DattaPay charges a flat 0.5% fee on all transactions. Wise fees vary from 0.5-2% depending on the currency and transfer type. The key difference: DattaPay works in Nigeria, Wise doesn't for USD.",
+      "When payments arrive in your DattaPay funding account, they automatically convert to USDT or USDC stablecoin. This protects your earnings from Naira devaluation and lets you sell at premium rates on crypto exchanges.",
   },
   {
-    question: "Does DattaPay offer the same multi-currency features as Wise?",
+    question: "How do I sell on Binance P2P after receiving payments?",
     answer:
-      "DattaPay focuses on USD/USDC for freelancers, with a US bank account and multi-currency support. While Wise offers 50+ currencies, DattaPay offers what freelancers need most: reliable USD access with 4.2% APY yield.",
+      "After your payment auto-converts to USDT/USDC in DattaPay, transfer to your Binance/Bybit/Bitget wallet. Use their P2P marketplace to sell at premium rates - often 3-5% higher than official bank exchange rates.",
   },
   {
-    question: "Can I receive Upwork payments with DattaPay like I could with Wise?",
+    question: "Can I receive Upwork/Fiverr payments with DattaPay?",
     answer:
-      "Yes! DattaPay provides US bank account details (routing and account number) that work with Upwork, Fiverr, Deel, Toptal, and any platform supporting US bank transfers.",
+      "Yes! Add your DattaPay funding account to Upwork/Fiverr as a withdrawal method. When payments arrive, they auto-convert to USDT/USDC. Sell on Binance P2P at premium rates for the best Naira conversion.",
   },
   {
-    question: "What's the advantage of DattaPay's stablecoin backing?",
+    question: "What's the setup process?",
     answer:
-      "DattaPay converts your funds to USDC stablecoin, providing transparency and protection against local currency devaluation. Wise doesn't offer stablecoin backing, and their USD service is suspended in Nigeria.",
+      "Sign up in 2 minutes to get an instant funding account + crypto wallet. Add the funding account to your freelance platforms. When payments arrive, they auto-convert to stablecoin. Sell on Binance/Bybit for premium rates.",
   },
   {
-    question: "Is DattaPay available in other African countries?",
+    question: "Does DattaPay work for remittances too?",
     answer:
-      "Yes! DattaPay supports freelancers across Africa including Nigeria, Kenya, Ghana, and more. Unlike Wise which has various restrictions in African countries, DattaPay is built specifically for emerging markets.",
+      "Yes! The same benefits apply to receiving money from family abroad. Payments auto-convert to USDT/USDC, and you can sell on Binance P2P at premium rates. Zero annual fees and much lower costs than traditional services.",
   },
 ];
 
@@ -218,13 +209,13 @@ export default function WiseComparisonPage() {
 
       <ComparisonHero
         competitorName="Wise"
-        headline="Wise Suspended USD in Nigeria. DattaPay Didn't."
-        subheadline="Since November 2022, Wise has suspended USD transfers to Nigeria. DattaPay offers full USD support, 0.5% fees, and 4.2% APY for Nigerian freelancers."
+        headline="Wise Suspended USD in Nigeria. DattaPay Has You Covered."
+        subheadline="Get an instant funding account + crypto wallet in 2 minutes. Payments auto-convert to USDT/USDC. Sell on Binance/Bybit/Bitget at premium P2P rates (3-5% higher than banks)."
         highlightStats={[
-          { value: "100%", label: "USD Support" },
-          { value: "Nov 2022", label: "Wise Suspended" },
-          { value: "0.5%", label: "DattaPay Fee" },
-          { value: "4.2%", label: "APY on Balance" },
+          { value: "2 min", label: "Setup Time" },
+          { value: "Auto", label: "USDT/USDC Convert" },
+          { value: "3-5%", label: "P2P Premium" },
+          { value: "$0", label: "Annual Fee" },
         ]}
       />
 
@@ -277,37 +268,35 @@ export default function WiseComparisonPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="rounded-2xl border border-border/50 bg-card p-6">
-              <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">
-                ✓
-              </div>
+              <div className="text-3xl font-bold text-primary mb-2">2 min</div>
               <h3 className="font-semibold text-foreground mb-2">
-                Full USD Support
+                Instant Funding Account
               </h3>
               <p className="text-sm text-muted-foreground">
-                Unlike Wise, DattaPay has no restrictions on USD in Nigeria.
-                Receive and hold USD without limitations.
+                Get a funding account + crypto wallet in 2 minutes. Add to
+                Fiverr/Upwork as withdrawal method.
               </p>
             </div>
 
             <div className="rounded-2xl border border-border/50 bg-card p-6">
-              <div className="text-3xl font-bold text-primary mb-2">4.2%</div>
+              <div className="text-3xl font-bold text-primary mb-2">Auto</div>
               <h3 className="font-semibold text-foreground mb-2">
-                APY on Your Balance
+                USDT/USDC Conversion
               </h3>
               <p className="text-sm text-muted-foreground">
-                Wise&apos;s interest feature is UK-only. DattaPay pays 4.2% APY
-                globally on all idle funds.
+                Payments automatically convert to USDT/USDC stablecoin.
+                Protection against Naira devaluation.
               </p>
             </div>
 
             <div className="rounded-2xl border border-border/50 bg-card p-6">
-              <div className="text-3xl font-bold text-primary mb-2">USDC</div>
+              <div className="text-3xl font-bold text-primary mb-2">3-5%</div>
               <h3 className="font-semibold text-foreground mb-2">
-                Stablecoin Protection
+                Binance P2P Premium
               </h3>
               <p className="text-sm text-muted-foreground">
-                Your funds are backed by USDC stablecoin. Protection against
-                Naira devaluation that Wise doesn&apos;t offer.
+                Sell USDT/USDC on Binance/Bybit/Bitget P2P at rates often 3-5%
+                higher than official bank rates.
               </p>
             </div>
           </div>

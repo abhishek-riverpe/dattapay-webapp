@@ -47,7 +47,7 @@ export const COMPARISONS: ContentItem[] = [
     slug: "payoneer",
     title: "DattaPay vs Payoneer",
     description:
-      "Save $847/year vs 8.5% total fees. Compare features, pricing, and supported countries for freelancers.",
+      "Stop paying $35/year + $3 per withdrawal. Auto-convert to USDT/USDC and sell on Binance P2P at 3-5% premium rates.",
     href: "/compare/payoneer",
     type: "comparison",
     category: "Comparison",
@@ -57,7 +57,7 @@ export const COMPARISONS: ContentItem[] = [
     slug: "grey",
     title: "DattaPay vs Grey",
     description:
-      "Same markets, better yield (4.2% APY). Compare DattaPay with Grey for African freelancers.",
+      "Auto-convert to USDT/USDC and sell on Binance P2P at 3-5% premium rates. Grey doesn't offer crypto P2P access.",
     href: "/compare/grey",
     type: "comparison",
     category: "Comparison",
@@ -67,7 +67,7 @@ export const COMPARISONS: ContentItem[] = [
     slug: "wise",
     title: "DattaPay vs Wise",
     description:
-      "Full USD support (unlike Wise in Nigeria). Compare features for international freelancers.",
+      "Wise suspended USD in Nigeria. DattaPay: instant funding account + auto-convert to USDT/USDC + Binance P2P selling.",
     href: "/compare/wise",
     type: "comparison",
     category: "Comparison",
@@ -81,7 +81,7 @@ export const PLATFORMS: ContentItem[] = [
     slug: "upwork",
     title: "Get Paid from Upwork",
     description:
-      "Receive Upwork payments with just 0.5% fees. Save $500+/year vs Payoneer withdrawals.",
+      "Stop paying Payoneer's $35/year + $3 per withdrawal. Auto-convert to USDT/USDC & sell on Binance P2P at premium rates.",
     href: "/upwork",
     type: "platform",
     category: "Platform Guide",
@@ -90,7 +90,7 @@ export const PLATFORMS: ContentItem[] = [
     slug: "fiverr",
     title: "Get Paid from Fiverr",
     description:
-      "Withdraw Fiverr earnings with 0.5% flat fee. No more $3 PayPal fees or high Payoneer rates.",
+      "Skip Payoneer's fees. Fiverr payments auto-convert to USDT/USDC. Sell on Binance P2P at 3-5% premium rates.",
     href: "/fiverr",
     type: "platform",
     category: "Platform Guide",
@@ -99,7 +99,7 @@ export const PLATFORMS: ContentItem[] = [
     slug: "deel",
     title: "Get Paid from Deel",
     description:
-      "Receive Deel contractor payments directly to your US account. Earn 4.2% APY on your balance.",
+      "Better than Deel Card. Payments auto-convert to USDT/USDC. Sell on Binance/Bybit P2P at 3-5% premium rates.",
     href: "/deel",
     type: "platform",
     category: "Platform Guide",
@@ -110,9 +110,9 @@ export const PLATFORMS: ContentItem[] = [
 export const LEARNING: ContentItem[] = [
   {
     slug: "usdc",
-    title: "What is USDC? A Guide for Freelancers",
+    title: "What is USDT/USDC? Auto-Convert & Binance P2P",
     description:
-      "Learn what USDC stablecoin is, how it works, and why freelancers use it to protect their earnings.",
+      "Learn how DattaPay auto-converts payments to USDT/USDC and how to sell on Binance P2P at 3-5% premium rates.",
     href: "/learn/usdc",
     type: "learning",
     category: "Stablecoins",
@@ -120,9 +120,9 @@ export const LEARNING: ContentItem[] = [
   },
   {
     slug: "stablecoin-guide",
-    title: "Stablecoin vs Local Currency: Which is Better?",
+    title: "Stablecoin vs Local Currency: Why Binance P2P Wins",
     description:
-      "Compare keeping your freelance earnings in stablecoins vs local currencies like Naira, Real, or Peso.",
+      "Why auto-converting to USDT/USDC and selling on Binance P2P gives you 3-5% better rates than local currency.",
     href: "/learn/stablecoin-guide",
     type: "learning",
     category: "Guide",
@@ -130,9 +130,9 @@ export const LEARNING: ContentItem[] = [
   },
   {
     slug: "inflation-hedge",
-    title: "How to Protect Your Freelance Income from Inflation",
+    title: "Protect Income: Auto-Convert & Binance P2P",
     description:
-      "Practical strategies for freelancers in high-inflation countries to preserve the value of their earnings.",
+      "How instant auto-conversion to USDT/USDC protects earnings + sell on Binance P2P at 3-5% premium rates.",
     href: "/learn/inflation-hedge",
     type: "learning",
     category: "Strategy",

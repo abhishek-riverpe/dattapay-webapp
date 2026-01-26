@@ -54,37 +54,44 @@ export const metadata: Metadata = {
 
 const features: ComparisonFeature[] = [
   {
-    feature: "Receiving Fee",
-    dattapay: "0.5% flat",
-    competitor: "2-3%",
-  },
-  {
-    feature: "Currency Conversion",
-    dattapay: "0%",
-    competitor: "2-4%",
-  },
-  {
     feature: "Annual Fee",
-    dattapay: "Free",
-    competitor: "$29.95",
+    dattapay: "$0",
+    competitor: "$35/year",
+    highlight: true,
   },
   {
-    feature: "Withdrawal Fee",
-    dattapay: "Free",
-    competitor: "$1.50-$3",
+    feature: "Per-Withdrawal Fee",
+    dattapay: "~0.5%",
+    competitor: "$3 per withdrawal",
+    highlight: true,
   },
   {
-    feature: "Yield on Balance",
-    dattapay: "4.2% APY",
-    competitor: "0%",
+    feature: "Setup Time",
+    dattapay: "2 minutes",
+    competitor: "Days to weeks",
   },
   {
-    feature: "Stablecoin Support",
+    feature: "Instant Funding Account",
     dattapay: true,
     competitor: false,
   },
   {
-    feature: "Inflation Protection",
+    feature: "Crypto Wallet",
+    dattapay: true,
+    competitor: false,
+  },
+  {
+    feature: "Auto USDT/USDC Conversion",
+    dattapay: true,
+    competitor: false,
+  },
+  {
+    feature: "Sell on Binance/Bybit P2P",
+    dattapay: true,
+    competitor: false,
+  },
+  {
+    feature: "P2P Premium Rates (3-5%)",
     dattapay: true,
     competitor: false,
   },
@@ -94,69 +101,53 @@ const features: ComparisonFeature[] = [
     competitor: true,
   },
   {
-    feature: "US Bank Account",
+    feature: "Upwork/Fiverr Compatible",
     dattapay: true,
     competitor: true,
   },
   {
-    feature: "Upwork Integration",
-    dattapay: true,
-    competitor: true,
-  },
-  {
-    feature: "Fiverr Integration",
-    dattapay: true,
-    competitor: true,
-  },
-  {
-    feature: "Total Fees (on $10k)",
-    dattapay: "$50",
-    competitor: "$850+",
-    highlight: true,
-  },
-  {
-    feature: "Annual Savings",
-    dattapay: "$847",
-    competitor: "-",
+    feature: "Minimum Annual Cost",
+    dattapay: "$0",
+    competitor: "$71+ ($35 + $3×12)",
     highlight: true,
   },
 ];
 
 const faqs: FAQItem[] = [
   {
-    question: "Why is DattaPay cheaper than Payoneer?",
+    question: "Why is DattaPay better than Payoneer?",
     answer:
-      "DattaPay uses blockchain technology and stablecoin infrastructure to reduce costs. We charge a flat 0.5% fee with no hidden charges, while Payoneer's total fees (receiving + currency conversion + annual fee) can reach 8.5% or more.",
+      "DattaPay has zero annual fees (Payoneer charges $35/year) and much lower per-transaction fees (vs Payoneer's $3 per withdrawal). Plus, your payments auto-convert to USDT/USDC stablecoin, which you can sell on Binance/Bybit/Bitget P2P at premium rates (often 3-5% higher than bank rates).",
   },
   {
-    question: "Can I receive Upwork payments with DattaPay like Payoneer?",
+    question: "How do I receive Upwork/Fiverr payments with DattaPay?",
     answer:
-      "Yes! DattaPay provides you with a US bank account (routing and account number) that works with Upwork, Fiverr, Deel, Toptal, and any platform that supports US bank transfers. Simply add your DattaPay account as a payment method.",
+      "Sign up in 2 minutes to get an instant funding account + crypto wallet. Add your funding account details to Upwork/Fiverr/Freelancer as a withdrawal method. When payments arrive, they auto-convert to USDT/USDC. Sell on Binance P2P at premium rates.",
   },
   {
     question: "How do I switch from Payoneer to DattaPay?",
     answer:
-      "Switching is simple: 1) Sign up for DattaPay (takes 5 minutes), 2) Get your US bank account details, 3) Update your payment method on Upwork/Fiverr/other platforms. Your next payment will come to DattaPay.",
+      "It takes 2 minutes: 1) Sign up for DattaPay and get your instant funding account, 2) Add it to Upwork/Fiverr as a new withdrawal method, 3) Your next payment auto-converts to USDT/USDC, 4) Sell on Binance/Bybit at premium P2P rates.",
   },
   {
-    question: "Is DattaPay safe compared to Payoneer?",
+    question: "How much can I save by switching from Payoneer?",
     answer:
-      "Yes, DattaPay uses bank-grade security with 256-bit encryption, multi-factor authentication, and is fully compliant with financial regulations. Your funds are backed by USDC stablecoin, providing additional security and transparency.",
+      "At minimum, you save $71+/year ($35 annual fee + $3×12 monthly withdrawals). But the real savings come from Binance P2P - you can often get 3-5% higher rates than bank transfers. On $10,000/year, that's $300-500 extra.",
   },
   {
-    question: "Does DattaPay work in Nigeria like Payoneer?",
+    question: "What is auto-conversion to USDT/USDC?",
     answer:
-      "Yes, DattaPay fully supports Nigerian freelancers. Unlike some competitors, we offer complete functionality in Nigeria including USD account, local withdrawals, and competitive exchange rates.",
+      "When payments arrive in your DattaPay funding account, they automatically convert to USDT or USDC stablecoin. This protects your earnings from local currency devaluation and lets you sell at premium rates on crypto exchanges.",
   },
   {
-    question: "What is the 4.2% APY that Payoneer doesn't offer?",
+    question: "How do I sell on Binance/Bybit/Bitget P2P?",
     answer:
-      "DattaPay pays 4.2% Annual Percentage Yield on your idle balance. If you keep $10,000 in your account, you'd earn approximately $420/year in passive income. Payoneer pays 0% on your balance.",
+      "After your payment converts to USDT/USDC in DattaPay, transfer to your Binance/Bybit/Bitget wallet. Use their P2P marketplace to sell at premium rates - often 3-5% higher than official bank exchange rates. Cash out in your local currency.",
   },
   {
-    question: "How does DattaPay protect against inflation unlike Payoneer?",
+    question: "Does DattaPay work for remittances too?",
     answer:
-      "DattaPay converts your payments to USDC stablecoin, keeping your earnings pegged to US dollars. This protects freelancers in countries like Nigeria, Argentina, and Brazil from local currency devaluation.",
+      "Yes! The same benefits apply to remittance users. Receive money from family abroad, auto-convert to USDT/USDC, and sell on Binance P2P at premium rates. Zero annual fees and much lower transaction costs than traditional services.",
   },
 ];
 
@@ -244,13 +235,13 @@ export default function PayoneerComparisonPage() {
 
       <ComparisonHero
         competitorName="Payoneer"
-        headline="DattaPay vs Payoneer: Save $847/Year"
-        subheadline="Payoneer charges up to 8.5% in total fees. DattaPay charges 0.5% flat. Plus, earn 4.2% APY on your balance - something Payoneer doesn't offer."
+        headline="Stop Paying Payoneer's $35/Year + $3 Per Withdrawal"
+        subheadline="Get an instant funding account + crypto wallet in 2 minutes. Payments auto-convert to USDT/USDC. Sell on Binance/Bybit/Bitget at premium P2P rates (3-5% higher than banks)."
         highlightStats={[
-          { value: "0.5%", label: "DattaPay Fee" },
-          { value: "8.5%", label: "Payoneer Total Fees" },
-          { value: "$847", label: "Annual Savings" },
-          { value: "4.2%", label: "APY on Balance" },
+          { value: "$0", label: "Annual Fee" },
+          { value: "2 min", label: "Setup Time" },
+          { value: "Auto", label: "USDT/USDC Convert" },
+          { value: "3-5%", label: "P2P Premium" },
         ]}
       />
 
@@ -284,35 +275,35 @@ export default function PayoneerComparisonPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="rounded-2xl border border-border/50 bg-card p-6">
-              <div className="text-3xl font-bold text-primary mb-2">$29.95</div>
+              <div className="text-3xl font-bold text-primary mb-2">$35+$36</div>
               <h3 className="font-semibold text-foreground mb-2">
-                Annual Fee You Won&apos;t Pay
+                Payoneer&apos;s Annual Cost
               </h3>
               <p className="text-sm text-muted-foreground">
-                Payoneer charges $29.95/year just to have an account. DattaPay
-                is free forever.
+                $35/year annual fee + $3×12 withdrawals = $71+/year minimum.
+                DattaPay: $0 annual fees.
               </p>
             </div>
 
             <div className="rounded-2xl border border-border/50 bg-card p-6">
-              <div className="text-3xl font-bold text-primary mb-2">2-4%</div>
+              <div className="text-3xl font-bold text-primary mb-2">2 min</div>
               <h3 className="font-semibold text-foreground mb-2">
-                Hidden Currency Fees
+                Instant Funding Account
               </h3>
               <p className="text-sm text-muted-foreground">
-                Payoneer&apos;s currency conversion adds 2-4% on top of their
-                receiving fees. DattaPay: 0%.
+                Get a funding account + crypto wallet instantly. Add to
+                Fiverr/Upwork as withdrawal method.
               </p>
             </div>
 
             <div className="rounded-2xl border border-border/50 bg-card p-6">
-              <div className="text-3xl font-bold text-primary mb-2">0%</div>
+              <div className="text-3xl font-bold text-primary mb-2">3-5%</div>
               <h3 className="font-semibold text-foreground mb-2">
-                No Yield on Balance
+                Binance P2P Premium
               </h3>
               <p className="text-sm text-muted-foreground">
-                Payoneer pays nothing on your balance. DattaPay pays 4.2% APY
-                automatically.
+                Auto-convert to USDT/USDC, then sell on Binance/Bybit P2P at
+                rates 3-5% higher than banks.
               </p>
             </div>
           </div>
@@ -321,7 +312,7 @@ export default function PayoneerComparisonPage() {
 
       <ComparisonFAQ competitorName="Payoneer" faqs={faqs} />
 
-      <ComparisonCTA competitorName="Payoneer" savings="$847" />
+      <ComparisonCTA competitorName="Payoneer" savings="$71+" />
     </>
   );
 }

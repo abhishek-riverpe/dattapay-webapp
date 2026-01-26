@@ -60,31 +60,43 @@ export const metadata: Metadata = {
 const steps = [
   {
     number: 1,
-    title: "Sign Up for DattaPay",
+    title: "Sign Up in 2 Minutes",
     description:
-      "Create your free account in 5 minutes. No paperwork, instant approval.",
+      "Get your instant funding account + crypto wallet. No paperwork, instant approval.",
   },
   {
     number: 2,
-    title: "Get Your US Bank Details",
+    title: "Add to Upwork",
     description:
-      "Receive your US bank account with routing number and account number.",
+      "Go to Upwork Settings > Get Paid > Add Method. Enter your DattaPay funding account details.",
   },
   {
     number: 3,
-    title: "Add to Upwork",
+    title: "Auto-Convert to USDT/USDC",
     description:
-      "Go to Upwork Settings > Get Paid > Add Method > US Bank Account. Enter your DattaPay details.",
+      "When Upwork payments arrive, they automatically convert to USDT/USDC stablecoin.",
   },
   {
     number: 4,
-    title: "Get Paid & Earn Yield",
+    title: "Sell on Binance P2P",
     description:
-      "Receive payments with 0.5% fee. Your balance automatically earns 4.2% APY.",
+      "Transfer to Binance/Bybit/Bitget and sell at premium P2P rates (3-5% higher than banks).",
   },
 ];
 
 const fees = [
+  {
+    label: "Annual Fee",
+    platform: "$35/year (Payoneer)",
+    dattapay: "$0",
+    isBetter: true,
+  },
+  {
+    label: "Per-Withdrawal Fee",
+    platform: "$3 (Payoneer)",
+    dattapay: "~0.5%",
+    isBetter: true,
+  },
   {
     label: "Upwork Service Fee",
     platform: "10-20%",
@@ -92,33 +104,21 @@ const fees = [
     isBetter: false,
   },
   {
-    label: "Withdrawal to Payoneer",
-    platform: "2-3% + conversion",
-    dattapay: "N/A",
+    label: "Auto USDT/USDC Conversion",
+    platform: "No",
+    dattapay: "Yes",
     isBetter: true,
   },
   {
-    label: "Withdrawal to Bank",
-    platform: "$0.99-$30",
-    dattapay: "0.5% flat",
+    label: "Binance P2P Selling",
+    platform: "No",
+    dattapay: "Yes (3-5% premium)",
     isBetter: true,
   },
   {
-    label: "Currency Conversion",
-    platform: "2-4%",
-    dattapay: "0%",
-    isBetter: true,
-  },
-  {
-    label: "Monthly Fee",
-    platform: "$0",
-    dattapay: "$0",
-    isBetter: false,
-  },
-  {
-    label: "Yield on Balance",
-    platform: "0%",
-    dattapay: "4.2% APY",
+    label: "Minimum Annual Savings",
+    platform: "-",
+    dattapay: "$71+ vs Payoneer",
     isBetter: true,
   },
 ];
@@ -127,42 +127,42 @@ const faqs: PlatformFAQItem[] = [
   {
     question: "How do I add DattaPay as a payment method on Upwork?",
     answer:
-      "Go to Upwork Settings > Get Paid > Add a method > Select 'Direct to U.S. Bank (ACH)'. Enter your DattaPay routing number and account number. Upwork will verify your account with two small deposits.",
+      "Sign up in 2 minutes to get your instant funding account. Go to Upwork Settings > Get Paid > Add Method. Enter your funding account details. Payments auto-convert to USDT/USDC, then sell on Binance P2P at premium rates.",
   },
   {
     question: "Is DattaPay better than Payoneer for Upwork?",
     answer:
-      "Yes, for most freelancers. Payoneer charges 2-3% receiving fee plus 2-4% currency conversion. DattaPay charges 0.5% flat fee with no conversion costs. Plus, DattaPay pays 4.2% APY on your balance - Payoneer pays 0%.",
+      "Yes! Payoneer charges $35/year + $3 per withdrawal = $71+/year minimum. DattaPay has zero annual fees. Plus, your payments auto-convert to USDT/USDC so you can sell on Binance P2P at 3-5% higher rates than banks.",
+  },
+  {
+    question: "How does the auto-conversion to USDT/USDC work?",
+    answer:
+      "When Upwork payments arrive in your DattaPay funding account, they automatically convert to USDT or USDC stablecoin. This protects your earnings from local currency devaluation and lets you sell at premium rates on Binance/Bybit/Bitget.",
+  },
+  {
+    question: "How do I sell on Binance P2P?",
+    answer:
+      "After your payment converts to USDT/USDC, transfer to your Binance/Bybit/Bitget wallet. Use their P2P marketplace to sell at premium rates - often 3-5% higher than official bank exchange rates. Cash out in your local currency.",
   },
   {
     question: "Can I use DattaPay for Upwork in Nigeria?",
     answer:
-      "Yes! DattaPay fully supports Nigerian freelancers. You get a US bank account that works with Upwork, and you can withdraw to your Nigerian bank account with competitive exchange rates.",
+      "Yes! DattaPay fully supports Nigerian freelancers. Sign up in 2 minutes, add your funding account to Upwork, and start selling on Binance P2P at premium rates.",
   },
   {
-    question: "How long does Upwork take to deposit to DattaPay?",
+    question: "How much can I save vs Payoneer?",
     answer:
-      "Upwork processes US bank (ACH) withdrawals within 2-5 business days. This is the same as their standard US bank transfer timeline. Once in your DattaPay account, funds are immediately available.",
+      "At minimum: $35/year annual fee + $3×12 withdrawals = $71/year. But the real savings come from Binance P2P - you can often get 3-5% higher rates than Payoneer's bank transfer. On $10,000/year, that's $300-500 extra.",
   },
   {
-    question: "Does Upwork charge fees for withdrawing to DattaPay?",
+    question: "Does DattaPay work for remittances too?",
     answer:
-      "Upwork charges $0.99 for US bank transfers under certain thresholds. However, you avoid the 2-4% currency conversion fees that platforms like Payoneer charge. DattaPay's 0.5% flat fee is typically much lower than alternatives.",
+      "Yes! The same benefits apply to receiving money from family abroad. Payments auto-convert to USDT/USDC, and you can sell on Binance P2P at premium rates. Zero annual fees and much better rates than traditional services.",
   },
   {
-    question: "What if my Upwork earnings are in different currencies?",
+    question: "What's the setup process?",
     answer:
-      "DattaPay receives USD directly from Upwork. If your clients pay in other currencies, Upwork converts to USD before sending to your US bank account. You receive clean USD with no additional conversion fees from DattaPay.",
-  },
-  {
-    question: "Can I still use Upwork Direct Contracts with DattaPay?",
-    answer:
-      "Yes! DattaPay works with all Upwork payment types including direct contracts, hourly contracts, and fixed-price projects. Any payment Upwork can send to a US bank account works with DattaPay.",
-  },
-  {
-    question: "How does the 4.2% APY work with Upwork earnings?",
-    answer:
-      "Once your Upwork payment arrives in DattaPay, it immediately starts earning 4.2% APY. Interest accrues daily and compounds automatically. You can withdraw anytime - there's no lock-up period.",
+      "1. Sign up in 2 minutes to get instant funding account + crypto wallet. 2. Add funding account to Upwork as withdrawal method. 3. Payments auto-convert to USDT/USDC. 4. Sell on Binance/Bybit P2P at 3-5% premium rates.",
   },
 ];
 
@@ -239,15 +239,15 @@ export default function UpworkPage() {
         <PlatformHero
           platformName="Upwork"
           platformColor="#14a800"
-          headline="Get Paid from Upwork with 0.5% Fees"
-          subheadline="Stop paying 3-5% in withdrawal fees. Use DattaPay's US bank account to receive Upwork payments directly with just 0.5% flat fee."
+          headline="Stop Paying Payoneer's $35/Year + $3 Per Withdrawal"
+          subheadline="Get an instant funding account + crypto wallet in 2 minutes. Upwork payments auto-convert to USDT/USDC. Sell on Binance/Bybit at premium P2P rates (3-5% higher than banks)."
           benefits={[
-            "US bank account accepted by Upwork",
-            "0.5% flat fee vs 3-5% with Payoneer",
-            "Earn 4.2% APY on your balance",
-            "Works in Nigeria, Kenya, Brazil & 100+ countries",
+            "Instant funding account in 2 minutes",
+            "Zero annual fees (Payoneer: $35/year)",
+            "Auto-convert to USDT/USDC stablecoin",
+            "Sell on Binance P2P at 3-5% premium rates",
           ]}
-          savings="$500+"
+          savings="$71+"
         />
 
         <PlatformSteps platformName="Upwork" steps={steps} />
@@ -306,40 +306,40 @@ export default function UpworkPage() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="rounded-2xl border border-border/50 bg-card p-6">
                 <div className="text-3xl font-bold text-primary mb-2">
-                  $500+
+                  $71+
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">
-                  Annual Savings
+                  Minimum Annual Savings
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  On $10,000/year in Upwork earnings, you save over $500
-                  compared to Payoneer&apos;s fees.
+                  Stop paying Payoneer&apos;s $35/year + $3×12 withdrawals.
+                  DattaPay has zero annual fees.
                 </p>
               </div>
 
               <div className="rounded-2xl border border-border/50 bg-card p-6">
                 <div className="text-3xl font-bold text-primary mb-2">
-                  4.2%
+                  3-5%
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">
-                  APY on Balance
+                  Binance P2P Premium
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Your idle Upwork earnings earn 4.2% APY automatically.
-                  Payoneer and Upwork pay 0%.
+                  Auto-convert to USDT/USDC, then sell on Binance P2P at rates
+                  3-5% higher than bank transfers.
                 </p>
               </div>
 
               <div className="rounded-2xl border border-border/50 bg-card p-6">
                 <div className="text-3xl font-bold text-primary mb-2">
-                  USDC
+                  2 min
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">
-                  Inflation Protection
+                  Instant Setup
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Your funds are backed by USDC stablecoin. Protect your
-                  earnings from local currency devaluation.
+                  Get your funding account + crypto wallet in 2 minutes. Add to
+                  Upwork and start receiving payments.
                 </p>
               </div>
             </div>
@@ -348,7 +348,7 @@ export default function UpworkPage() {
 
         <PlatformFAQ platformName="Upwork" faqs={faqs} />
 
-        <PlatformCTA platformName="Upwork" savings="$500+" />
+        <PlatformCTA platformName="Upwork" savings="$71+" />
       </main>
 
       <Footer />

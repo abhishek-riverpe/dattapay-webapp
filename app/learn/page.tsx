@@ -33,9 +33,9 @@ export const metadata: Metadata = {
 
 const articles = [
   {
-    title: "What is USDC? A Guide for Freelancers",
+    title: "What is USDC/USDT? Auto-Convert & Sell on Binance",
     description:
-      "Learn what USDC stablecoin is, how it works, and why freelancers use it to protect their earnings from currency volatility.",
+      "Learn how DattaPay auto-converts your payments to USDT/USDC stablecoin, and how to sell on Binance P2P at premium rates (3-5% higher than banks).",
     href: "/learn/usdc",
     category: "Stablecoins",
     icon: Coins,
@@ -43,9 +43,9 @@ const articles = [
     featured: true,
   },
   {
-    title: "Stablecoin vs Local Currency: Which is Better?",
+    title: "Stablecoin vs Local Currency: Sell on Binance P2P",
     description:
-      "Compare keeping your freelance earnings in stablecoins vs local currencies like Naira, Real, or Peso. Learn the pros and cons.",
+      "Why auto-converting to USDT/USDC and selling on Binance P2P gives you 3-5% better rates than keeping money in local currency.",
     href: "/learn/stablecoin-guide",
     category: "Guide",
     icon: BookOpen,
@@ -53,9 +53,9 @@ const articles = [
     featured: true,
   },
   {
-    title: "How to Protect Your Freelance Income from Inflation",
+    title: "Protect Your Income: Auto-Convert to Stablecoin",
     description:
-      "Practical strategies for freelancers in high-inflation countries to preserve the value of their earnings.",
+      "How DattaPay's instant auto-conversion to USDT/USDC protects your earnings from devaluation, plus sell on Binance P2P at premium rates.",
     href: "/learn/inflation-hedge",
     category: "Strategy",
     icon: Shield,
@@ -122,13 +122,13 @@ export default function LearnPage() {
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6">
-              Learn About Freelancer Payments
+              Auto-Convert to USDT/USDC & Sell on Binance P2P
             </h1>
 
             <p className="text-lg sm:text-xl text-muted-foreground">
-              Educational guides to help you understand stablecoins, protect
-              your earnings from inflation, and optimize your international
-              payments.
+              Learn how DattaPay auto-converts your payments to stablecoin, and
+              how to sell on Binance/Bybit/Bitget P2P at premium rates (3-5%
+              higher than banks).
             </p>
           </div>
         </div>
@@ -231,32 +231,33 @@ export default function LearnPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground mb-6">
-                Why Financial Literacy Matters for Freelancers
+                The DattaPay Flow: Auto-Convert & Sell at Premium Rates
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                As a freelancer earning internationally, understanding how money
-                works across borders can save you thousands of dollars and
-                protect your hard-earned income from currency volatility.
+                Stop paying Payoneer&apos;s $35/year + $3 per withdrawal. Get an
+                instant funding account + crypto wallet in 2 minutes. Payments
+                auto-convert to USDT/USDC stablecoin.
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                   <span className="text-muted-foreground">
-                    Learn how stablecoins can protect your earnings from 30%+
-                    inflation
+                    Auto-convert payments to USDT/USDC - protection from
+                    currency devaluation
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Shield className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                   <span className="text-muted-foreground">
-                    Understand the difference between USDC, USDT, and local
-                    currencies
+                    Sell on Binance/Bybit/Bitget P2P at 3-5% premium rates vs
+                    banks
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Coins className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                   <span className="text-muted-foreground">
-                    Discover strategies to maximize your freelance income
+                    Zero annual fees (vs Payoneer&apos;s $35/year + $3 per
+                    withdrawal)
                   </span>
                 </li>
               </ul>
@@ -264,13 +265,13 @@ export default function LearnPage() {
 
             <div className="rounded-2xl bg-primary/5 border border-primary/20 p-8">
               <div className="text-center">
-                <div className="text-5xl font-bold text-primary mb-2">$22B</div>
+                <div className="text-5xl font-bold text-primary mb-2">3-5%</div>
                 <p className="text-muted-foreground mb-6">
-                  Stablecoin transactions in Nigeria (2023-2024)
+                  Higher rates on Binance P2P vs bank transfers
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Freelancers in emerging markets are already using stablecoins
-                  to protect their earnings. Learn how you can too.
+                  DattaPay auto-converts your payments to USDT/USDC. Sell on
+                  Binance P2P at premium rates and keep more of your earnings.
                 </p>
               </div>
             </div>
