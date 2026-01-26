@@ -13,7 +13,6 @@ Disallow: /api/
 Disallow: /static/
 Disallow: /prisma/
 Disallow: /*.json$
-Disallow: /*?*
 
 # Allow important static files
 Allow: /manifest.json

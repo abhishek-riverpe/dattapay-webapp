@@ -10,7 +10,9 @@ export const metadata: Metadata = {
     "Learn about stablecoins, USDC, inflation protection, and international payments. Educational guides for freelancers in Africa, LATAM, and emerging markets.",
   keywords: [
     "what is USDC",
+    "what is USDT",
     "stablecoin guide",
+    "stablecoin guide 2026",
     "inflation protection freelancers",
     "freelancer finance education",
     "cryptocurrency for freelancers",
@@ -18,6 +20,10 @@ export const metadata: Metadata = {
     "stablecoin vs local currency",
     "USDC vs USDT",
     "freelancer financial literacy",
+    "Binance P2P guide",
+    "auto convert USDT USDC",
+    "sell stablecoin P2P",
+    "freelancer payment guide",
   ],
   alternates: {
     canonical: `${siteUrl}/learn`,

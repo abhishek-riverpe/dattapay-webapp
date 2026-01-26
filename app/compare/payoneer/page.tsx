@@ -15,12 +15,19 @@ export const metadata: Metadata = {
   keywords: [
     "DattaPay vs Payoneer",
     "Payoneer alternative",
-    "Payoneer alternative Africa",
-    "Payoneer fees too high",
-    "Payoneer alternative low fees",
-    "freelancer payment platform comparison",
+    "Payoneer alternative 2026",
+    "Payoneer $35 annual fee",
+    "Payoneer $3 withdrawal fee",
     "Payoneer alternative Nigeria",
+    "Payoneer alternative Africa",
+    "freelancer payment platform",
+    "USDT USDC auto convert",
+    "Binance P2P premium rates",
+    "stop paying Payoneer fees",
+    "Payoneer vs DattaPay comparison",
     "cheaper than Payoneer",
+    "Upwork Payoneer alternative",
+    "Fiverr Payoneer alternative",
   ],
   alternates: {
     canonical: `${siteUrl}/compare/payoneer`,
@@ -185,7 +192,7 @@ const jsonLd = {
       description:
         "Compare DattaPay vs Payoneer for freelancer payments. Save up to $847/year.",
       datePublished: "2026-01-01",
-      dateModified: "2026-01-23",
+      dateModified: "2026-01-26",
       isPartOf: {
         "@id": `${siteUrl}/#website`,
       },

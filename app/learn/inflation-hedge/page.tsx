@@ -21,6 +21,12 @@ export const metadata: Metadata = {
     "earn yield on freelance income",
     "passive income freelancer",
     "USDC yield",
+    "auto convert USDT USDC",
+    "Binance P2P premium rates",
+    "freelancer currency protection 2026",
+    "protect freelance income devaluation",
+    "stablecoin vs local currency",
+    "sell USDT P2P premium",
   ],
   alternates: {
     canonical: `${siteUrl}/learn/inflation-hedge`,
@@ -86,7 +92,7 @@ const jsonLd = {
       description:
         "Practical strategies for freelancers in high-inflation countries to preserve earnings.",
       datePublished: "2026-01-01",
-      dateModified: "2026-01-23",
+      dateModified: "2026-01-26",
       author: {
         "@type": "Organization",
         name: "DattaPay",

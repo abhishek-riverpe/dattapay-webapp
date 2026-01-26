@@ -21,6 +21,12 @@ export const metadata: Metadata = {
     "stablecoin risks",
     "cryptocurrency for freelancers",
     "digital dollar vs local currency",
+    "Binance P2P premium rates",
+    "sell stablecoin P2P",
+    "USDT USDC vs bank transfer",
+    "freelancer currency devaluation",
+    "protect earnings inflation",
+    "stablecoin guide 2026",
   ],
   alternates: {
     canonical: `${siteUrl}/learn/stablecoin-guide`,
@@ -86,7 +92,7 @@ const jsonLd = {
       description:
         "Compare stablecoins vs local currencies for freelancer earnings.",
       datePublished: "2026-01-01",
-      dateModified: "2026-01-23",
+      dateModified: "2026-01-26",
       author: {
         "@type": "Organization",
         name: "DattaPay",

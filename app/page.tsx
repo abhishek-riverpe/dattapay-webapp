@@ -16,16 +16,23 @@ export const metadata: Metadata = {
   description:
     "Get instant funding account + crypto wallet in 2 minutes. Receive from Fiverr, Upwork, Freelancer — auto-convert to USDT/USDC. Sell on Binance at premium rates. Zero annual fees. Perfect for freelancers and remittances.",
   keywords: [
+    "DattaPay",
     "Payoneer alternative",
+    "Payoneer alternative 2026",
     "funding account freelancer",
+    "instant funding account",
     "USDT freelancer payment",
+    "USDC freelancer payment",
     "crypto wallet freelancer",
     "Fiverr withdrawal no fees",
     "Upwork payment USDT",
     "stablecoin payments",
     "Binance P2P freelancer",
+    "Binance P2P premium rates",
     "remittance low fees",
     "international payments freelancer",
+    "auto convert USDT USDC",
+    "zero annual fee payment",
   ],
   alternates: {
     canonical: "https://dattapay.com",

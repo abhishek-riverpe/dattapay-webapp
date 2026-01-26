@@ -26,6 +26,10 @@ export const metadata: Metadata = {
     "Deel payments Africa",
     "Deel EOR payments",
     "Deel US bank account",
+    "Deel USDT USDC",
+    "Deel Binance P2P",
+    "Deel withdrawal 2026",
+    "Deel better than card",
   ],
   alternates: {
     canonical: `${siteUrl}/deel`,

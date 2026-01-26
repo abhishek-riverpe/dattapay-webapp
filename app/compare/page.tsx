@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   keywords: [
     "DattaPay comparison",
     "Payoneer alternative",
+    "Payoneer alternative 2026",
     "Wise alternative",
     "Grey alternative",
     "PayPal alternative Africa",
@@ -18,6 +19,10 @@ export const metadata: Metadata = {
     "best payment platform freelancers",
     "payment platform fees comparison",
     "international payment comparison 2026",
+    "Binance P2P payment platform",
+    "USDT USDC auto convert",
+    "zero annual fee freelancer",
+    "compare payment platforms Africa",
   ],
   alternates: {
     canonical: `${siteUrl}/compare`,

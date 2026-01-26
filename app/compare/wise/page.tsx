@@ -15,12 +15,18 @@ export const metadata: Metadata = {
   keywords: [
     "DattaPay vs Wise",
     "Wise alternative",
+    "Wise alternative 2026",
     "Wise alternative Nigeria",
     "Wise USD suspended Nigeria",
     "TransferWise alternative Africa",
     "Wise not working Nigeria",
     "best Wise alternative 2026",
     "Wise USD suspended alternative",
+    "Binance P2P Nigeria",
+    "USDT USDC auto convert",
+    "freelancer payments Nigeria",
+    "receive USD Nigeria",
+    "Wise replacement Nigeria",
   ],
   alternates: {
     canonical: `${siteUrl}/compare/wise`,
@@ -180,7 +186,7 @@ const jsonLd = {
       description:
         "Wise suspended USD in Nigeria since 2022. DattaPay is the best alternative.",
       datePublished: "2026-01-01",
-      dateModified: "2026-01-23",
+      dateModified: "2026-01-26",
       isPartOf: {
         "@id": `${siteUrl}/#website`,
       },

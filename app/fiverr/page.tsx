@@ -26,6 +26,10 @@ export const metadata: Metadata = {
     "Fiverr payment methods",
     "Fiverr ganhar em dólar",
     "Fiverr US bank account",
+    "Fiverr USDT USDC",
+    "Fiverr Binance P2P",
+    "Fiverr withdrawal 2026",
+    "Fiverr skip Payoneer fees",
   ],
   alternates: {
     canonical: `${siteUrl}/fiverr`,

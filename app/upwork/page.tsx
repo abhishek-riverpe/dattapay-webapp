@@ -26,6 +26,10 @@ export const metadata: Metadata = {
     "Upwork Payoneer alternative",
     "Upwork direct deposit",
     "Upwork US bank account",
+    "Upwork USDT USDC",
+    "Upwork Binance P2P",
+    "Upwork withdrawal 2026",
+    "Upwork skip Payoneer fees",
   ],
   alternates: {
     canonical: `${siteUrl}/upwork`,

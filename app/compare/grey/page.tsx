@@ -15,12 +15,18 @@ export const metadata: Metadata = {
   keywords: [
     "DattaPay vs Grey",
     "Grey alternative",
+    "Grey alternative 2026",
     "Grey alternative Nigeria",
+    "Grey alternative Kenya",
     "Grey vs Raenest",
     "dollar account Nigeria comparison",
     "Grey fees comparison",
     "best dollar account Nigerian freelancer",
-    "Grey alternative Kenya",
+    "Binance P2P Nigeria",
+    "USDT USDC auto convert",
+    "Grey no crypto",
+    "African freelancer payments",
+    "receive USD Africa",
   ],
   alternates: {
     canonical: `${siteUrl}/compare/grey`,
@@ -174,7 +180,7 @@ const jsonLd = {
       description:
         "Compare DattaPay vs Grey for African freelancers. Get 0.5% fees + 4.2% APY yield.",
       datePublished: "2026-01-01",
-      dateModified: "2026-01-23",
+      dateModified: "2026-01-26",
       isPartOf: {
         "@id": `${siteUrl}/#website`,
       },

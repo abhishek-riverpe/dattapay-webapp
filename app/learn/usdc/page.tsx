@@ -12,7 +12,9 @@ export const metadata: Metadata = {
     "Learn what USDC stablecoin is, how it works, and why freelancers use it to protect their earnings. Understand USDC vs USDT, safety, and use cases.",
   keywords: [
     "what is USDC",
+    "what is USDT",
     "USDC stablecoin",
+    "USDT stablecoin",
     "USDC for freelancers",
     "USDC vs USDT",
     "is USDC safe",
@@ -22,6 +24,10 @@ export const metadata: Metadata = {
     "digital dollar",
     "USDC Nigeria",
     "USDC Africa freelancer",
+    "auto convert USDT USDC",
+    "Binance P2P stablecoin",
+    "sell USDT Binance P2P",
+    "stablecoin freelancer guide 2026",
   ],
   alternates: {
     canonical: `${siteUrl}/learn/usdc`,
@@ -87,7 +93,7 @@ const jsonLd = {
       description:
         "Learn what USDC stablecoin is, how it works, and why freelancers use it to protect their earnings.",
       datePublished: "2026-01-01",
-      dateModified: "2026-01-23",
+      dateModified: "2026-01-26",
       author: {
         "@type": "Organization",
         name: "DattaPay",
