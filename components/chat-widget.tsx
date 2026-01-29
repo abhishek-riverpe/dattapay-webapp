@@ -139,7 +139,7 @@ export function ChatWidget() {
     <>
       {/* Chat Panel */}
       {open && (
-        <div className="fixed inset-0 z-50 flex items-end justify-end md:inset-auto md:bottom-24 md:right-6">
+        <div className="fixed inset-0 z-[9999] flex items-end justify-end md:inset-auto md:bottom-24 md:right-6">
           {/* Backdrop on mobile */}
           <div
             className="absolute inset-0 bg-black/40 md:hidden"
@@ -257,7 +257,7 @@ export function ChatWidget() {
       {/* Floating Button */}
       <button
         onClick={() => setOpen(!open)}
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg hover:bg-primary/90 hover:scale-110 transition-all duration-300"
+        className="fixed bottom-6 right-6 z-[9999] flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg hover:bg-primary/90 hover:scale-110 transition-all duration-300"
         aria-label={open ? "Close chat" : "Open chat"}
       >
         {open ? (
