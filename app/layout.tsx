@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { Poppins } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { ChatWidget } from "@/components/chat-widget";
 import { RegionProvider } from "@/lib/region-context";
 import "./globals.css";
 
@@ -223,7 +223,7 @@ export default async function RootLayout({
           <RegionProvider regionCode={regionCode}>
             {children}
           </RegionProvider>
-          <ThemeToggle />
+          <ChatWidget />
         </ThemeProvider>
       </body>
     </html>

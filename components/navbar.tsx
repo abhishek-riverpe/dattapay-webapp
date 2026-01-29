@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { SITE } from "@/lib/constants";
 import { RegionSwitcher } from "./region-switcher";
+import { ThemeToggle } from "./theme-toggle";
 import { useRegion } from "@/lib/region-context";
 import { DEFAULT_CONTENT } from "@/lib/regional-content";
 
@@ -66,6 +67,7 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-4">
           <RegionSwitcher />
+          <ThemeToggle />
           <Button asChild size="lg" className="rounded-full px-6">
             <Link href="/contact">{nav.getStarted}</Link>
           </Button>
@@ -104,7 +106,10 @@ export default function Navbar() {
             <div className="pt-4 flex flex-col gap-4">
               <div className="flex items-center justify-between px-3">
                 <span className="text-sm font-medium text-muted-foreground">Region</span>
-                <RegionSwitcher />
+                <div className="flex items-center gap-2">
+                  <RegionSwitcher />
+                  <ThemeToggle />
+                </div>
               </div>
               <Button asChild size="lg" className="w-full rounded-full">
                 <Link href="/contact">{nav.getStarted}</Link>
