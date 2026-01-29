@@ -116,7 +116,7 @@ export function ChatWidget() {
     } catch {
       appendToMessage(
         assistantId,
-        "Sorry, I encountered an error. Please try again or contact support@dattapay.com for help."
+        "Sorry, I encountered an error. Please try again or contact support@dattapay.com for help.",
       );
     } finally {
       setLoading(false);
@@ -146,7 +146,7 @@ export function ChatWidget() {
             onClick={() => setOpen(false)}
           />
 
-          <div className="relative flex flex-col w-full h-full bg-background md:w-[420px] md:h-[600px] md:rounded-2xl md:border md:border-border md:shadow-2xl overflow-hidden">
+          <div className="relative flex flex-col w-full h-full bg-background md:w-105 md:h-150 md:rounded-2xl md:border md:border-border md:shadow-2xl overflow-hidden">
             {/* Header */}
             <div className="flex items-center justify-between px-4 py-3 border-b border-border bg-background">
               <div className="flex items-center gap-2">
@@ -223,7 +223,7 @@ export function ChatWidget() {
                     onKeyDown={handleKeyDown}
                     placeholder="Ask about DattaPay..."
                     rows={1}
-                    className="flex-1 resize-none bg-transparent px-2 py-1.5 text-sm outline-none placeholder:text-muted-foreground min-h-[36px] max-h-[100px]"
+                    className="flex-1 resize-none bg-transparent px-2 py-1.5 text-sm outline-none placeholder:text-muted-foreground min-h-9 max-h-25"
                     style={{
                       height: "auto",
                       overflow:
@@ -295,9 +295,7 @@ function MessageBubble({ message }: { message: ChatMessage }) {
             : "bg-muted text-foreground rounded-tl-md"
         }`}
       >
-        {message.content || (
-          <SyncLoader color="hsl(var(--primary))" size={6} />
-        )}
+        {message.content || <SyncLoader color="hsl(var(--primary))" size={6} />}
       </div>
     </div>
   );
