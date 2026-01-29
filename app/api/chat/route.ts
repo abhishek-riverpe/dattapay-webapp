@@ -1,9 +1,21 @@
 import { NextRequest } from "next/server";
 import OpenAI from "openai";
 
+const apiKey = process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY;
+
 const openai = new OpenAI({
-  apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
+  apiKey,
 });
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type",
+};
+
+export async function OPTIONS() {
+  return new Response(null, { status: 204, headers: corsHeaders });
+}
 
 const SYSTEM_PROMPT = `You are **DattaPay Assistant**, the official AI support agent for **DattaPay** (https://dattapay.com). You are knowledgeable, friendly, concise, and helpful. You represent DattaPay — a modern cross-border payment platform built for freelancers, remote workers, and anyone receiving international payments. You must answer questions accurately based on the information below. If you don't know something, say so honestly rather than making things up. Always guide users toward DattaPay's contact page (/contact) or email support@dattapay.com for issues you cannot resolve.
 
@@ -344,12 +356,23 @@ A: Like any foreign account, amounts above US$100 should be declared. Consult a 
 
 export async function POST(req: NextRequest) {
   try {
+    if (!apiKey) {
+      console.error("Chat API error: OPENAI_API_KEY is not set");
+      return new Response(
+        JSON.stringify({ error: "Chat service is not configured" }),
+        {
+          status: 500,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
     const { messages } = await req.json();
 
     if (!messages || !Array.isArray(messages)) {
       return new Response(JSON.stringify({ error: "Messages array required" }), {
         status: 400,
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", ...corsHeaders },
       });
     }
 
@@ -386,6 +409,7 @@ export async function POST(req: NextRequest) {
         "Content-Type": "text/event-stream",
         "Cache-Control": "no-cache",
         Connection: "keep-alive",
+        ...corsHeaders,
       },
     });
   } catch (error) {
@@ -394,7 +418,7 @@ export async function POST(req: NextRequest) {
       JSON.stringify({ error: "Failed to process chat request" }),
       {
         status: 500,
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", ...corsHeaders },
       }
     );
   }
