@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, BadgePercent, Building2 } from "lucide-react";
+import { ArrowRight, TrendingDown, TrendingUp, ShieldCheck } from "lucide-react";
 import { RegionalContentData, DEFAULT_CONTENT } from "@/lib/regional-content";
 
 const focusPoints = [
-  { icon: BadgePercent, label: "Flat 0.5% Fee" },
-  { icon: Shield, label: "Bank-grade Security" },
-  { icon: Building2, label: "Registered MSB with FinCEN" },
+  { icon: TrendingDown, label: "Save 3-5% vs Payoneer/PayPal" },
+  { icon: TrendingUp, label: "Earn 3-4% APY on Idle Funds" },
+  { icon: ShieldCheck, label: "US Government Licensed (FinCEN MSB)" },
 ];
 
 interface HeroProps {
@@ -42,9 +42,9 @@ export default function Hero({ regionData }: HeroProps) {
               content.headline
             ) : (
               <>
-                Empowering freelancers & creators.{" "}
-                <span className="bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                  Receive, grow, spend.
+                Keep more. Earn more.{" "}
+                <span className="bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent whitespace-nowrap">
+                  Stress less.
                 </span>
               </>
             )}

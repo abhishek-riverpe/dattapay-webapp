@@ -5,34 +5,34 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "How do I receive USD payments as a freelancer in Africa?",
+    question: "How is this different from just using PayPal or Payoneer?",
     answer:
-      "Sign up for DattaPay to get a US bank account. Share your account details with clients, and receive payments in USD with only 0.5% fees. No complex paperwork required.",
+      "PayPal and Payoneer charge 3-5% on every transaction plus annual fees. DattaPay charges just 0.5% flat — no annual fees, no hidden charges. Plus, your earnings are stored as USDC (digital dollars) that earn 3-4% APY while they sit. In many countries you get better exchange rates when you withdraw.",
   },
   {
-    question: "How does DattaPay protect my earnings from inflation?",
+    question: "Do I need to know anything about crypto?",
     answer:
-      "DattaPay converts your payments to USDC stablecoin, keeping your earnings pegged to US dollars. This protects you from local currency devaluation. You also earn 4.2% APY on idle funds.",
-  },
-  {
-    question: "What are DattaPay's fees compared to Payoneer or Wise?",
-    answer:
-      "DattaPay charges just 0.5% flat fee vs Payoneer's 2-3% + currency conversion fees. No monthly fees, no withdrawal fees. You could save up to $847/year on a typical $10,000 annual income.",
-  },
-  {
-    question: "Which countries does DattaPay support?",
-    answer:
-      "DattaPay supports freelancers in 50+ countries including Nigeria, Kenya, Ghana, South Africa, Brazil, Mexico, Argentina, and more. We're focused on serving regions with high inflation or limited banking access.",
-  },
-  {
-    question: "How do I withdraw my earnings?",
-    answer:
-      "You can withdraw to your local bank account at competitive exchange rates, or keep your funds in USDC to earn 4.2% APY. We support multiple withdrawal methods including bank transfer and mobile money.",
+      "No. DattaPay handles everything automatically. Your payments come in as dollars and you can withdraw to your local bank account — no crypto knowledge required. We use stablecoins (digital dollars) behind the scenes to get you better rates and earn yield, but you never have to touch them directly.",
   },
   {
     question: "Is DattaPay safe and compliant?",
     answer:
-      "Yes. DattaPay uses bank-grade security with 256-bit encryption. We're fully compliant with US financial regulations and partner with licensed financial institutions. Your funds are protected.",
+      "DattaPay is a registered Money Service Business (MSB) with FinCEN, the US financial regulator. We use bank-grade security and your funds are stored in regulated, audited stablecoins backed 1:1 by real US dollars. Thousands of freelancers from 50+ countries trust us with their payments.",
+  },
+  {
+    question: "How do I earn yield on my USDC?",
+    answer:
+      "You don't have to do anything. If you hold USDC on DattaPay, you automatically earn 3-4% APY. We invest pooled funds in US Treasury Bills and pass the yield to you daily. There's no lockup — withdraw anytime with no penalty.",
+  },
+  {
+    question: "Which countries does DattaPay support?",
+    answer:
+      "DattaPay supports freelancers in 50+ countries including Nigeria, Kenya, Ghana, South Africa, Brazil, Mexico, Argentina, Bangladesh, and more. We're focused on serving regions with high inflation or limited banking access.",
+  },
+  {
+    question: "How do I withdraw my earnings?",
+    answer:
+      "Transfer your USDC to your personal wallet or sell on your preferred exchange. In some emerging markets, freelancers who sell USDC on P2P exchanges can get rates above the mid-market rate. Or simply hold and earn 3-4% APY backed by US Treasury Bills.",
   },
 ];
 

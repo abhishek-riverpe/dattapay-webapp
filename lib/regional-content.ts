@@ -133,14 +133,14 @@ export const DEFAULT_CONTENT: Omit<RegionalContentData, "code" | "country" | "co
     rights: "All rights reserved.",
   },
   hero: {
-    headline: "Stop Losing Money to Payoneer's Hidden Fees",
-    subheadline: "Get your funding account & crypto wallet instantly. Receive payments from Fiverr, Upwork, Freelancer — auto-converted to USDT/USDC. Sell at premium rates on Binance. Zero annual fees.",
-    ctaText: "Get Your Free Account",
+    headline: "Keep more. Earn more. Stress less.",
+    subheadline: "Get a US bank account + USDC wallet in 2 minutes. Receive from Upwork, Fiverr, Freelancer — pay just 0.5% instead of Payoneer's 3-5%. Park your stablecoins and earn 3-4% APY backed by US Treasury Bills. Zero annual fees.",
+    ctaText: "Get My Free US Bank Account",
     badge: "Trusted by 10,000+ Freelancers Worldwide",
     stats: [
       { value: "$0", label: "Annual Fee" },
       { value: "0.5%", label: "Per Transaction" },
-      { value: "Instant", label: "Crypto Conversion" },
+      { value: "3-4%", label: "APY on Idle Funds" },
       { value: "2 min", label: "Account Setup" },
     ],
   },
@@ -149,19 +149,19 @@ export const DEFAULT_CONTENT: Omit<RegionalContentData, "code" | "country" | "co
     subtitle: "While Payoneer charges $35 annual fee plus $3 for every single withdrawal, DattaPay charges only a tiny fee per transaction. No annual fees. No hidden costs. No surprises.",
     comparisonTitle: "See How Much You're Losing",
     featuresTitle: "Everything You Need, Nothing You Don't",
-    featuresSubtitle: "Instant funding account + crypto wallet. That's it. Simple, fast, affordable.",
+    featuresSubtitle: "US bank account + USDC wallet + automatic yield. Simple, fast, affordable.",
     features: {
       globalAccounts: {
-        title: "Instant Funding Account",
-        description: "Get your US/EU bank details in 2 minutes. Add directly to Fiverr, Upwork, Freelancer, PeoplePerHour as withdrawal method.",
+        title: "Your US Bank Account",
+        description: "Get real US bank details in 2 minutes. Add to Upwork, Fiverr, Deel, or share directly with clients. Pay just 0.5% — not the 3-5% that PayPal and Payoneer charge.",
       },
       instantSettlement: {
-        title: "Auto Stablecoin Conversion",
-        description: "Payments instantly convert to USDT/USDC. No waiting days. No manual conversion. Your money works while you sleep.",
+        title: "Earn While You Hold",
+        description: "Park your USDC on DattaPay and earn 3-4% APY automatically. We invest in US Treasury Bills (the safest asset in the world) and pass the yield to you. No staking. No lockup. Just passive income.",
       },
       automatedYield: {
-        title: "Sell at Premium Rates",
-        description: "Cash out your USDT/USDC on Binance, Bybit, or Bitget at market-best rates. Often 2-5% higher than bank rates.",
+        title: "Auto-Convert to Stablecoins",
+        description: "Payments instantly convert to USDC — digital dollars pegged 1:1 to USD. Your money holds its value while your local currency doesn't.",
       },
     },
     comparison: {
@@ -181,32 +181,40 @@ export const DEFAULT_CONTENT: Omit<RegionalContentData, "code" | "country" | "co
   },
   faqs: [
     {
-      question: "How is DattaPay different from Payoneer?",
-      answer: "Payoneer charges $35/year annual fee plus $3 for every withdrawal. DattaPay has ZERO annual fees and charges only a small percentage per transaction. Plus, your payments auto-convert to USDT/USDC stablecoin, which you can sell at premium rates on exchanges like Binance.",
+      question: "How is this different from just using PayPal or Payoneer?",
+      answer: "PayPal and Payoneer charge 3-5% on every transaction plus annual fees. DattaPay charges just 0.5% flat — no annual fees, no hidden charges. Plus, your earnings are stored as USDC (digital dollars) that earn 3-4% APY while they sit. In many countries you get better exchange rates when you withdraw, which more than covers our small fee.",
+    },
+    {
+      question: "Do I need to know anything about crypto?",
+      answer: "No. DattaPay handles everything automatically. Your payments come in as dollars and you can withdraw to your local bank account — no crypto knowledge required. We use stablecoins (digital dollars) behind the scenes to get you better rates and earn yield, but you never have to touch them directly.",
+    },
+    {
+      question: "Is this legal? Is it safe?",
+      answer: "DattaPay is a registered Money Service Business (MSB) with FinCEN, the US financial regulator. We use bank-grade security and your funds are stored in regulated, audited stablecoins backed 1:1 by real US dollars. Thousands of freelancers from 50+ countries trust us with their payments.",
     },
     {
       question: "How do I add DattaPay to my Fiverr/Upwork account?",
-      answer: "Sign up and get your funding account details instantly (US bank account with routing number). Go to your Fiverr/Upwork payment settings, add it as a bank withdrawal method. Done. Takes 2 minutes.",
+      answer: "Sign up and get real US bank details (routing number + account number) instantly. Copy-paste them into your Upwork or Fiverr payment settings as a withdrawal method. Your next withdrawal goes directly to your DattaPay account. Takes 2 minutes.",
     },
     {
-      question: "What happens when I receive a payment?",
-      answer: "When your client pays through the freelance platform, the money hits your DattaPay funding account. It's instantly converted to USDT or USDC stablecoin and deposited to your crypto wallet. No delays, no manual steps.",
+      question: "How do I earn yield on my USDC?",
+      answer: "You don't have to do anything. If you hold USDC on DattaPay, you automatically earn 3-4% APY. We invest pooled funds in US Treasury Bills and pass the yield to you daily. There's no lockup — withdraw anytime with no penalty.",
     },
     {
-      question: "How do I cash out my earnings?",
-      answer: "Transfer your USDT/USDC to any exchange (Binance, Bybit, Bitget) and sell at market rates — often 2-5% higher than what banks or Payoneer offer. Or hold as stablecoin to protect against local currency devaluation.",
+      question: "What are US Treasury Bills?",
+      answer: "Treasury Bills (T-Bills) are short-term debt issued by the US government. They're considered the safest investment in the world. We invest in T-Bills and share the yield with you — that's how you earn 3-4% APY on your USDC.",
     },
     {
-      question: "Is there really no annual fee?",
-      answer: "Correct. Zero annual fees. Unlike Payoneer's $35/year or banks' maintenance fees, DattaPay only charges a small percentage when you actually receive money. If you don't use it, you don't pay.",
+      question: "How do I withdraw my earnings?",
+      answer: "Transfer your USDC to your personal wallet or sell on your preferred exchange. In some emerging markets like Nigeria, Bangladesh, and Argentina, freelancers who sell USDC on P2P exchanges can sometimes get rates above the mid-market rate. Or simply hold and earn 3-4% APY.",
     },
     {
       question: "Which freelance platforms are supported?",
       answer: "All major platforms: Fiverr, Upwork, Freelancer.com, PeoplePerHour, Toptal, Deel, Remote.com, 99designs, Workana, and more. If it supports US bank withdrawals, it works with DattaPay.",
     },
     {
-      question: "How fast do I get my funding account?",
-      answer: "Instantly. Sign up, verify your identity, and your funding account + crypto wallet are ready in under 2 minutes. No paperwork, no waiting days for approval.",
+      question: "Is there really no annual fee?",
+      answer: "Correct. Zero annual fees. Unlike Payoneer's $35/year or banks' maintenance fees, DattaPay only charges 0.5% when you actually receive money. If you don't use it, you don't pay. Free forever.",
     },
     {
       question: "Can I also send remittances to my family?",
@@ -218,20 +226,20 @@ export const DEFAULT_CONTENT: Omit<RegionalContentData, "code" | "country" | "co
     subtitle: "Everything you need to know about getting paid smarter with DattaPay.",
   },
   howItWorks: {
-    title: "3 Steps to Financial Freedom",
+    title: "3 Steps to Keep More of What You Earn",
     subtitle: "No complex setup. No waiting. Start receiving payments today.",
     steps: {
       step1: {
-        title: "Get Your Account",
-        description: "Sign up and receive your funding account + crypto wallet instantly. Add to Fiverr, Upwork, or any platform.",
+        title: "Get Your US Bank Account",
+        description: "Sign up and receive US bank details instantly — routing number and account number. Add to Upwork, Fiverr, or any platform that supports US bank withdrawals.",
       },
       step2: {
-        title: "Receive Payments",
-        description: "Clients pay to your funding account. Money auto-converts to USDT/USDC in your crypto wallet.",
+        title: "Receive Payments as USDC",
+        description: "Clients pay to your funding account. Money auto-converts to USDC stablecoins (digital dollars pegged 1:1 to USD). You pay just 0.5% — not Payoneer's 3-5%.",
       },
       step3: {
-        title: "Cash Out at Premium",
-        description: "Sell your stablecoins on Binance, Bybit, or Bitget at market-best rates. Or hold to beat inflation.",
+        title: "Earn or Withdraw — Your Choice",
+        description: "Hold and earn 3-4% APY backed by US Treasury Bills. Or withdraw anytime — transfer to your personal wallet or sell on your preferred exchange.",
       },
     },
   },
@@ -247,9 +255,9 @@ export const DEFAULT_CONTENT: Omit<RegionalContentData, "code" | "country" | "co
   },
   cta: {
     headline: "Every Day You Wait, Payoneer Takes More",
-    subheadline: "Join 10,000+ freelancers who switched to DattaPay. Get your free funding account and crypto wallet now.",
-    ctaText: "Get Your Free Account",
-    note: "No credit card required. No annual fees. Setup in 2 minutes.",
+    subheadline: "Join 10,000+ freelancers who switched to DattaPay. Get your free US bank account now — no crypto knowledge needed.",
+    ctaText: "Start Saving on Fees Now",
+    note: "Free forever. No credit card. No annual fees. Setup in 2 minutes.",
   },
   platforms: ["Fiverr", "Upwork", "Freelancer.com", "PeoplePerHour", "Toptal", "Deel", "Remote.com", "99designs"],
 };

@@ -18,11 +18,11 @@ const siteUrl = "https://dattapay.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "DattaPay - International Payments for Freelancers",
+    default: "DattaPay: Payoneer Alternative for Freelancers | 0.5% Fees",
     template: "%s | DattaPay",
   },
   description:
-    "Get paid in USD/EUR with just 0.5% flat fee. Earn 4.2% APY on idle funds. Bank-grade security & compliance. Join 5,000+ freelancers saving $847/year on fees.",
+    "Get a US bank account in 2 minutes. Pay just 0.5% — not Payoneer's 3-5%. Earn 3-4% APY on idle funds backed by US Treasury Bills. Join 10,000+ freelancers keeping more of what they earn.",
   keywords: [
     // Core value propositions
     "USD payments for freelancers",
@@ -41,12 +41,13 @@ export const metadata: Metadata = {
     "receber dólar como freelancer",
     "cobrar en dólares Argentina",
     "recibir dólares México freelancer",
-    // Inflation protection
+    // Yield & inflation protection
     "protect freelance income inflation",
     "inflation hedge freelancers",
-    "USDC yield",
+    "USDC yield APY",
+    "Treasury Bills yield freelancer",
     "stablecoin inflation hedge",
-    "currency protection",
+    "earn yield on freelance income",
     // Competitor alternatives
     "Payoneer alternative low fees",
     "Wise alternative Nigeria",
@@ -66,9 +67,9 @@ export const metadata: Metadata = {
   creator: "DattaPay",
   publisher: "Negentropy LLC",
   openGraph: {
-    title: "DattaPay - International Payments for Freelancers",
+    title: "DattaPay: Payoneer Alternative for Freelancers | 0.5% Fees + 3-4% APY",
     description:
-      "Get paid in USD/EUR with 0.5% flat fee. Earn 4.2% APY on idle funds. Bank-grade security. Join 5,000+ freelancers.",
+      "Get a US bank account in 2 minutes. Pay 0.5% instead of 3-5%. Earn 3-4% APY on idle funds. Join 10,000+ freelancers.",
     url: siteUrl,
     siteName: "DattaPay",
     type: "website",
@@ -86,9 +87,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "DattaPay - International Payments for Freelancers",
+    title: "DattaPay: Payoneer Alternative for Freelancers | 0.5% Fees + 3-4% APY",
     description:
-      "Get paid in USD/EUR with 0.5% flat fee. Earn 4.2% APY on idle funds. Join 5,000+ freelancers.",
+      "Get a US bank account in 2 minutes. Pay 0.5% instead of 3-5%. Earn 3-4% APY backed by US Treasury Bills.",
     images: ["/og-image.png"],
     site: "@dattapay",
     creator: "@dattapay",
@@ -161,7 +162,7 @@ export default async function RootLayout({
           "width": 512,
           "height": 512
         },
-        "description": "International payment platform for freelancers with 0.5% fees and 4.2% APY yield.",
+        "description": "International payment platform for freelancers with 0.5% fees and 3-4% APY yield backed by US Treasury Bills.",
         "email": "support@dattapay.com",
         "foundingDate": "2024",
         "sameAs": [
@@ -175,7 +176,7 @@ export default async function RootLayout({
         "@id": `${siteUrl}/#website`,
         "url": siteUrl,
         "name": "DattaPay",
-        "description": "Get paid in USD/EUR with 0.5% flat fee. Earn 4.2% APY on idle funds.",
+        "description": "Get a US bank account in 2 minutes. Pay 0.5% instead of 3-5%. Earn 3-4% APY on idle funds.",
         "publisher": {
           "@id": `${siteUrl}/#organization`
         }
@@ -191,7 +192,7 @@ export default async function RootLayout({
         "about": {
           "@id": `${siteUrl}/#organization`
         },
-        "description": "Get paid in USD/EUR with 0.5% flat fee. Earn 4.2% APY on idle funds. Bank-grade security.",
+        "description": "Get a US bank account in 2 minutes. Pay 0.5% instead of 3-5%. Earn 3-4% APY backed by US Treasury Bills.",
         "inLanguage": lang
       }
     ]
