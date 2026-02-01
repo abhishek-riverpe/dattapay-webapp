@@ -1,14 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, TrendingDown, TrendingUp, ShieldCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { RegionalContentData, DEFAULT_CONTENT } from "@/lib/regional-content";
-
-const focusPoints = [
-  { icon: TrendingDown, label: "0.5% fees vs 3-5%" },
-  { icon: TrendingUp, label: "3-4% APY" },
-  { icon: ShieldCheck, label: "FinCEN Licensed" },
-];
 
 interface HeroProps {
   regionData?: RegionalContentData;
@@ -53,19 +47,6 @@ export default function Hero({ regionData }: HeroProps) {
           <p className="mt-5 max-w-xl text-base text-muted-foreground sm:text-lg">
             {content.subheadline}
           </p>
-
-          {/* Focus Points */}
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
-            {focusPoints.map((point) => (
-              <div
-                key={point.label}
-                className="inline-flex items-center gap-1.5 rounded-full border border-border/40 bg-background px-3 py-1.5 text-xs font-medium sm:text-sm"
-              >
-                <point.icon className="h-3.5 w-3.5 text-primary" />
-                {point.label}
-              </div>
-            ))}
-          </div>
 
           {/* CTA */}
           <div className="mt-8">
