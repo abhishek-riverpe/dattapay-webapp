@@ -145,8 +145,8 @@ export const DEFAULT_CONTENT: Omit<RegionalContentData, "code" | "country" | "co
     ],
   },
   keepMore: {
-    title: "Payoneer Takes $35/Year + $3 Per Transaction. We Don't.",
-    subtitle: "While Payoneer charges $35 annual fee plus $3 for every single withdrawal, DattaPay charges only a tiny fee per transaction. No annual fees. No hidden costs. No surprises.",
+    title: "Payoneer Takes $30/Year + $3 Per Transaction. We Don't.",
+    subtitle: "While Payoneer charges $30 annual fee plus $3 for every single withdrawal, DattaPay charges only a tiny fee per transaction. No annual fees. No hidden costs. No surprises.",
     comparisonTitle: "See How Much You're Losing",
     featuresTitle: "Everything You Need, Nothing You Don't",
     featuresSubtitle: "US bank account + USDC wallet + automatic yield. Simple, fast, affordable.",
@@ -167,7 +167,7 @@ export const DEFAULT_CONTENT: Omit<RegionalContentData, "code" | "country" | "co
     comparison: {
       recommended: "Smart Choice",
       othersTitle: "Payoneer & Traditional Banks",
-      othersSubtitle: "$35/year + $3 per withdrawal + hidden fees",
+      othersSubtitle: "$30/year + $3 per withdrawal + hidden fees",
       dattapaySubtitle: "Zero annual fee, lowest transaction cost",
       labels: {
         receiveInternational: "Receive International",
@@ -214,7 +214,7 @@ export const DEFAULT_CONTENT: Omit<RegionalContentData, "code" | "country" | "co
     },
     {
       question: "Is there really no annual fee?",
-      answer: "Correct. Zero annual fees. Unlike Payoneer's $35/year or banks' maintenance fees, DattaPay only charges 0.5% when you actually receive money. If you don't use it, you don't pay. Free forever.",
+      answer: "Correct. Zero annual fees. Unlike Payoneer's $30/year or banks' maintenance fees, DattaPay only charges 0.5% when you actually receive money. If you don't use it, you don't pay. Free forever.",
     },
     {
       question: "Can I also send remittances to my family?",
@@ -288,7 +288,7 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
       rights: "All rights reserved.",
     },
     hero: {
-      headline: "Nigerian Freelancers: Stop Paying Payoneer's ₦50,000+ Annual Fees",
+      headline: "Stop Paying Payoneer's ₦50,000+ Annual Fees",
       subheadline: "Get your funding account & crypto wallet in 2 minutes. Receive from Fiverr, Upwork, Freelancer — instant USDT/USDC conversion. Sell on Binance at premium rates. No annual fees. No ₦4,500 per withdrawal.",
       ctaText: "Get Your Free Account Now",
       badge: "Trusted by 5,000+ Nigerian Freelancers",
@@ -300,7 +300,7 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
       ],
     },
     keepMore: {
-      title: "Payoneer Charges $35/Year + $3 Per Withdrawal. Why Are You Still Paying?",
+      title: "Payoneer Charges $30/Year + $3 Per Withdrawal. Why Are You Still Paying?",
       subtitle: "That's over ₦50,000/year in fees alone. Plus Naira keeps crashing. DattaPay gives you instant stablecoin conversion — sell your USDT on Binance at rates 3-5% higher than parallel market.",
       comparisonTitle: "Calculate Your Losses with Payoneer",
       featuresTitle: "What Nigerian Freelancers Actually Need",
@@ -322,7 +322,7 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
       comparison: {
         recommended: "Smart Nigerians Choose This",
         othersTitle: "Payoneer & Dom Accounts",
-        othersSubtitle: "$35/year + $3/withdrawal + terrible rates",
+        othersSubtitle: "$30/year + $3/withdrawal + terrible rates",
         dattapaySubtitle: "Zero annual fee, best conversion rates",
         labels: {
           receiveInternational: "Receive International",
@@ -337,7 +337,7 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
     faqs: [
       {
         question: "How is DattaPay better than Payoneer for Nigerian freelancers?",
-        answer: "Payoneer charges $35/year (₦50,000+) annual fee plus $3 (₦4,500+) for every single withdrawal. DattaPay has ZERO annual fees. Your payments auto-convert to USDT/USDC, which you sell on Binance P2P at rates often ₦50-100 higher per dollar than what Payoneer or banks offer.",
+        answer: "Payoneer charges $30/year (₦50,000+) annual fee plus $3 (₦4,500+) for every single withdrawal. DattaPay has ZERO annual fees. Your payments auto-convert to USDT/USDC, which you sell on Binance P2P at rates often ₦50-100 higher per dollar than what Payoneer or banks offer.",
       },
       {
         question: "How do I add DattaPay to my Upwork/Fiverr account?",
@@ -433,7 +433,7 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
       rights: "Todos os direitos reservados.",
     },
     hero: {
-      headline: "Freelancer Brasileiro: Pare de Perder R$200+ Por Ano com Payoneer",
+      headline: "Pare de Perder R$200+ Por Ano com Payoneer",
       subheadline: "Conta de recebimento + carteira crypto em 2 minutos. Receba do Fiverr, Upwork, Workana — conversão instantânea para USDT/USDC. Venda na Binance com cotação premium. Zero taxa anual.",
       ctaText: "Criar Minha Conta Grátis",
       badge: "Usado por 3.000+ Freelancers Brasileiros",
@@ -445,7 +445,7 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
       ],
     },
     keepMore: {
-      title: "Payoneer Cobra $35/Ano + $3 Por Saque. Por Que Você Ainda Paga Isso?",
+      title: "Payoneer Cobra $30/Ano + $3 Por Saque. Por Que Você Ainda Paga Isso?",
       subtitle: "São mais de R$200/ano só em taxas. E o real continua desvalorizando. Com DattaPay, seus pagamentos viram USDT instantaneamente — venda na Binance P2P com cotação 3-5% melhor que o câmbio comercial.",
       comparisonTitle: "Calcule Quanto Você Perde com Payoneer",
       featuresTitle: "O Que Freelancers Brasileiros Realmente Precisam",
@@ -467,7 +467,7 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
       comparison: {
         recommended: "Escolha Inteligente",
         othersTitle: "Payoneer & Bancos Tradicionais",
-        othersSubtitle: "$35/ano + $3/saque + cotação ruim",
+        othersSubtitle: "$30/ano + $3/saque + cotação ruim",
         dattapaySubtitle: "Zero taxa anual, melhor cotação",
         labels: {
           receiveInternational: "Receber Internacional",
@@ -482,7 +482,7 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
     faqs: [
       {
         question: "Por que DattaPay é melhor que Payoneer para brasileiros?",
-        answer: "Payoneer cobra $35/ano (R$200+) de taxa anual mais $3 (R$17+) por cada saque. DattaPay tem ZERO taxa anual. Seus pagamentos convertem automaticamente para USDT/USDC, que você vende na Binance P2P com cotação frequentemente 3-5% melhor que Payoneer ou bancos.",
+        answer: "Payoneer cobra $30/ano (R$200+) de taxa anual mais $3 (R$17+) por cada saque. DattaPay tem ZERO taxa anual. Seus pagamentos convertem automaticamente para USDT/USDC, que você vende na Binance P2P com cotação frequentemente 3-5% melhor que Payoneer ou bancos.",
       },
       {
         question: "Como adicionar DattaPay no Upwork/Fiverr/Workana?",
@@ -578,7 +578,7 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
       rights: "Todos los derechos reservados.",
     },
     hero: {
-      headline: "Freelancer Argentino: Dejá de Perder con Payoneer y el Cepo",
+      headline: "Dejá de Perder con Payoneer y el Cepo",
       subheadline: "Cuenta de cobro + billetera crypto en 2 minutos. Cobrá de Fiverr, Upwork, Workana — conversión instantánea a USDT/USDC. Vendé en Binance a cotización blue. Sin cuota anual. Sin cepo.",
       ctaText: "Crear Mi Cuenta Gratis",
       badge: "Usado por 4.000+ Freelancers Argentinos",
@@ -590,7 +590,7 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
       ],
     },
     keepMore: {
-      title: "Payoneer Te Cobra $35/Año + $3 Por Retiro. ¿Por Qué Seguís Pagando?",
+      title: "Payoneer Te Cobra $30/Año + $3 Por Retiro. ¿Por Qué Seguís Pagando?",
       subtitle: "Son más de $50.000 pesos/año solo en comisiones. Y el peso pierde 10% por mes. Con DattaPay, tus pagos se convierten instantáneamente a USDT — vendé en Binance P2P a cotización MEP/blue.",
       comparisonTitle: "Calculá Cuánto Perdés con Payoneer",
       featuresTitle: "Lo Que los Freelancers Argentinos Realmente Necesitan",
@@ -612,7 +612,7 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
       comparison: {
         recommended: "Elección Inteligente",
         othersTitle: "Payoneer & Bancos Tradicionales",
-        othersSubtitle: "$35/año + $3/retiro + dólar oficial",
+        othersSubtitle: "$30/año + $3/retiro + dólar oficial",
         dattapaySubtitle: "Cero cuota anual, cotización libre",
         labels: {
           receiveInternational: "Recibir Internacional",
@@ -627,7 +627,7 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
     faqs: [
       {
         question: "¿Por qué DattaPay es mejor que Payoneer para argentinos?",
-        answer: "Payoneer cobra $35/año de cuota anual más $3 por cada retiro. Y encima te liquida al dólar oficial (40% menos que el blue). DattaPay tiene CERO cuota anual. Tus pagos se convierten automáticamente a USDT/USDC, que vendés en Binance P2P a cotización libre.",
+        answer: "Payoneer cobra $30/año de cuota anual más $3 por cada retiro. Y encima te liquida al dólar oficial (40% menos que el blue). DattaPay tiene CERO cuota anual. Tus pagos se convierten automáticamente a USDT/USDC, que vendés en Binance P2P a cotización libre.",
       },
       {
         question: "¿Cómo agrego DattaPay a Upwork/Fiverr/Workana?",
@@ -723,8 +723,8 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
       rights: "All rights reserved.",
     },
     hero: {
-      headline: "Bangladeshi Freelancers: Stop Paying Payoneer's ৳4,000+ Annual Fees",
-      subheadline: "Get your funding account & crypto wallet in 2 minutes. Receive from Fiverr, Upwork, Freelancer — instant USDT/USDC conversion. Sell on Binance at premium rates. No annual fees. No ৳350 per withdrawal.",
+      headline: "Stop Paying Payoneer's ৳4,000+ Annual Fees",
+      subheadline: "Get paid from Fiverr, Upwork & Freelancer — convert to USDT instantly, sell on Binance at premium rates. Zero fees, setup in 2 minutes.",
       ctaText: "Get Your Free Account Now",
       badge: "Trusted by 8,000+ Bangladeshi Freelancers",
       stats: [
@@ -735,7 +735,7 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
       ],
     },
     keepMore: {
-      title: "Payoneer Charges $35/Year + $3 Per Withdrawal. Why Are You Still Paying?",
+      title: "Payoneer Charges $30/Year + $3 Per Withdrawal. Why Are You Still Paying?",
       subtitle: "That's over ৳4,000/year in fees alone. Plus Taka keeps dropping against the dollar. DattaPay gives you instant stablecoin conversion — sell your USDT on Binance at rates 3-5% higher than bank rates.",
       comparisonTitle: "Calculate Your Losses with Payoneer",
       featuresTitle: "What Bangladeshi Freelancers Actually Need",
@@ -757,7 +757,7 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
       comparison: {
         recommended: "Smart Bangladeshis Choose This",
         othersTitle: "Payoneer & Local Banks",
-        othersSubtitle: "$35/year + $3/withdrawal + poor rates",
+        othersSubtitle: "$30/year + $3/withdrawal + poor rates",
         dattapaySubtitle: "Zero annual fee, best conversion rates",
         labels: {
           receiveInternational: "Receive International",
@@ -772,7 +772,7 @@ export const REGIONAL_CONTENT: Record<SupportedRegion, RegionalContentData> = {
     faqs: [
       {
         question: "How is DattaPay better than Payoneer for Bangladeshi freelancers?",
-        answer: "Payoneer charges $35/year (৳4,000+) annual fee plus $3 (৳350+) for every single withdrawal. DattaPay has ZERO annual fees. Your payments auto-convert to USDT/USDC, which you sell on Binance P2P at rates often ৳3-5 higher per dollar than what Payoneer or banks offer.",
+        answer: "Payoneer charges $30/year (৳4,000+) annual fee plus $3 (৳350+) for every single withdrawal. DattaPay has ZERO annual fees. Your payments auto-convert to USDT/USDC, which you sell on Binance P2P at rates often ৳3-5 higher per dollar than what Payoneer or banks offer.",
       },
       {
         question: "How do I add DattaPay to my Upwork/Fiverr account?",
