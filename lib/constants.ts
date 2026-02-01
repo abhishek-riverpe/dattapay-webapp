@@ -2,8 +2,8 @@ export const SITE = {
   name: "DattaPay",
   company: "DattaPay",
   email: "support@dattapay.com",
-  logo: "/logos/logo.PNG",
-  logoDark: "/logos/logo.PNG",
+  logo: "/logo.png",
+  logoDark: "/logo.png",
   year: new Date().getFullYear(),
 } as const;
 

@@ -44,23 +44,13 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="group flex items-center gap-2.5 mb-4">
-              <div className="relative h-9 w-9">
-                <div className="absolute -inset-0.5 rounded-lg bg-gradient-to-br from-primary/50 to-primary/10 opacity-60 blur-sm transition-opacity group-hover:opacity-80" />
-                <Image
-                  src={SITE.logo}
-                  alt={`${SITE.name} - Payment platform for freelancers and creators`}
-                  width={36}
-                  height={36}
-                  className="relative h-9 w-9 rounded-lg object-cover shadow-md ring-1 ring-white/20 transition-transform group-hover:scale-105 dark:hidden"
-                />
-                <Image
-                  src={SITE.logoDark}
-                  alt={`${SITE.name} - Payment platform for freelancers and creators`}
-                  width={36}
-                  height={36}
-                  className="relative h-9 w-9 rounded-lg object-cover shadow-md ring-1 ring-white/20 transition-transform group-hover:scale-105 hidden dark:block"
-                />
-              </div>
+              <Image
+                src={SITE.logo}
+                alt={`${SITE.name} Logo`}
+                width={36}
+                height={36}
+                className="h-9 w-9 object-contain"
+              />
               <span className="text-lg font-bold tracking-tight">{SITE.name}</span>
             </Link>
             <p className="text-sm text-muted-foreground">

@@ -29,25 +29,14 @@ export default function Navbar() {
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="group flex items-center gap-3">
-          <div className="relative h-10 w-10">
-            <div className="absolute -inset-0.5 rounded-xl bg-gradient-to-br from-primary/60 to-primary/20 opacity-75 blur-sm transition-all group-hover:opacity-100 group-hover:blur-md" />
-            <Image
-              src={SITE.logo}
-              alt={`${SITE.name} - Official Logo (Light Mode)`}
-              width={40}
-              height={40}
-              className="relative h-10 w-10 rounded-xl object-cover shadow-lg ring-1 ring-white/20 transition-transform group-hover:scale-105 dark:hidden"
-              priority
-            />
-            <Image
-              src={SITE.logoDark}
-              alt={`${SITE.name} - Official Logo (Dark Mode)`}
-              width={40}
-              height={40}
-              className="relative h-10 w-10 rounded-xl object-cover shadow-lg ring-1 ring-white/20 transition-transform group-hover:scale-105 hidden dark:block"
-              priority
-            />
-          </div>
+          <Image
+            src={SITE.logo}
+            alt={`${SITE.name} Logo`}
+            width={40}
+            height={40}
+            className="h-10 w-10 object-contain"
+            priority
+          />
           <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text">{SITE.name}</span>
         </Link>
 
