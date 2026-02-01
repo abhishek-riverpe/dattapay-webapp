@@ -134,7 +134,7 @@ export const DEFAULT_CONTENT: Omit<RegionalContentData, "code" | "country" | "co
   },
   hero: {
     headline: "Keep more. Earn more. Stress less.",
-    subheadline: "Get a US bank account + USDC wallet in 2 minutes. Receive from Upwork, Fiverr, Freelancer — pay just 0.5% instead of Payoneer's 3-5%. Park your stablecoins and earn 3-4% APY backed by US Treasury Bills. Zero annual fees.",
+    subheadline: "US bank account in 2 minutes. Receive from Upwork, Fiverr & more with just 0.5% fees. Earn 3-4% APY on idle funds. Zero annual fees.",
     ctaText: "Get My Free US Bank Account",
     badge: "Trusted by 10,000+ Freelancers Worldwide",
     stats: [
